@@ -1,0 +1,64 @@
+body{
+  font-family: lato;
+}
+
+.inventor-container {
+    display: flex;
+    flex-direction: column; /* change flex direction for mobile view */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width:96%;
+    /* border: 1px solid #ccc; */
+  }
+  
+  .inventor-info {
+    flex: 1;
+    margin-right: 0; /* remove margin for mobile view */
+    margin-bottom: 20px; /* add margin for mobile view */
+    text-align: center; /* center text for mobile view */
+  }
+  
+  .inventor-info h2 {
+    font-size: 28px; /* reduce font size for mobile view */
+    margin-bottom: 10px;
+    margin-left: 0; /* remove margin for mobile view */
+  }
+  
+  .inventor-info p {
+    font-size: 14px; /* reduce font size for mobile view */
+    line-height: 1.5; /* reduce line height for mobile view */
+    width: 100%; /* set width to 100% for mobile view */
+    margin-left: 0; /* remove margin for mobile view */
+  }
+  
+  .inventor-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .inventor-image img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    .inventor-container {
+      flex-direction: row; /* revert flex direction for larger screens */
+    }
+    .inventor-info {
+      margin-right: 20px; /* add margin for larger screens */
+      margin-bottom: 0; /* remove margin for larger screens */
+      text-align: left; /* align text to left for larger screens */
+    }
+    .inventor-info h2 {
+      font-size: 44px;
+      margin-left: 20%;
+    }
+    .inventor-info p {
+      font-size: 16px;
+      line-height: 2;
+      width: 80%;
+      margin-left: 20%;
+    }
+  }
