@@ -23,24 +23,15 @@ function DemoButton() {
     return (
       <>
         <Box sx={{ m:5,textAlign:"center" }}>
-        <Typography sx={{fontSize:"40px",fontFamily:"lato",fontWeight:"bold"}}>Watch the Demo and Learn How It Works</Typography>
-        <Typography sx={{mt:2,fontSize:"20px",fontFamily:"lato"}}>Want to learn how to import vouchers and master data from Excel sheets into Tally?<br/> Our recorded video demo has got you covered! In just a few minutes, <br/>we'll show you how to use Excel to Tally software for seamless integration.</Typography>
-            <Button variant="contained" color="success" sx={{ fontFamily: "lato", mt: 3 }} onClick={handleOpen}>Watch Recorded Demo</Button>
-            <Dialog open={open} onClose={handleClose}>
-              <DialogContent>
-                <Box sx={{ width: "auto", borderRadius: "10px" }}>
-                  <Typography sx={{ fontSize: "24px", fontWeight: "bold", fontFamily: "lato", textAlign: "center", mb: 1 }}>Excel To Tally</Typography>
-                  <iframe
-                    width="500px"
-                    height="320px"
-                    src="https://www.youtube.com/embed/YiQ3V-Pgu48"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen="true"
-                  ></iframe>
-                </Box>
-              </DialogContent>
-            </Dialog>
+        <Typography sx={{fontSize:"40px",fontFamily:"lato",fontWeight:"bold"}}>About Us</Typography>
+        <Typography sx={{ mt: 2, fontSize: "20px", fontFamily: "lato", ml: "50px", mr: "50px" }}>We are a team of Chartered Accountants and Technical experts who combine financial
+         expertise with cutting-edge technology to develop customized solutions for our clients. We believe in a collaborative approach, working 
+         closely with our clients to understand their needs and create solutions that meet their unique requirements.We specialize in deployment, 
+         enhancement, and operational support services. We understand these services’ plays critical role in helping businesses streamline operations,
+         enhance efficiency, and achieve goals. 
+
+</Typography>
+
           </Box>
       </>
     );

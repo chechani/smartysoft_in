@@ -27,7 +27,9 @@ const AllPages = () => {
             <Card>
                 <Home />
             </Card>
-          
+            <Card>
+                <DemoButton/>
+            </Card>
             <Card>
                 <HappyCustomers />
             </Card>
@@ -36,34 +38,32 @@ const AllPages = () => {
                 <Reasons />
             </Card>
             <Card>
-                <NewFeatures />
-            </Card>
- 
-            <Card>
-                <DemoButton/>
-            </Card>
-              <Card>
-                <DmsTemplates />
-            </Card>
-            <Card>
-                <DmsOtherTemplates/>
-            </Card>
-            <Card>
                 <Benefits />
             </Card>
             <Card>
+                <DmsTemplates />
+            </Card>
+            {/* <Card>
+                <NewFeatures />
+            </Card> */}
+ 
+     
+     
+       
+          
+            <Card>
                 <OurInfo/>
             </Card>
-            <Card>
+            {/* <Card>
                 <Pricing />
-            </Card>
+            </Card> */}
         
-            <Card>
+            {/* <Card>
                 <Data/>
-            </Card>
-            <Card>
+            </Card> */}
+            {/* <Card>
                 <PurchaseConversion/>
-            </Card>
+            </Card> */}
 
         </>
     )

@@ -50,7 +50,7 @@ export default function Footer() {
           <div>
             <img
               alt="footer-logo"
-              src="./accxchangelogo.jpeg"
+              src="./smarty_logo.png"
               style={{ width: "30%", marginLeft: "10%" }}
             />
             <Typography sx={{ width: "60%", ml: 5, marginTop: 2, fontFamily: "lato", fontSize: "18px" }}>

@@ -41,7 +41,7 @@ function Benefits() {
             fontSize: '40px',
           }}
         >
-          Maximizing Efficiency and Accuracy with Tally
+          Why Choose us
         </Typography>
         <Grid container spacing={2}>
           {benefitsData.map((benefit, index) => (
@@ -79,29 +79,29 @@ function Benefits() {
 const benefitsData = [
   {
     icon: AddToHomeScreenIcon,
-    title: 'Accelerate your data entry with precision',
+    title: 'Highly Experinced and Techno Commercial Founders',
     description:
-      'One click activity ensures 100% accuracy with the facility of stock items, expense and tax ledgers',
+      'Our founder and CEO is a Chartered Accountant with over two and a half decades of experience in the software business. His financial expertise, coupled with extensive knowledge of the industry, brings a unique perspective to our services.',
   },
   {
     icon: SentimentSatisfiedAltIcon,
-    title: 'Empower to maintain precise and accurate inventory records',
+    title: 'Core Team Multifaceted Capabilities',
     description:
-      'Automated insertion of sales, purchase, payment & receipt brings accuracy in accounting and inventory management.',
+      'Our core team comprises individuals with vast technical and functional knowledge. With diverse backgrounds and skills, they possess the necessary expertise to tackle various challenges and deliver outstanding results.',
   },
 
   {
     icon: ScheduleIcon,
-    title: 'Time-saving solution, reducing efforts and boosting efficiency',
+    title: 'Business acumen combined with high teck skills ',
     description:
-      "No more manual creation of invoices & vouchers into Tally, so it saves too much time and effort.",
+      "Our team's exceptional combination of business acumen and programming abilities sets us apart. Our proficiency in Python, JavaScript, React, and Vue Js allows us to conceptualize innovative solutions and address complex problems effectively. We leverage these skills to provide our clients with tailored and high-quality services.",
   },
 
   {
     icon: ThumbUpOffAltIcon,
-    title: 'Say goodbye to the need for accounting expertise',
+    title: 'Experience with many useful Open Source Technolgies',
     description:
-      'SMEs or any business owners can insert invoices & vouchers into Tally as no accounting knowledge is required.',
+      'Our team has deep expertise in a wide range of open-source technologies, allowing us to leverage their benefits for businesses effectively. With our extensive knowledge and experience, we provide valuable guidance and support in utilizing these technologies to drive success.',
   }
 ];
 

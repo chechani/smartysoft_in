@@ -5,7 +5,7 @@ function DmsTemplates() {
     return (
         <>
             <Box style={{ textAlign: "center",paddingTop:"100px",paddingBottom:"70px", fontFamily: "Poppins',sans-serif"}}>
-                <Typography variant='h4' sx={{ fontWeight: 700,fontFamily:"lato",fontSize:"42px"}}>Templates for Dealers of Popular Companies</Typography>
+                <Typography variant='h4' sx={{ fontWeight: 700,fontFamily:"lato",fontSize:"42px"}}>We are proficient in Technologies</Typography>
 
                 <Grid container spacing={2} sx={{ mt: 5 }}>
                     <Grid item xs={12} md={3}>

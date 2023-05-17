@@ -41,7 +41,7 @@ navigate("/happycustomers")
   return (
     <Navbar expand="lg" style={{position:"fixed",top:0,width:"100%",backgroundColor:"	whitesmoke"}}>
     <Container fluid>
-      <Navbar.Brand><img src='/Excel2tally.png' alt='logo' style={{fontWeight:"bold",marginLeft:"20px",width:"120px",height:"60px",borderRadius:"10px"}} onClick={HandleLogo}/></Navbar.Brand>
+      <Navbar.Brand><img src='/smarty_logo.png' alt='logo' style={{fontWeight:"bold",marginLeft:"20px",width:"120px",height:"40px",borderRadius:"10px"}} onClick={HandleLogo}/></Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
         <Nav
@@ -49,16 +49,16 @@ navigate("/happycustomers")
           style={{ maxHeight: '280px',fontFamily:"Nirmala UI",fontSize:"17px",fontWeight:"bold"}}
           navbarScroll
         >
-          <Nav.Link onClick={handleFeature} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Features</Nav.Link>
-          <Nav.Link onClick={handleDemo} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Why Choose us</Nav.Link>
-          <Nav.Link onClick={handleBenefits} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Benefits</Nav.Link>
-          <Nav.Link onClick={handlePricing} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Pricing</Nav.Link>
+          <Nav.Link onClick={handleFeature} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>About Us </Nav.Link>
+          <Nav.Link onClick={handleDemo} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Our Services</Nav.Link>
+          <Nav.Link onClick={handleBenefits} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Why Us</Nav.Link>
+          <Nav.Link onClick={handlePricing} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Success Story</Nav.Link>
         </Nav>
-         <Nav>
-          <Button variant='contained' sx={{mr:2,mt:1,fontFamily:"lato",fontWeight:"bold"}} onClick={handleScheduleDemo}>Schedule Demo</Button>
-        </Nav>
+         {/* <Nav>
+          <Button variant='contained' sx={{mr:2,mt:1,fontFamily:"lato",fontWeight:"bold"}} onClick={handleScheduleDemo}>Schedule Meeting </Button>
+        </Nav> */}
         <Nav>
-          <Button variant='contained' color="success" sx={{mr:2,mt:1,fontFamily:"lato",fontWeight:"bold"}} onClick={handleClick}>Download</Button>
+          <Button variant='contained' color="success" sx={{mr:2,mt:1,fontFamily:"lato",fontWeight:"bold"}} onClick={handleClick}>Schedule Meeting </Button>
         </Nav>
       </Navbar.Collapse>
     </Container>
