@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CssBaseline from "@mui/material/CssBaseline";
-import Grid from "@mui/material/Grid";
+// import Button from "@mui/material/Button";
+// import Card from "@mui/material/Card";
+// import CssBaseline from "@mui/material/CssBaseline";
+// import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import GlobalStyles from "@mui/material/GlobalStyles";
-import Container from "@mui/material/Container";
-import { Dialog, DialogContent } from "@mui/material";
+// import GlobalStyles from "@mui/material/GlobalStyles";
+// import Container from "@mui/material/Container";
+// import { Dialog, DialogContent } from "@mui/material";
 
 
-function DemoButton() {
+function AboutUs() {
     const [open, setOpen] = useState(false);
 
     const handleClose = () => {
@@ -37,4 +37,4 @@ function DemoButton() {
     );
   }
   
-  export default DemoButton;
+  export default AboutUs;

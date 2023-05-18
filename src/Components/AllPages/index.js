@@ -2,17 +2,16 @@ import React from 'react';
 import Home from '../Home';
 import { Card} from '@mui/material';
 import HappyCustomers from '../HappyCustomers';
-import NewFeatures from '../NewFeatures';
-import DmsTemplates from '../DmsTamplates';
+import Technologies from '../Technologies';
 import Benefits from '../Benefits';
 import Pricing from '../Pricing';
 import PurchaseConversion from '../PurchaseConversion';
-import OurInfo from '../OurInfo.js';
-import DmsOtherTemplates from '../DmsOtherTamplates';
-import DemoButton from '../DemoButton';
+import Testimonial from '../Testimonial/index.js';
+import AboutUs from '../AboutUs';
 import { Data } from "../Question/Data";
 import WhatsAppButton from '../WhatsAppButton';
 import Reasons from '../HappyCustomers/reasons';
+import Products from '../Products/index';
 
 
 
@@ -28,7 +27,10 @@ const AllPages = () => {
                 <Home />
             </Card>
             <Card>
-                <DemoButton/>
+                <AboutUs/>
+            </Card>
+            <Card>
+                <Products />
             </Card>
             <Card>
                 <HappyCustomers />
@@ -40,19 +42,18 @@ const AllPages = () => {
             <Card>
                 <Benefits />
             </Card>
+       
             <Card>
-                <DmsTemplates />
+                <Technologies />
             </Card>
-            {/* <Card>
-                <NewFeatures />
-            </Card> */}
+     
  
      
      
        
           
             <Card>
-                <OurInfo/>
+                <Testimonial/>
             </Card>
             {/* <Card>
                 <Pricing />

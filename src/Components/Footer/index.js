@@ -191,7 +191,7 @@ export default function Footer() {
             fontSize: "15px"
           }}
         >
-          ACCXCHANGE TRANSACTIONS WORLDWIDE PRIVATE LIMITED <br></br>Copyright
+          Smarty Software Private Limited <br></br>Copyright
           ©2023 All Rights Reserved
         </Box>
       </Box>

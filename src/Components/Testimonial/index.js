@@ -4,7 +4,7 @@ import { Box, Grid, Typography } from '@mui/material';
 
 
 
-const OurInfo = () => {
+const Testimonial = () => {
 
 
     return (
@@ -169,4 +169,4 @@ const OurInfo = () => {
     )
 }
 
-export default OurInfo;
+export default Testimonial;

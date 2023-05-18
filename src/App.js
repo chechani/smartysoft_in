@@ -16,8 +16,7 @@ import PrivacyPolicy from './Components/PrivacyPolicy';
 import Aboutus from './Components/AboutUs';
 import ScheduleDemoThanksPage from './Components/ScheduleDemoThanksPage';
 import ExcelfileThanksPage from './Components/ExcelfileThanksPage';
-// import Services from './Components/OurServices';
-import OurProducts from './Components/OurProducts';
+import Products from './Components/Products';
 import DemoButton from './Components/DemoButton';
 
 function App() {
@@ -42,7 +41,6 @@ function App() {
         <Route path="/excelfilethanks" element={<ExcelfileThanksPage/>}/>
         {/* <Route path="/services" element={<Services/>}/> */}
         <Route path="/demobutton" element={<DemoButton/>}/>
-        <Route path="/ourproducts" element={<OurProducts/>}/>
         <Route path='*' element={<AllPages/>}/>
       </Routes>
       <Footer/>

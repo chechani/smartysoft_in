@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
 
-function DmsTemplates() {
+function Technologies() {
     return (
         <>
             <Box style={{ textAlign: "center",paddingTop:"100px",paddingBottom:"70px", fontFamily: "Poppins',sans-serif"}}>
@@ -70,4 +70,4 @@ function DmsTemplates() {
     );
 }
 
-export default DmsTemplates;
+export default Technologies;
