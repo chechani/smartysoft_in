@@ -12,6 +12,9 @@ import { Data } from "../Question/Data";
 import WhatsAppButton from '../WhatsAppButton';
 import Reasons from '../HappyCustomers/reasons';
 import Products from '../Products/index';
+import Solutions from '../Benefits/solutions';
+
+
 
 
 
@@ -23,12 +26,18 @@ const AllPages = () => {
         <Card>
             <WhatsAppButton/>
         </Card>
+  
             <Card>
                 <Home />
             </Card>
             <Card>
                 <AboutUs/>
             </Card>
+
+            <Card>
+                <Solutions />
+            </Card>
+      
             <Card>
                 <Products />
             </Card>
