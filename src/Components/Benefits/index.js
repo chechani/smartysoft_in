@@ -81,27 +81,27 @@ const benefitsData = [
     icon: AddToHomeScreenIcon,
     title: 'Highly Experinced and Techno Commercial Founders',
     description:
-      'Our founder and CEO is a Chartered Accountant with over two and a half decades of experience in the software business. His financial expertise, coupled with extensive knowledge of the industry, brings a unique perspective to our services.',
+      'Our Founder and CEO, a Chartered Accountant with over 25 years of experience in the software business, brings a wealth of expertise and industry knowledge to our services. This unique combination of financial acumen and industry insight enables us to deliver crisp and appealing solutions to our clients.',
   },
   {
     icon: SentimentSatisfiedAltIcon,
     title: 'Core Team Multifaceted Capabilities',
     description:
-      'Our core team comprises individuals with vast technical and functional knowledge. With diverse backgrounds and skills, they possess the necessary expertise to tackle various challenges and deliver outstanding results.',
+      'Our exceptional team comprises highly skilled individuals with extensive technical and functional knowledge. With diverse backgrounds and a wide range of expertise, they are equipped to handle any challenge that comes their way. Their collective proficiency enables us to consistently deliver outstanding results',
   },
 
   {
     icon: ScheduleIcon,
     title: 'Business acumen combined with high teck skills ',
     description:
-      "Our team's exceptional combination of business acumen and programming abilities sets us apart. Our proficiency in Python, JavaScript, React, and Vue Js allows us to conceptualize innovative solutions and address complex problems effectively. We leverage these skills to provide our clients with tailored and high-quality services.",
+      "Our team possesses exceptional skills in solution visualization and programming, bolstered by AI technologies. This proficiency enables us to excel in cutting-edge technologies like Python, JavaScript, React, and Vue.js. We leverage this expertise to conceptualize innovative solutions",
   },
 
   {
     icon: ThumbUpOffAltIcon,
     title: 'Experience with many useful Open Source Technolgies',
     description:
-      'Our team has deep expertise in a wide range of open-source technologies, allowing us to leverage their benefits for businesses effectively. With our extensive knowledge and experience, we provide valuable guidance and support in utilizing these technologies to drive success.',
+      'Our team possesses extensive expertise in a diverse array of open-source technologies, enabling us to harness their advantages effectively for businesses. With a deep understanding and substantial experience, we offer valuable guidance and support in utilizing these technologies to drive success',
   }
 ];
 
