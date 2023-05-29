@@ -41,7 +41,7 @@ function Benefits() {
             fontSize: '40px',
           }}
         >
-          Why Choose us
+          Why We
         </Typography>
         <Grid container spacing={2}>
           {benefitsData.map((benefit, index) => (

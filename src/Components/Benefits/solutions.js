@@ -31,7 +31,7 @@ function Solutions() {
           {features.map((feature, index) => (
             <Col lg={4} md={4} sm={6} xs={12} key={index}>
               <div className="d-flex features feature-primary pt-4 pb-4">
-                <div style={{ margin: "10px", marginLeft: "20px", marginRight: "20px" }}>
+                <div style={{ margin: "10px", marginLeft: "10px", marginRight: "10px" }}>
                   <img
                     src={"https://smartysoftware.in/" + feature.image}
                     width="60"
