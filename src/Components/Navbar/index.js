@@ -51,7 +51,7 @@ navigate("/happycustomers")
         >
           <Nav.Link onClick={handleFeature} style={{paddingRight:"30px",color:"black"}}>About Us </Nav.Link>
           <Nav.Link onClick={handleDemo} style={{paddingRight:"30px",color:"black"}}>Our Services</Nav.Link>
-          <Nav.Link onClick={handleBenefits} style={{paddingRight:"30px",color:"black"}}>Why Us</Nav.Link>
+          <Nav.Link onClick={handleBenefits} style={{paddingRight:"30px",color:"black"}}>Why We</Nav.Link>
           <Nav.Link onClick={handlePricing} style={{paddingRight:"30px",color:"black"}}>Success Story</Nav.Link>
         </Nav>
          {/* <Nav>
