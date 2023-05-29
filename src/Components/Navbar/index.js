@@ -49,16 +49,16 @@ navigate("/happycustomers")
           style={{ maxHeight: '280px',fontFamily:"Nirmala UI",fontSize:"17px",fontWeight:"bold"}}
           navbarScroll
         >
-          <Nav.Link onClick={handleFeature} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>About Us </Nav.Link>
-          <Nav.Link onClick={handleDemo} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Our Services</Nav.Link>
-          <Nav.Link onClick={handleBenefits} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Why Us</Nav.Link>
-          <Nav.Link onClick={handlePricing} style={{paddingRight:"30px",color:"black",fontFamily:"lato"}}>Success Story</Nav.Link>
+          <Nav.Link onClick={handleFeature} style={{paddingRight:"30px",color:"black"}}>About Us </Nav.Link>
+          <Nav.Link onClick={handleDemo} style={{paddingRight:"30px",color:"black"}}>Our Services</Nav.Link>
+          <Nav.Link onClick={handleBenefits} style={{paddingRight:"30px",color:"black"}}>Why Us</Nav.Link>
+          <Nav.Link onClick={handlePricing} style={{paddingRight:"30px",color:"black"}}>Success Story</Nav.Link>
         </Nav>
          {/* <Nav>
-          <Button variant='contained' sx={{mr:2,mt:1,fontFamily:"lato",fontWeight:"bold"}} onClick={handleScheduleDemo}>Schedule Meeting </Button>
+          <Button variant='contained' sx={{mr:2,mt:1,fontWeight:"bold"}} onClick={handleScheduleDemo}>Schedule Meeting </Button>
         </Nav> */}
         <Nav>
-          <Button variant='contained' color="success" sx={{mr:2,mt:1,fontFamily:"lato",fontWeight:"bold"}} onClick={handleClick}>Schedule Meeting </Button>
+          <Button variant='contained' color="success" sx={{mr:2,mt:1,fontWeight:"bold"}} onClick={handleClick}>Schedule Meeting </Button>
         </Nav>
       </Navbar.Collapse>
     </Container>

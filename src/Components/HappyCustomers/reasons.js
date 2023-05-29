@@ -24,7 +24,7 @@ function Reason({ title, description, icon }) {
               fontSize: '20px',
               fontWeight: 'bold',
               mt: 2,
-              fontFamily: 'lato',
+              
               mb: 1,
               textAlign: 'center' ,
             }}
@@ -40,7 +40,7 @@ function Reason({ title, description, icon }) {
       </Grid>
       {expanded && (
         <Box sx={{ pl: 4, pr: 4 }}>
-          <Typography sx={{ fontFamily: 'lato', fontSize: '18px',textAlign: 'center' }}>
+          <Typography sx={{ fontSize: '18px',textAlign: 'center' }}>
             {description}
           </Typography>
         </Box>

@@ -49,10 +49,10 @@ function Registration() {
             <Grid container spacing={5}>
                 <Grid item xs={12} md={6}>
                     <Box>
-                        <Typography variant="h4" sx={{ fontFamily: "lato", fontWeight: "600" }}>Request a Demo for Excel to Tally Software</Typography>
+                        <Typography variant="h4" sx={{ fontWeight: "600" }}>Request a Demo for Excel to Tally Software</Typography>
 
-                        <Typography variant="h6" sx={{ fontFamily: "lato", mt: 3 }} >Our Excel to Tally integration offers a seamless way to import data from Excel into Tally ERP. With this integration, you can save time and improve accuracy by avoiding manual data entry,</Typography>
-                        <Typography variant="h6" sx={{ fontFamily: "lato", mt: 2 }}> reducing errors and streamlining your accounting processes.
+                        <Typography variant="h6" sx={{ mt: 3 }} >Our Excel to Tally integration offers a seamless way to import data from Excel into Tally ERP. With this integration, you can save time and improve accuracy by avoiding manual data entry,</Typography>
+                        <Typography variant="h6" sx={{ mt: 2 }}> reducing errors and streamlining your accounting processes.
                             To receive the download link for our solution, please fill out the form below with your information, and we'll send you the link via email shortly. You will also receive updates on any new features and releases related to our integration.
                             Thank you for considering our Excel to Tally integration solution. We look forward to hearing how it can benefit your business</Typography>
                     </Box>

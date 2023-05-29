@@ -25,11 +25,11 @@ const ScheduleDemoThanksPage = ()=>{
         <CheckIcon 
             style={{fontSize:"100px",padding:8, color:"green",border:"3px solid green", borderRadius:"100px"}}
         />
-        <Typography  sx={{mt:5,fontFamily:"lato",fontSize:"42px",fontWeight:"bold",color:"green"}}>Thank You for Scheduling Demo of Excel to Tally Integration</Typography>
-        <Typography  sx={{mt:2,fontFamily:"lato",fontSize:"22px"}}>We appreciate your interest in our Excel to Tally integration solution. Your download link has been sent to your email, so please check your inbox.</Typography>
-        <Typography  sx={{mt:2,fontFamily:"lato",fontSize:"22px"}}>We hope our solution will help streamline your accounting processes and save you time and effort importing data from Excel to Tally ERP. If you have any questions or feedback about our solution, please do not hesitate to contact us.</Typography>
-        <Typography  sx={{mt:2,fontFamily:"lato",fontSize:"22px"}}>In the meantime, we invite you to check out our blog and resources section for more tips and insights on accounting and business management.</Typography>
-        <Typography  sx={{mt:2,fontFamily:"lato",fontSize:"22px"}}>Thank you again for Scheduling Demo of our Excel to Tally integration solution. We are excited to hear how it has helped your business.</Typography>
+        <Typography  sx={{mt:5,fontSize:"42px",fontWeight:"bold",color:"green"}}>Thank You for Scheduling Demo of Excel to Tally Integration</Typography>
+        <Typography  sx={{mt:2,fontSize:"22px"}}>We appreciate your interest in our Excel to Tally integration solution. Your download link has been sent to your email, so please check your inbox.</Typography>
+        <Typography  sx={{mt:2,fontSize:"22px"}}>We hope our solution will help streamline your accounting processes and save you time and effort importing data from Excel to Tally ERP. If you have any questions or feedback about our solution, please do not hesitate to contact us.</Typography>
+        <Typography  sx={{mt:2,fontSize:"22px"}}>In the meantime, we invite you to check out our blog and resources section for more tips and insights on accounting and business management.</Typography>
+        <Typography  sx={{mt:2,fontSize:"22px"}}>Thank you again for Scheduling Demo of our Excel to Tally integration solution. We are excited to hear how it has helped your business.</Typography>
         </Box>
         </Card>
 

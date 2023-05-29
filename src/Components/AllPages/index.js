@@ -55,11 +55,10 @@ const AllPages = () => {
             <Card>
                 <AboutUs/>
             </Card>
-            <Card>
+            {/* <Card>
                 <Products />
-            </Card>
+            </Card> */}
 
-        
             {/* <Card>
                 <HappyCustomers />
             </Card> */}

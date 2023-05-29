@@ -21,10 +21,10 @@ const Testimonial = () => {
                   <br />
                   by all means
                 </Typography>
-                <Typography variant='h6' sx={{fontFamily:"lato"}}>Fantastic software and found support team very co-operative<br/> I am using since three years, I recommended it usually.
+                <Typography variant='h6' >Fantastic software and found support team very co-operative<br/> I am using since three years, I recommended it usually.
                </Typography>
                <br />
-                <Typography sx={{ fontFamily: "lato", fontWeight: "bold" }}>
+                <Typography sx={{fontWeight: "bold" }}>
                 "CA Deepak Banger,Chartered Accountant, Dubai"
                 </Typography>
               </Box>
@@ -52,9 +52,9 @@ const Testimonial = () => {
                 >
                   Time saving Software and More Useful for Data Entry                   
                 </Typography>
-                <Typography variant='h6' sx={{fontFamily:"lato"}}>We are using Excel to Tally of AccxChange since 5 years</Typography>
+                <Typography variant='h6'>We are using Excel to Tally of AccxChange since 5 years</Typography>
                 <br />
-                <Typography sx={{ fontFamily: "lato", fontWeight: "bold" }}>
+                <Typography sx={{fontWeight: "bold" }}>
                   Mr. Babulal Prajapat, Nirlon Kitchenware Pvt. Ltd.Mumbai
                 </Typography>
               </Box>
@@ -84,8 +84,8 @@ const Testimonial = () => {
                   <br />
                 
                 </Typography>
-                <Typography variant='h6' sx={{fontFamily:"lato"}}>We are using since 6-7 years and operating it easily</Typography>
-                <Typography sx={{ fontFamily: "lato", fontWeight: "bold",mt:2 }}>
+                <Typography variant='h6'>We are using since 6-7 years and operating it easily</Typography>
+                <Typography sx={{fontWeight: "bold",mt:2 }}>
                 Mr.Pradeep Patil, Panduranga Consultancy Services
                 </Typography>
               </Box>
@@ -114,8 +114,8 @@ const Testimonial = () => {
                   Uploading 200-300 Invoices<br/> daily basis
                   <br />
                  </Typography>
-                <Typography variant='h6' sx={{fontFamily:"lato"}}>I am benefited a lot and saving time with accuracy</Typography>
-                <Typography sx={{ fontFamily: "lato", fontWeight: "bold",mt:2 }}>
+                <Typography variant='h6'>I am benefited a lot and saving time with accuracy</Typography>
+                <Typography sx={{fontWeight: "bold",mt:2 }}>
                  Mr. Deepak Jain, Kamal Enterprises
                 </Typography>
               </Box>
@@ -143,9 +143,9 @@ const Testimonial = () => {
                 >
                   15 Hours work in 3 Hours
                 </Typography>
-                <Typography variant='h6' sx={{fontFamily:"lato"}}>Helping us in Smooth, Fast and Easy Import</Typography>
+                <Typography variant='h6'>Helping us in Smooth, Fast and Easy Import</Typography>
                 <br />
-                <Typography sx={{ fontFamily: "lato", fontWeight: "bold" }}>
+                <Typography sx={{fontWeight: "bold" }}>
                  Mr. Vatsal Agarwal, Vasudev Trading Company , Surat
                 </Typography>
               </Box>

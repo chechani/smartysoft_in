@@ -16,9 +16,7 @@ export const Data = () => {
           fontSize: "32px",
           fontWeight:"bold",
           p:2,
-          mt:5,
-          fontFamily:"lato",         
-        
+          mt:5,    
         }}
       >
         Frequently Asked Questions
@@ -42,7 +40,7 @@ export const Data = () => {
                       id="panel2a-header"
                     >
                       <Typography>
-                        <Typography sx={{fontFamily:"lato",fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
+                        <Typography sx={{fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
                           <DoubleArrowIcon />
                           Can I schedule or automate the data import process from Excel to Tally
                         </Typography>
@@ -52,7 +50,7 @@ export const Data = () => {
                       <Typography
                         style={{ textAlign: "start" }}
                       >
-                        <Typography style={{ color: "grey",fontSize:"18px",fontFamily:"lato" }}>
+                        <Typography style={{ color: "grey",fontSize:"18px"}}>
                         Yes, Once Excel Sheet is uploaded after maping to our standard templates, it will upload all rows automatically. 
                         It will mark imported rows as "Y" and Failed as "N". 
                         </Typography>
@@ -66,7 +64,7 @@ export const Data = () => {
                       id="panel2a-header"
                     >
                       <Typography>
-                        <Typography sx={{fontFamily:"lato",fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
+                        <Typography sx={{fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
                           <DoubleArrowIcon />
                           What types of data can I import from Excel to Tally?
                         </Typography>
@@ -76,7 +74,7 @@ export const Data = () => {
                       <Typography
                         style={{textAlign: "start" }}
                       >
-                        <Typography style={{ color: "grey",fontSize:"18px",fontFamily:"lato" }}>
+                        <Typography style={{ color: "grey",fontSize:"18px", }}>
                         It can import any voucer type and you need to to design templates
                         as per formats of our standrad templates. Our assistance may requires and we also undertake
                         separate Template Development Services from your formats at a cost of Rs. 1000 per Tempalte
@@ -91,7 +89,7 @@ export const Data = () => {
                       id="panel2a-header"
                     >
                       <Typography>
-                        <Typography sx={{fontFamily:"lato",fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
+                        <Typography sx={{fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
                           <DoubleArrowIcon />
                           How do I map fields between Excel and Tally for a data import process?
                         </Typography>
@@ -101,7 +99,7 @@ export const Data = () => {
                       <Typography
                         style={{ textAlign: "start" }}
                       >
-                        <Typography style={{ color: "grey",fontSize:"18px",fontFamily:"lato" }}>
+                        <Typography style={{ color: "grey",fontSize:"18px", }}>
                         Its a simple process for existing Excel worker. They just need to map your sheet coulumns to our sheet.
                         Information not conatined in your sheet and requires to import data then default values are marked.
                         </Typography>
@@ -115,7 +113,7 @@ export const Data = () => {
                       id="panel2a-header"
                     >
                       <Typography>
-                        <Typography sx={{fontFamily:"lato",fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
+                        <Typography sx={{fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
                           <DoubleArrowIcon />
                           What are the best practices for formatting Excel data to import?
                         </Typography>
@@ -125,7 +123,7 @@ export const Data = () => {
                       <Typography
                         style={{ textAlign: "start" }}
                       >
-                        <Typography style={{ color: "grey",fontSize:"18px",fontFamily:"lato" }}>
+                        <Typography style={{ color: "grey",fontSize:"18px", }}>
                         Any Excel worker can map very easily columns of different sheets . We also provide
                         training to do this when you buy it. 
                           </Typography>
@@ -139,7 +137,7 @@ export const Data = () => {
                       id="panel2a-header"
                     >
                       <Typography>
-                        <Typography sx={{fontFamily:"lato",fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
+                        <Typography sx={{fontWeight:"bold",fontSize:"20px",textAlign:"start"}}>
                           <DoubleArrowIcon />
                           How do I handle errors in my Excel data during the import process?
                         </Typography>
@@ -149,7 +147,7 @@ export const Data = () => {
                       <Typography
                         style={{textAlign: "start" }}
                       >
-                        <Typography style={{ color: "grey",fontSize:"18px",fontFamily:"lato" }}>
+                        <Typography style={{ color: "grey",fontSize:"18px", }}>
                         Transaction having errors are marked as No in Excel sheet so one can easily find
                         those transactions and can fix easily . We also help and provide assistance to find out 
                         issue and resove it. 

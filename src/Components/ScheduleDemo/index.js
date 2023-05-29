@@ -51,15 +51,15 @@ function SchaduleDemo() {
             <Grid container spacing={5} style={{ marginBottom: "20px" }}>
                 <Grid item xs={12} md={6}>
                     <Box>
-                        <Typography variant="h4" sx={{ fontFamily: "lato", fontWeight: "600" }}>Request a Demo for Excel to Tally Software</Typography>
-                        <Typography variant="h6" sx={{ fontFamily: "lato", mt: 3 }} >We are excited to show you how our software can simplify your data import process, saving you time and reducing the risk of errors. Our software allows you to transfer data directly from Excel to Tally, eliminating the need for manual data entry and streamlining the data transfer process.</Typography>
-                        <Typography variant="h6" sx={{ fontFamily: "lato", mt: 2 }}>We will be in touch with you shortly to schedule a demo at your convenience. During the demo, we will walk you through the features of our software, answer any questions you may have</Typography>
+                        <Typography variant="h4" sx={{ fontWeight: "600" }}>Request a Demo for Excel to Tally Software</Typography>
+                        <Typography variant="h6" sx={{ mt: 3 }} >We are excited to show you how our software can simplify your data import process, saving you time and reducing the risk of errors. Our software allows you to transfer data directly from Excel to Tally, eliminating the need for manual data entry and streamlining the data transfer process.</Typography>
+                        <Typography variant="h6" sx={{ mt: 2 }}>We will be in touch with you shortly to schedule a demo at your convenience. During the demo, we will walk you through the features of our software, answer any questions you may have</Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6} mb>
                     <Card sx={{ p: 3, backgroundColor: "whitesmoke" }}>
                         <div id="mauticform_wrapper_demorequest" className="mauticform_wrapper">
-                            <Typography variant="h5" sx={{ fontWeight: "bold", mb: 5, fontFamily: "lato" }}>Fill below Form to Schedule a Personalised Demo</Typography>
+                            <Typography variant="h5" sx={{ fontWeight: "bold", mb: 5}}>Fill below Form to Schedule a Personalised Demo</Typography>
 
 
                             <form autocomplete="false" role="form" method="post" action="https://connect.smartysoft.in/form/submit?formId=8" id="mauticform_demorequestexceltotally" data-mautic-form="demorequestexceltotally" enctype="multipart/form-data">

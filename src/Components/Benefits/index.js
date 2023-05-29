@@ -35,7 +35,7 @@ function Benefits() {
           variant="h4"
           sx={{
             fontWeight: 700,
-            fontFamily: 'lato',
+            
             mb: 5,
             mt: 2,
             fontSize: '40px',
@@ -54,7 +54,7 @@ function Benefits() {
                     fontSize: '20px',
                     fontWeight: 'bold',
                     mt: 2,
-                    fontFamily: 'lato',
+                    
                   }}
                 >
                   {benefit.title}

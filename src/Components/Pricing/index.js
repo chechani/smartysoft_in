@@ -65,7 +65,7 @@ function Pricing() {
         sx={{ pt: 8, pb: 6 }}
       >
         <Typography
-          sx={{fontFamily:"lato",fontWeight:"bold",mt:2}}
+          sx={{fontWeight:"bold",mt:2}}
           variant="h3"
           align="center"
           color="text.primary"
