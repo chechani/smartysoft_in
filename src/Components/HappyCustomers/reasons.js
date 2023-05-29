@@ -39,7 +39,7 @@ function Reason({ title, description, icon }) {
         </Grid>
       </Grid>
       {expanded && (
-        <Box sx={{ pl: 4, pr: 4 }}>
+        <Box sx={{ pl: 3, pr: 3 }}>
           <Typography sx={{ fontSize: '18px',textAlign: 'center' }}>
             {description}
           </Typography>

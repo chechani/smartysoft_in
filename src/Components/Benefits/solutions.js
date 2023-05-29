@@ -25,7 +25,7 @@ function Solutions() {
   }
 
   return (
-    <section className="bg-light" style={{ margin: "20px 30px" }}>
+    <section className="bg-light">
       <Container fluid>
         <Row>
           {features.map((feature, index) => (
