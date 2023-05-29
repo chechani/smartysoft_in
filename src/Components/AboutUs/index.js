@@ -1,16 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 function AboutUs() {
-  const [open, setOpen] = useState(false);
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleOpen = () => {
-    setOpen(true);
-  };
 
   return (
     <>
@@ -34,7 +26,6 @@ function AboutUs() {
         <Typography
           style={{
             fontSize: "20px",
-            margin: "0 5rem",
             fontFamily: "Roboto, sans-serif",
           }}
         >
