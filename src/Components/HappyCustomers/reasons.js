@@ -19,14 +19,15 @@ function Reason({ title, description, icon }) {
         </Grid>
         <Grid item>
           <Typography
+            variant="h4"
+            component="h2"
             sx={{
               color: 'black',
-              fontSize: '20px',
+              fontSize: '24px',
               fontWeight: 'bold',
-              mt: 2,
-              
-              mb: 1,
-              textAlign: 'center' ,
+              mt: 3,
+              mb: 2,
+              textAlign: 'center',
             }}
           >
             {title}
@@ -40,7 +41,7 @@ function Reason({ title, description, icon }) {
       </Grid>
       {expanded && (
         <Box sx={{ pl: 3, pr: 3 }}>
-          <Typography sx={{ fontSize: '18px',textAlign: 'center' }}>
+          <Typography sx={{ fontSize: '18px', textAlign: 'center' }}>
             {description}
           </Typography>
         </Box>
@@ -52,6 +53,13 @@ function Reason({ title, description, icon }) {
 function Reasons() {
   return (
     <Box sx={{ mt: 1 }}>
+      <Typography
+        variant="h3"
+        component="h2"
+        sx={{ textAlign: 'center', mb: 4, fontSize: '32px', fontWeight: 'bold' }}
+      >
+        Our Services
+      </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12} md={4}>
           <Reason
@@ -70,7 +78,7 @@ function Reasons() {
         <Grid item xs={12} md={4}>
           <Reason
             title="Enhancement and Optimization"
-            description="We specialize in identifying areas for improvement and maximizing the utilization of ERPNext, in conjunction with other technologies. "
+            description="We specialize in identifying areas for improvement and maximizing the utilization of ERPNext, in conjunction with other technologies."
             icon={<FavoriteBorderIcon fontSize="large" style={{ color: 'green' }} />}
           />
         </Grid>
@@ -84,14 +92,14 @@ function Reasons() {
         <Grid item xs={12} md={4}>
           <Reason
             title="Support and Maintenance"
-            description="We provide ongoing services for ERPNext and other deployed technologies. Our primary focus is on ensuring the smooth operation of these systems"
+            description="We provide ongoing services for ERPNext and other deployed technologies. Our primary focus is on ensuring the smooth operation of these systems."
             icon={<PersonalVideoIcon fontSize="large" style={{ color: 'green' }} />}
           />
         </Grid>
         <Grid item xs={12} md={4}>
           <Reason
             title="Training and Knowledge Transfer"
-            description="We offer comprehensive training and knowledge transfer services to empower businesses in utilizing technologies to their fullest potential"
+            description="We offer comprehensive training and knowledge transfer services to empower businesses in utilizing technologies to their fullest potential."
             icon={<AddShoppingCartIcon fontSize="large" style={{ color: 'green' }} />}
           />
         </Grid>

@@ -25,8 +25,12 @@ function Solutions() {
   }
 
   return (
-    <section className="bg-light">
+    <section className="bg-light section-margin">
       <Container fluid>
+        <div className="section-gap"></div> {/* Gap before the component */}
+        <div className="section-title-wrapper">
+          <h2 className="section-title">Solutions We Offer</h2> {/* Added section title */}
+        </div>
         <Row>
           {features.map((feature, index) => (
             <Col lg={4} md={4} sm={6} xs={12} key={index}>
@@ -72,6 +76,25 @@ function Solutions() {
 
         .text-muted.para {
           margin-top: 10px;
+        }
+
+        .section-title-wrapper {
+          margin: 40px 0; /* Add margin to the wrapper div */
+        }
+
+        .section-title {
+          text-align: center;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .section-margin {
+          margin-top: 60px;
+          margin-bottom: 60px;
+        }
+
+        .section-gap {
+          height: 40px; /* Adjust the gap height as needed */
         }
       `}
       </style>
