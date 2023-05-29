@@ -3,14 +3,16 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 function AboutUs() {
-
   return (
     <>
       <Box
         style={{
-          margin: "5rem",
+          margin: "5rem 0",
           textAlign: "center",
           fontFamily: "Arial, sans-serif",
+          padding: "2rem",
+          width: "100%", // Set width to 100%
+          boxSizing: "border-box", // Include padding and border in the width calculation
         }}
       >
         <Typography

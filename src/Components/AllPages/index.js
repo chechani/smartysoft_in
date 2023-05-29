@@ -37,6 +37,12 @@ const AllPages = () => {
                 <KeyFeatures/>
             </Card>
             <Card>
+                <AboutUs/>
+            </Card>
+            <Card>
+                <Benefits />
+            </Card>
+            <Card>
                 <Reasons />
             </Card>
         
@@ -45,16 +51,12 @@ const AllPages = () => {
             </Card>
 
            
-            <Card>
-                <Benefits />
-            </Card>
+          
 
             {/* <Card>
                 <TaskManager/>
             </Card> */}
-            <Card>
-                <AboutUs/>
-            </Card>
+      
             {/* <Card>
                 <Products />
             </Card> */}
@@ -64,10 +66,10 @@ const AllPages = () => {
             </Card> */}
      
         
-{/*        
+       
             <Card>
                 <Technologies />
-            </Card> */}
+            </Card>
      
        
  
