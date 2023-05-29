@@ -22,6 +22,7 @@ import KeyFeatures from '../Features/keyfeatures';
 
 
 
+
 const AllPages = () => {
     return (
         <>
@@ -48,9 +49,9 @@ const AllPages = () => {
                 <Benefits />
             </Card>
 
-            {/* <Card>
+            <Card>
                 <TaskManager/>
-            </Card> */}
+            </Card>
             <Card>
                 <AboutUs/>
             </Card>
@@ -69,6 +70,7 @@ const AllPages = () => {
                 <Technologies />
             </Card> */}
      
+       
  
      
      
