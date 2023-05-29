@@ -13,6 +13,8 @@ import WhatsAppButton from '../WhatsAppButton';
 import Reasons from '../HappyCustomers/reasons';
 import Products from '../Products/index';
 import Solutions from '../Benefits/solutions';
+import TaskManager from '../Products/screen';
+import KeyFeatures from '../Features/keyfeatures';
 
 
 
@@ -31,39 +33,50 @@ const AllPages = () => {
                 <Home />
             </Card>
             <Card>
-                <AboutUs/>
+                <KeyFeatures/>
             </Card>
-
-            <Card>
-                <Solutions />
-            </Card>
-      
-            <Card>
-                <Products />
-            </Card>
-            <Card>
-                <HappyCustomers />
-            </Card>
-     
             <Card>
                 <Reasons />
             </Card>
+        
+            <Card>
+                <Solutions />
+            </Card>
+
+           
             <Card>
                 <Benefits />
             </Card>
-       
+
+            {/* <Card>
+                <TaskManager/>
+            </Card> */}
+            <Card>
+                <AboutUs/>
+            </Card>
+            <Card>
+                <Products />
+            </Card>
+
+        
+            {/* <Card>
+                <HappyCustomers />
+            </Card> */}
+     
+        
+{/*        
             <Card>
                 <Technologies />
-            </Card>
+            </Card> */}
      
  
      
      
        
           
-            <Card>
+            {/* <Card>
                 <Testimonial/>
-            </Card>
+            </Card> */}
             {/* <Card>
                 <Pricing />
             </Card> */}

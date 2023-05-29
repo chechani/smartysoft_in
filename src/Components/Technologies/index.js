@@ -18,9 +18,7 @@ function Technologies() {
                         <Typography>
                         <img src="./company_images/Abbott.png" style={{height:"50px",width:"100px",marginTop:"20px"}}/>
                         </Typography>
-                        <Typography>
-                        <img src="./company_images/Maruti.png" style={{height:"50px",width:"100px",marginTop:"20px"}}/>
-                        </Typography>
+                      
                     </Grid>
                     <Grid item xs={12} md={3}>
                         <Typography>
@@ -32,9 +30,7 @@ function Technologies() {
                         <Typography>
                         <img src="./company_images/Nutricia.png" style={{height:"50px",width:"100px",marginTop:"20px"}}/> 
                         </Typography>
-                        <Typography>
-                        <img src="./company_images/Honda.png" style={{height:"50px",width:"100px",marginTop:"20px"}}/>
-                        </Typography>
+             
                     </Grid>
                     <Grid item xs={12} md={3}>
                         <Typography>
@@ -46,9 +42,7 @@ function Technologies() {
                         <Typography>
                         <img src="./company_images/nivea.png" style={{height:"50px",width:"100px",marginTop:"20px"}}/>
                         </Typography>
-                        <Typography>
-                        <img src="./company_images/Suzuki.png" style={{height:"50px",width:"100px",marginTop:"20px"}}/>
-                        </Typography>
+                  
                     </Grid>
                     <Grid item xs={12} md={3}>
                         <Typography>
@@ -60,9 +54,7 @@ function Technologies() {
                         <Typography>
                         <img src="./company_images/WildStone.png" style={{height:"50px",width:"100px",marginTop:"20px"}}/>
                         </Typography>
-                        <Typography>
-                        <img src="./company_images/Ceat.png" style={{height:"50px",width:"100px",marginTop:"20px"}}/>
-                        </Typography>
+           
                     </Grid>
                 </Grid>
             </Box>

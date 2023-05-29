@@ -1,0 +1,31 @@
+.title {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title i {
+  margin-right: 5px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+}
+
+.features {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  max-height: 250px; /* Adjust the value as needed */
+  overflow-y: auto;
+}
+
+.features:hover {
+  background-color: #f0f0f0; /* Change the background color on hover as desired */
+}
