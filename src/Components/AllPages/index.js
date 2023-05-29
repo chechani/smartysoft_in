@@ -37,6 +37,9 @@ const AllPages = () => {
                 <KeyFeatures/>
             </Card>
             <Card>
+                <Solutions />
+            </Card>
+            <Card>
                 <AboutUs/>
             </Card>
             <Card>
@@ -46,9 +49,7 @@ const AllPages = () => {
                 <Reasons />
             </Card>
         
-            <Card>
-                <Solutions />
-            </Card>
+         
 
            
           
