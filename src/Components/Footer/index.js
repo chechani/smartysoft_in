@@ -133,9 +133,7 @@ export default function Footer() {
         <Grid div xs={12} md={3}>
           <Box sx={{ mt: 5, ml: { xs: 10, sm: 10 } }}>
             <Typography sx={{ fontSize: "22px", fontFamily: "lato", fontWeight: "bold" }}>Newsletter</Typography>
-            <Typography sx={{ fontSize: "18px", mt: 3, fontFamily: "lato" }}>
-              Sign up to receive tips How to use effectively
-            </Typography>
+         
             <Box sx={{ mr: 2 }}>
               <Box
                 sx={{
