@@ -22,10 +22,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   transition: background-color 0.3s ease;
-  max-height: 250px; /* Adjust the value as needed */
-  overflow-y: auto;
 }
 
 .features:hover {
-  background-color: #f0f0f0; /* Change the background color on hover as desired */
+  background-color: #f0f0f0;
 }

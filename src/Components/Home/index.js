@@ -13,7 +13,7 @@ function Home() {
 
           <Grid item xs={12} md={6}>
           <Typography sx={{ fontWeight: 700, mt: 3, fontSize: "30px", color: "darkgreen" }}> Enabling Businesses for</Typography>
-            <Typography sx={{ fontWeight: 700, mt: 3, fontSize: "60px" }}>Digital Transformation</Typography>
+            <Typography sx={{ fontWeight: 700, mt: 3, fontSize: "50px"}}>Digital Transformation</Typography>
             <Typography sx={{ fontWeight: 700, mt: 2, fontSize: "20px" }}>Based on the World’s Leading Open Source and Free Software
 </Typography>
           
