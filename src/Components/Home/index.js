@@ -14,7 +14,7 @@ function Home() {
           <Grid item xs={12} md={6}>
           <Typography sx={{ fontWeight: 700, mt: 3, fontSize: "30px", color: "darkgreen" }}> Enabling Businesses for</Typography>
             <Typography sx={{ fontWeight: 700, mt: 3, fontSize: "50px"}}>Digital Transformation</Typography>
-            <Typography sx={{ fontWeight: 700, mt: 2, fontSize: "20px" }}>Based on the World’s Leading Open Source and Free Software
+            <Typography sx={{ fontWeight: 700, mt: 2, fontSize: "20px" }}>World’s Leading Open Source and Free Technologies
 </Typography>
           
             <Link style={{ textDecoration: "none" }} to="/excelfileform"><Button variant='contained' sx={{mt: 3, mb: 2, backgroundColor: "#006400", fontWeight: "bold" }}>Schedule a Meeting</Button></Link>

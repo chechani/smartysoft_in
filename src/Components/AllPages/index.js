@@ -49,9 +49,9 @@ const AllPages = () => {
                 <Benefits />
             </Card>
 
-            <Card>
+            {/* <Card>
                 <TaskManager/>
-            </Card>
+            </Card> */}
             <Card>
                 <AboutUs/>
             </Card>

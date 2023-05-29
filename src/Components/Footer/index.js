@@ -75,14 +75,14 @@ export default function Footer() {
         </Grid>
         <Grid div xs={12} sm={6} md={2}>
           <Box sx={{ mt: 5, ml: { xs: 10, sm: 10 } }}>
-            <Typography sx={{ fontSize: "22px", fontWeight: "bold", fontFamily: "lato" }}>Company</Typography>
+            <Typography sx={{ fontSize: "22px", fontWeight: "bold", fontFamily: "lato" }}>Other Products</Typography>
             <ul style={{ marginTop: "10px", fontFamily: "lato", fontSize: "18px" }}>
               <li style={{ marginTop: "25px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="/aboutus"
+                  href="https://exceltotally.info"
                 >
-                  About us
+                  Excel to Tally
                 </a>
               </li>
 
@@ -97,9 +97,9 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="/ourproducts"
+                  href="https://einvoicing.co.in"
                 >
-                  Products
+                  eInvoicing
                 </a>
               </li>
             </ul>
