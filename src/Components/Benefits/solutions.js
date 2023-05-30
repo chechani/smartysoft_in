@@ -26,11 +26,11 @@ function Solutions() {
   }
 
   return (
-    <section className="bg-light" style={{paddingBottom:"20px"}}>
+    <section className="bg-light" style={{paddingBottom:"10px"}}>
       <Container fluid>
         <div className="section-gap"></div> {/* Gap before the component */}
         <div className="section-title-wrapper">
-          <h2 className="section-title" style={{marginTop:"-28px", fontWeight: 700, fontSize: '32px'}}>Solutions We Offer</h2> {/* Added section title */}
+          <h2 className="section-title" style={{marginTop:"-28px", fontSize:"32px",fontWeight:700}}>Solutions We Offer</h2> {/* Added section title */}
         </div>
         <Row>
           {features.map((feature, index) => (

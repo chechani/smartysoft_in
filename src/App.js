@@ -18,7 +18,11 @@ import ScheduleDemoThanksPage from './Components/ScheduleDemoThanksPage';
 import ExcelfileThanksPage from './Components/ExcelfileThanksPage';
 import Products from './Components/Products';
 import DemoButton from './Components/DemoButton';
-import AccountingAndFinance from './Components/SolutionPages/Accounting&Finance';
+import AccountingAndFinance from './Components/SolutionAllPages/Accounting&Finance';
+import MarketingAutomation from './Components/SolutionAllPages/MarketingAutomation';
+import SalesDistribution from './Components/SolutionAllPages/Sales&Distribution';
+import CrmCustomerPortal from './Components/SolutionAllPages/CRM&CustomerPortal';
+import BuyingVendorPortal from './Components/SolutionAllPages/Buying&VendorPortal';
 
 function App() {
   return (
@@ -42,7 +46,12 @@ function App() {
         <Route path="/excelfilethanks" element={<ExcelfileThanksPage/>}/>
 
 
+{/* Solution All Pages */}
         <Route path="/accounting" element={<AccountingAndFinance/>}/>
+        <Route path="/marketing" element={<MarketingAutomation/>}/>
+        <Route path="/salesdistribution" element={<SalesDistribution/>}/>
+        <Route path="/crmcustomerportal" element={<CrmCustomerPortal/>}/>
+        <Route path="/buyingvendorportal" element={<BuyingVendorPortal/>}/>
 
         {/* <Route path="/services" element={<Services/>}/> */}
         <Route path="/demobutton" element={<DemoButton/>}/>
