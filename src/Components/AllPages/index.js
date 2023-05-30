@@ -23,6 +23,8 @@ import KeyFeatures from '../Features/keyfeatures';
 
 
 
+
+
 const AllPages = () => {
     return (
         <>
@@ -33,9 +35,11 @@ const AllPages = () => {
             <Card>
                 <Home />
             </Card>
+     
             <Card>
                 <KeyFeatures/>
             </Card>
+       
             <Card>
                 <Solutions />
             </Card>

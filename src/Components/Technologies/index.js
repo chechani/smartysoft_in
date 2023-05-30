@@ -5,7 +5,7 @@ function Technologies() {
     return (
         <>
             <Box style={{ textAlign: "center", paddingTop: "100px", paddingBottom: "70px", fontFamily: "Poppins',sans-serif", marginBottom: "60px" }}>
-                <Typography variant='h4' sx={{ fontWeight: 700, fontSize: "42px" }}>We are proficient in Technologies</Typography>
+                <Typography variant='h4' sx={{ fontWeight: 700, fontSize: "42px" }}>Proficient in Technologies</Typography>
 
                 <Grid container spacing={2} sx={{ mt: 5 }}>
                     <Grid item xs={12} md={3}>

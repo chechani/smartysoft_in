@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "reactstrap";
+import { AiOutlineLink, AiOutlinePlayCircle, AiOutlineWhatsApp } from "react-icons/ai";
 
 function Solutions() {
   const [features, setFeatures] = useState([]);
@@ -52,6 +53,20 @@ function Solutions() {
                   <p className="text-muted para mb-0" style={{ marginRight: "10px", color: "#00FF00" }}>
                     {feature.descriptive_title}
                   </p>
+                  <div className="button-container">
+                    <a href={feature.more_link} className="button-more">
+                      <AiOutlineLink className="button-icon" />
+                      More
+                    </a>
+                    <a href={feature.video_link} className="button-watch-video">
+                      <AiOutlinePlayCircle className="button-icon" />
+                      Watch Video
+                    </a>
+                    <a href={feature.whatsapp_link} className="button-whatsapp">
+                      <AiOutlineWhatsApp className="button-icon" />
+                      WhatsApp
+                    </a>
+                  </div>
                 </div>
               </div>
             </Col>
@@ -95,6 +110,33 @@ function Solutions() {
 
         .section-gap {
           height: 40px; /* Adjust the gap height as needed */
+        }
+
+        .button-container {
+          margin-top: 10px;
+        }
+
+        .button-container a {
+          display: inline-flex;
+          align-items: center;
+          padding: 4px 8px;
+          margin-right: 10px;
+          font-weight: normal;
+          font-size: 14px;
+          text-decoration: none;
+          color: #333;
+          background-color: #f5f5f5;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          transition: background-color 0.3s;
+        }
+
+        .button-container a:hover {
+          background-color: #e5e5e5;
+        }
+
+        .button-icon {
+          margin-right: 5px;
         }
       `}
       </style>
