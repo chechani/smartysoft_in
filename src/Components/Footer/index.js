@@ -86,14 +86,14 @@ export default function Footer() {
                 </a>
               </li>
 
-              {/* <li style={{ marginTop: "15px" }}>
+              <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="/"
+                  href="https://knowledgemanager.in"
                 >
-                  Services
+                  Knowledge Manager
                 </a>
-              </li> */}
+              </li>
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
