@@ -60,7 +60,7 @@ function Solutions() {
                     </a>
                     <a href={feature.video_link} className="button-watch-video">
                       <AiOutlinePlayCircle className="button-icon" />
-                      Watch Video
+                      Video
                     </a>
                     <a href={feature.whatsapp_link} className="button-whatsapp">
                       <AiOutlineWhatsApp className="button-icon" />
