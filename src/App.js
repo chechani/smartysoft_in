@@ -27,6 +27,22 @@ import PointSales from './Components/SolutionAllPages/PointSales';
 import ManufacturingOperation from './Components/SolutionAllPages/ManufacturingOperation';
 import ProjectAccounting from './Components/SolutionAllPages/ProjectAccounting';
 import AccountingAndFinance from './Components/SolutionAllPages/AccountingAndFinance';
+import QualityManagement from './Components/SolutionAllPages/QualityManagement';
+import ProjectAndTaskManagement from './Components/SolutionAllPages/ProjectAndTaskManagement';
+import TimeRecordingAndBilling from './Components/SolutionAllPages/TimeRecordingAndBilling';
+import AssetManagement from './Components/SolutionAllPages/AssetManagement';
+import CustomerHelpDesk from './Components/SolutionAllPages/CustomerHelpDesk';
+import MaintenanceManagement from './Components/SolutionAllPages/MaintenanceManagement';
+import HumanResourcesManagement from './Components/SolutionAllPages/HumanResourcesManagement';
+import WebsiteBuilder from './Components/SolutionAllPages/WebsiteBuilder';
+import Ecommerce from './Components/SolutionAllPages/Ecommerce';
+import BusinessIntelligence from './Components/SolutionAllPages/BusinessIntelligence';
+import ExpenseTravelManagement from './Components/SolutionAllPages/ExpenseTravelManagement';
+import MeetingAgendaTaskExecution from './Components/SolutionAllPages/MeetingAgendaTaskExecution';
+import KnowledgeManagement from './Components/SolutionAllPages/KnowledgeManagement';
+import DocumentAutomationManagement from './Components/SolutionAllPages/DocumentAutomation';
+import FleetManagement from './Components/SolutionAllPages/FleetManagement';
+
 
 function App() {
   return (
@@ -60,6 +76,21 @@ function App() {
         <Route path="/pointsales" element={<PointSales/>}/>
         <Route path="/manufacturingoperation" element={<ManufacturingOperation/>}/>
         <Route path="/projectaccounting" element={<ProjectAccounting/>}/>
+        <Route path="/qualitymanagement" element={<QualityManagement/>}/>
+        <Route path="/projectandtaskmanagement" element={<ProjectAndTaskManagement/>}/>
+        <Route path="/timerecordingandbilling" element={<TimeRecordingAndBilling/>}/>
+        <Route path="/assetmanagement" element={<AssetManagement/>}/>
+        <Route path="/customerhelpdesk" element={<CustomerHelpDesk/>}/>
+        <Route path="/maintenancemanagement" element={<MaintenanceManagement/>}/>
+        <Route path="/humanresourcesmanagement" element={<HumanResourcesManagement/>}/>
+        <Route path="/websitebuilder" element={<WebsiteBuilder/>}/>
+        <Route path="/ecommerce" element={<Ecommerce/>}/>
+        <Route path="/businessintelligence" element={<BusinessIntelligence/>}/>
+        <Route path="/expensetravelmanagement" element={<ExpenseTravelManagement/>}/>
+        <Route path="/meetingagendataskexecution" element={<MeetingAgendaTaskExecution/>}/>
+        <Route path="/knowledgemanagement" element={<KnowledgeManagement/>}/>
+        <Route path="/documentautomation" element={<DocumentAutomationManagement/>}/>
+        <Route path="/fleetmanagement" element={<FleetManagement/>}/>
 
         {/* <Route path="/services" element={<Services/>}/> */}
         <Route path="/demobutton" element={<DemoButton/>}/>

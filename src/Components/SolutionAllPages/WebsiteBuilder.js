@@ -4,15 +4,14 @@ import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
 
 
-
-function QualityManagement() {
+function WebsiteBuilder() {
   const [AccountData, SetAccountData] = useState([]);
   const [documentData, setDocumentData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=quality%20management"
+          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=website%20builder"
         );
         const data = await response.json();
         console.log(data.message);
@@ -101,4 +100,4 @@ function QualityManagement() {
   );
 }
 
-export default QualityManagement;
+export default WebsiteBuilder;

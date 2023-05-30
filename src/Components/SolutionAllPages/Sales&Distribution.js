@@ -13,7 +13,7 @@ function SalesDistribution() {
           "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=Sales%20and%20Distribution"
         );
         const data = await response.json();
-        console.log(data.message);
+        console.log(data);
         setDocumentData(data.message.smarty_documents);
         SetAccountData(data.message);
       } catch (error) {
@@ -86,8 +86,8 @@ function SalesDistribution() {
           </div>
           <div style={{ width: '50%', textAlign: 'right' }}>
             <img 
-            src={data.image}
-            // src={`http://smartysoft.in/${data.image}`}
+            // src={data.image}
+            src={`https://smartysoft.in/${data.image}`}
              alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
           </div>
         </Card>
