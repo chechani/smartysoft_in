@@ -23,7 +23,7 @@ function Reason({ title, description, icon }) {
             component="h2"
             sx={{
               color: 'black',
-              fontSize: '24px',
+              fontSize: '20px',
               fontWeight: 'bold',
               mt: 3,
               mb: 2,
@@ -41,7 +41,7 @@ function Reason({ title, description, icon }) {
       </Grid>
       {expanded && (
         <Box sx={{ pl: 3, pr: 3 }}>
-          <Typography sx={{ fontSize: '18px', textAlign: 'center' }}>
+          <Typography sx={{textAlign: 'center' }}>
             {description}
           </Typography>
         </Box>

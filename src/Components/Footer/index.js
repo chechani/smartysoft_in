@@ -51,9 +51,9 @@ export default function Footer() {
             <img
               alt="footer-logo"
               src="./smarty_logo.png"
-              style={{ width: "25%", marginLeft: "10%" }}
+              style={{ width: "25%", marginLeft: "7%" }}
             />
-            <Typography sx={{ width: "60%", ml: 5, marginTop: 2, fontFamily: "lato", fontSize: "18px" }}>
+            <Typography sx={{ width: "60%", ml: 5, marginTop: 2, fontSize: "18px" }}>
               Excel to Tally from AccXchange helps in Data Import from Excel to Tally seamlessly
             </Typography>
             <Box sx={{ ml: 4, mt: 1 }}>
