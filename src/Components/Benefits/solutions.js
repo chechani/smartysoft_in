@@ -22,20 +22,22 @@ function Solutions() {
   }, []);
 
   if (features.length === 0) {
-    return null; // Removed loading indicator
+    return null;
   }
 
   return (
-    <section className="bg-light" style={{paddingBottom:"10px"}}>
+    <section className="bg-light" style={{ paddingBottom: "10px" }}>
       <Container fluid>
-        <div className="section-gap"></div> {/* Gap before the component */}
+        <div className="section-gap"></div>
         <div className="section-title-wrapper">
-          <h2 className="section-title" style={{marginTop:"-28px", fontSize:"32px",fontWeight:700}}>Solutions We Offer</h2> {/* Added section title */}
+          <h2 className="section-title" style={{ marginTop: "-28px", fontSize: "32px", fontWeight: 700 }}>
+            Solutions We Offer
+          </h2>
         </div>
         <Row>
           {features.map((feature, index) => (
             <Col lg={4} md={4} sm={6} xs={12} key={index}>
-              <div className="d-flex features feature-primary pt-4 pb-4">
+              <div className="d-flex features feature-primary pt-4 pb-4" style={{ marginBottom: "20px" }}>
                 <div style={{ margin: "10px", marginLeft: "10px", marginRight: "10px" }}>
                   <img
                     src={"https://smartysoftware.in/" + feature.image}
@@ -46,25 +48,23 @@ function Solutions() {
                 </div>
                 <div className="flex-1">
                   <div className="feature-header">
-                    <h4 className="title">
-                      {feature.short_title}
-                    </h4>
+                    <h4 className="title">{feature.short_title}</h4>
                   </div>
                   <p className="text-muted para mb-0" style={{ marginRight: "10px", color: "#00FF00" }}>
                     {feature.descriptive_title}
                   </p>
-                  <div className="button-container">
-                    <a href={feature.more_link} className="button-more">
-                      <AiOutlineLink className="button-icon" />
-                      More
+                  <div className="button-container"> 
+                    <a href={feature.whatsapp_link} className="button-whatsapp">
+                      <AiOutlineWhatsApp className="button-icon" />
+                      WhatsApp
                     </a>
                     <a href={feature.video_link} className="button-watch-video">
                       <AiOutlinePlayCircle className="button-icon" />
                       Video
                     </a>
-                    <a href={feature.whatsapp_link} className="button-whatsapp">
-                      <AiOutlineWhatsApp className="button-icon" />
-                      WhatsApp
+                    <a href={feature.more_link} className="button-more">
+                      <AiOutlineLink className="button-icon" />
+                      More
                     </a>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ function Solutions() {
         }
 
         .section-title-wrapper {
-          margin: 40px 0; /* Add margin to the wrapper div */
+          margin: 40px 0;
         }
 
         .section-title {
@@ -109,7 +109,7 @@ function Solutions() {
         }
 
         .section-gap {
-          height: 40px; /* Adjust the gap height as needed */
+          height: 20px;
         }
 
         .button-container {

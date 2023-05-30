@@ -86,7 +86,9 @@ function AccountingAndFinance() {
             <Typography>{data.document_detail}</Typography>
           </div>
           <div style={{ width: '50%', textAlign: 'right' }}>
-            <img src={data.image} alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
+            <img 
+            src={"https://smartysoftware.in/" + data.image}
+             alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
           </div>
         </Card>
       </Grid>

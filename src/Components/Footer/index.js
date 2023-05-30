@@ -75,8 +75,8 @@ export default function Footer() {
         </Grid>
         <Grid div xs={12} sm={6} md={2}>
           <Box sx={{ mt: 5, ml: { xs: 13, sm: 10 } }}>
-            <Typography sx={{ fontSize: "22px", fontWeight: "bold", fontFamily: "lato" }}>Other Products</Typography>
-            <ul style={{ marginTop: "10px", fontFamily: "lato", fontSize: "18px" }}>
+            <Typography sx={{ fontSize: "22px", fontWeight: "bold" }}>Other Products</Typography>
+            <ul style={{ marginTop: "10px",fontSize: "18px" }}>
               <li style={{ marginTop: "25px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
@@ -107,8 +107,8 @@ export default function Footer() {
         </Grid>
         <Grid div xs={12} sm={6} md={2}>
           <Box sx={{ mt: 5, ml: { xs: 13, sm: 8 } }}>
-            <Typography sx={{ fontSize: "22px", fontFamily: "lato", fontWeight: "bold" }}>Useful Links</Typography>
-            <ul style={{ fontFamily: "lato", fontSize: "18px" }}>
+            <Typography sx={{ fontSize: "22px",fontWeight: "bold" }}>Useful Links</Typography>
+            <ul style={{fontSize: "18px" }}>
               <li style={{ marginTop: "25px" }}>
                 <a
                   href="/contactus"
@@ -132,7 +132,7 @@ export default function Footer() {
         </Grid>
         <Grid div xs={12} md={3}>
           <Box sx={{ mt: 5, ml: { xs: 13, sm: 10 } }}>
-            <Typography sx={{ fontSize: "22px", fontFamily: "lato", fontWeight: "bold" }}>Newsletter</Typography>
+            <Typography sx={{ fontSize: "22px", fontWeight: "bold" }}>Newsletter</Typography>
          
             <Box sx={{ mr: 2 }}>
               <Box
@@ -185,7 +185,6 @@ export default function Footer() {
             textAlign: "center",
             padding: "9px",
             width: "100%",
-            fontFamily: "lato",
             fontSize: "15px"
           }}
         >

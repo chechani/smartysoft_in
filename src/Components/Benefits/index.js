@@ -62,7 +62,7 @@ function Benefits() {
                   {expanded[index] ? <RemoveIcon /> : <AddIcon />}
                 </IconButton>
                 <Collapse in={expanded[index]}>
-                  <Typography sx={{ color: 'black', fontFamily: 'lato' }}>
+                  <Typography sx={{ color: 'black'}}>
                     {benefit.description}
                   </Typography>
                 </Collapse>
