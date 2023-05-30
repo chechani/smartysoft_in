@@ -4,17 +4,17 @@ import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
 
 
-function CrmCustomerPortal() {
+function AccountingAndFinance() {
   const [AccountData, SetAccountData] = useState([]);
   const [documentData, setDocumentData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=crm%20and%20customer%20portal"
+          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=accounting%20and%20finance"
         );
         const data = await response.json();
-        console.log(data);
+        console.log(data.message);
         setDocumentData(data.message.smarty_documents)
         SetAccountData(data.message);
       } catch (error) {
@@ -22,7 +22,6 @@ function CrmCustomerPortal() {
       }
     };
     fetchData();
-
   }, []);
 
   return (
@@ -48,11 +47,6 @@ function CrmCustomerPortal() {
             >
               {AccountData.descriptive_title}
             </Typography>
-            <Link style={{ textDecoration: "none" }} to="/">
-              <Button variant="contained" sx={{ mt: 3, mb: 2, ml: 2 }}>
-                Back
-              </Button>
-            </Link>
             <Link
               style={{ textDecoration: "none" }}
               to="/excelfileform"
@@ -106,4 +100,4 @@ function CrmCustomerPortal() {
   );
 }
 
-export default CrmCustomerPortal;
+export default AccountingAndFinance;

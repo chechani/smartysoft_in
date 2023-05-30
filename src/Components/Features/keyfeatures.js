@@ -45,7 +45,7 @@ const KeyFeatures = () => {
         marginTop: "20px",
         marginBottom: "15px",
       },
-      desc: "Marketing Automation Solution",
+      desc: "Marketing Automation - Manage Campaigns and Interaction",
       videoUrl: "https://www.youtube.com/embed/ZiWNBF-UuPw",
     },
     {
@@ -142,7 +142,7 @@ const KeyFeatures = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">ERPNEXT Details Info</DialogTitle>
+        <DialogTitle id="alert-dialog-title">Video</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             <iframe width="550" height="280" src={selectedVideoUrl} title="Video Player" frameBorder="0" allowFullScreen></iframe>

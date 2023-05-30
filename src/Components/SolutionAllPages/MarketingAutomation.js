@@ -2,7 +2,7 @@ import { Button, Typography, Box, Card } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
-import AccountingData from './DummyData';
+
 
 function MarketingAutomation() {
   const [AccountData, SetAccountData] = useState([]);
@@ -22,7 +22,6 @@ function MarketingAutomation() {
       }
     };
     fetchData();
-    console.log(AccountingData[0]);
   }, []);
 
   return (
@@ -92,7 +91,7 @@ function MarketingAutomation() {
             <Typography>{data.document_detail}</Typography>
           </div>
           <div style={{ width: '50%', textAlign: 'right' }}>
-            <img src={`http://smartysoft.in/${data.image}`} alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
+            <img src={data.image} alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
           </div>
         </Card>
       </Grid>

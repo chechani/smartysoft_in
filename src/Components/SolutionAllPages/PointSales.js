@@ -2,16 +2,15 @@ import { Button, Typography, Box, Card } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
-import AccountingData from './DummyData';
 
-function AccountingAndFinance() {
+function PointSales() {
   const [AccountData, SetAccountData] = useState([]);
   const [documentData, setDocumentData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=accounting%20and%20finance"
+          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=point%20of%20sales%20for%20retail%20outlets"
         );
         const data = await response.json();
         console.log(data.message);
@@ -22,7 +21,6 @@ function AccountingAndFinance() {
       }
     };
     fetchData();
-    console.log(AccountingData[0]);
   }, []);
 
   return (
@@ -87,7 +85,7 @@ function AccountingAndFinance() {
             <Typography>{data.document_detail}</Typography>
           </div>
           <div style={{ width: '50%', textAlign: 'right' }}>
-            <img src={`http://smartysoft.in/${data.image}`} alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
+            <img src={data.image} alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
           </div>
         </Card>
       </Grid>
@@ -101,4 +99,4 @@ function AccountingAndFinance() {
   );
 }
 
-export default AccountingAndFinance;
+export default PointSales;
