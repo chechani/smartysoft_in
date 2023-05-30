@@ -7,6 +7,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { AiOutlinePlayCircle } from "react-icons/ai";
 
 const KeyFeatures = () => {
   const [open, setOpen] = useState(false);
@@ -122,9 +123,12 @@ const KeyFeatures = () => {
                   </div>
                   <CardBody className="p-2">
                     <p className="text-muted mb-0 description">{feature.desc}</p>
-                    <Button variant="outlined" size="small" sx={{mt:2}} onClick={() => handleClickOpen(feature.videoUrl)}>
-                      More Info
-                    </Button>
+                    <div className="button-container">
+                    <a onClick={() => handleClickOpen(feature.videoUrl)} className="button-watch-video">
+                      <AiOutlinePlayCircle className="button-icon" />
+                      Video
+                    </a>
+                    </div>
                   </CardBody>
                 </Card>
               </Col>
@@ -141,7 +145,7 @@ const KeyFeatures = () => {
         <DialogTitle id="alert-dialog-title">ERPNEXT Details Info</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            <iframe width="560" height="315" src={selectedVideoUrl} title="Video Player" frameBorder="0" allowFullScreen></iframe>
+            <iframe width="550" height="280" src={selectedVideoUrl} title="Video Player" frameBorder="0" allowFullScreen></iframe>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
