@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardBody, Col, Container, Row } from 'reactstrap';
 import './keyfeatures.css';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 const KeyFeatures = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedVideoUrl, setSelectedVideoUrl] = useState('');
+
+  const handleClickOpen = (videoUrl) => {
+    setSelectedVideoUrl(videoUrl);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedVideoUrl('');
+  };
+
   const features = [
     {
       id: 1,
@@ -14,6 +33,7 @@ const KeyFeatures = () => {
         marginBottom: "15px",
       },
       desc: "Enterprise Resource Planning (ERP) Solution",
+      videoUrl: "https://www.youtube.com/embed/RSe1GFl3e2Q",
     },
     {
       id: 2,
@@ -25,6 +45,7 @@ const KeyFeatures = () => {
         marginBottom: "15px",
       },
       desc: "Marketing Automation Solution",
+      videoUrl: "https://www.youtube.com/embed/ZiWNBF-UuPw",
     },
     {
       id: 3,
@@ -36,6 +57,7 @@ const KeyFeatures = () => {
         marginBottom: "15px",
       },
       desc: "File Management and Collaboration Solution",
+      videoUrl: "https://www.youtube.com/embed/nxX_Z6BKySw",
     },
     {
       id: 4,
@@ -47,17 +69,19 @@ const KeyFeatures = () => {
         marginBottom: "15px",
       },
       desc: "Integration Solution - Connect any Software.",
+      videoUrl: "https://www.youtube.com/embed/VIDEO_ID_HERE",
     },
     {
       id: 5,
       image: {
-        url: "http://smartysoft.in/company_images/mautic.png",
+        url: "./company_images/crm.png",
         width: "120px",
         height: "35px",
         marginTop: "20px",
         marginBottom: "15px",
       },
       desc: "Customer Relationship Management Solution",
+      videoUrl: "https://www.youtube.com/embed/VIDEO_ID_HERE",
     },
     {
       id: 6,
@@ -69,6 +93,7 @@ const KeyFeatures = () => {
         marginBottom: "15px",
       },
       desc: "Design, build, and deploy AI-powered Chatbots",
+      videoUrl: "https://www.youtube.com/embed/VIDEO_ID_HERE",
     },
   ];
 
@@ -95,8 +120,11 @@ const KeyFeatures = () => {
                       className="product-image"
                     />
                   </div>
-                  <CardBody className="p-4">
+                  <CardBody className="p-2">
                     <p className="text-muted mb-0 description">{feature.desc}</p>
+                    <Button variant="outlined" size="small" sx={{mt:2}} onClick={() => handleClickOpen(feature.videoUrl)}>
+                      More Info
+                    </Button>
                   </CardBody>
                 </Card>
               </Col>
@@ -104,6 +132,24 @@ const KeyFeatures = () => {
           </Row>
         </Container>
       </section>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">ERPNEXT Details Info</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            <iframe width="560" height="315" src={selectedVideoUrl} title="Video Player" frameBorder="0" allowFullScreen></iframe>
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus size="small" variant="contained" sx={{mr:1}}>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
     </React.Fragment>
   );
 };

@@ -7,7 +7,7 @@ function AboutUs() {
     <>
       <Box
         style={{
-          margin: "5rem 0",
+
           textAlign: "center",
           fontFamily: "Arial, sans-serif",
           padding: "2rem",
@@ -17,8 +17,8 @@ function AboutUs() {
       >
         <Typography
           style={{
-            fontSize: "40px",
-            fontWeight: "bold",
+            fontWeight: 700, 
+            fontSize: '32px',
             marginBottom: "2rem",
             fontFamily: "Roboto, sans-serif",
           }}

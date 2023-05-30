@@ -56,7 +56,7 @@ function Reasons() {
       <Typography
         variant="h3"
         component="h2"
-        sx={{ textAlign: 'center', mb: 4, fontSize: '32px', fontWeight: 'bold' }}
+        sx={{ textAlign: 'center', mb: 4,mt: 8,fontSize: '32px', fontWeight: 'bold' }}
       >
         Our Services
       </Typography>

@@ -18,6 +18,7 @@ import ScheduleDemoThanksPage from './Components/ScheduleDemoThanksPage';
 import ExcelfileThanksPage from './Components/ExcelfileThanksPage';
 import Products from './Components/Products';
 import DemoButton from './Components/DemoButton';
+import AccountingAndFinance from './Components/SolutionPages/Accounting&Finance';
 
 function App() {
   return (
@@ -39,6 +40,10 @@ function App() {
         <Route path ='/aboutus' element={<Aboutus/>}/>
         <Route path="/scheduledemothanks" element={<ScheduleDemoThanksPage/>}/>
         <Route path="/excelfilethanks" element={<ExcelfileThanksPage/>}/>
+
+
+        <Route path="/accounting" element={<AccountingAndFinance/>}/>
+
         {/* <Route path="/services" element={<Services/>}/> */}
         <Route path="/demobutton" element={<DemoButton/>}/>
         <Route path='*' element={<AllPages/>}/>

@@ -36,9 +36,8 @@ function Benefits() {
           sx={{
             fontWeight: 700,
             
-            mb: 5,
-            mt: 2,
-            fontSize: '40px',
+            mb: 3,
+            fontSize: '32px',
           }}
         >
           Why We
@@ -46,7 +45,7 @@ function Benefits() {
         <Grid container spacing={2}>
           {benefitsData.map((benefit, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
-              <Box sx={{ p: 3}}>
+              <Box >
                 <benefit.icon fontSize="large" style={{ color: 'green' }} />
                 <Typography
                   sx={{

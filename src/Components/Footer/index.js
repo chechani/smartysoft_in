@@ -47,11 +47,11 @@ export default function Footer() {
       <ToastContainer />
       <Grid container spacing={5} style={{ paddingBottom: "50px" }}>
         <Grid item xs={12} md={5}>
-          <div>
+          <div style={{marginLeft:"20px"}}>
             <img
               alt="footer-logo"
               src="./smarty_logo.png"
-              style={{ width: "30%", marginLeft: "10%" }}
+              style={{ width: "25%", marginLeft: "10%" }}
             />
             <Typography sx={{ width: "60%", ml: 5, marginTop: 2, fontFamily: "lato", fontSize: "18px" }}>
               Excel to Tally from AccXchange helps in Data Import from Excel to Tally seamlessly
@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
         </Grid>
         <Grid div xs={12} sm={6} md={2}>
-          <Box sx={{ mt: 5, ml: { xs: 10, sm: 10 } }}>
+          <Box sx={{ mt: 5, ml: { xs: 13, sm: 10 } }}>
             <Typography sx={{ fontSize: "22px", fontWeight: "bold", fontFamily: "lato" }}>Other Products</Typography>
             <ul style={{ marginTop: "10px", fontFamily: "lato", fontSize: "18px" }}>
               <li style={{ marginTop: "25px" }}>
@@ -106,7 +106,7 @@ export default function Footer() {
           </Box>
         </Grid>
         <Grid div xs={12} sm={6} md={2}>
-          <Box sx={{ mt: 5, ml: { xs: 10, sm: 8 } }}>
+          <Box sx={{ mt: 5, ml: { xs: 13, sm: 8 } }}>
             <Typography sx={{ fontSize: "22px", fontFamily: "lato", fontWeight: "bold" }}>Useful Links</Typography>
             <ul style={{ fontFamily: "lato", fontSize: "18px" }}>
               <li style={{ marginTop: "25px" }}>
@@ -131,7 +131,7 @@ export default function Footer() {
           </Box>
         </Grid>
         <Grid div xs={12} md={3}>
-          <Box sx={{ mt: 5, ml: { xs: 10, sm: 10 } }}>
+          <Box sx={{ mt: 5, ml: { xs: 13, sm: 10 } }}>
             <Typography sx={{ fontSize: "22px", fontFamily: "lato", fontWeight: "bold" }}>Newsletter</Typography>
          
             <Box sx={{ mr: 2 }}>
