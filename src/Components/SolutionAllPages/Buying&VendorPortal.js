@@ -6,15 +6,18 @@ import AccountingData from './DummyData';
 
 function BuyingVendorPortal() {
   const [AccountData, SetAccountData] = useState([]);
+  const [documentData, setDocumentData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.api.get_smarty_solutions"
+          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=buying%20and%20vendor%20portal"
         );
         const data = await response.json();
         console.log(data);
-        SetAccountData(data.message[0]);
+
+        SetAccountData(data.message);
+        setDocumentData(data.message.smarty_documents)
       } catch (error) {
         console.log(error);
       }
@@ -79,18 +82,24 @@ function BuyingVendorPortal() {
         </Grid>
       </Box>
 
-      {/* Cards of Data */}
-      <Box sx={{ width: "auto",m:5 }}>
-        <Grid container spacing={2}>
-        {AccountingData.map((data, index) => (
-            <Grid item xs={12} key={index}>
-              <Card sx={{ display: "flex", width: "100%" }}>
-                <Typography>{data.Features}</Typography>   
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+     {/* Cards of Data */}
+     <Box sx={{ width: 'auto', m: 5 }}>
+  <Grid container spacing={2}>
+    {documentData.map((data, index) => (
+      <Grid item xs={12} key={index}>
+        <Card sx={{ display: 'flex', width: '100%', p: 5 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
+            <Typography>{data.document}</Typography>
+            <Typography>{data.document_detail}</Typography>
+          </div>
+          <div style={{ width: '50%', textAlign: 'right' }}>
+            <img src={`http://smartysoft.in/${data.image}`} alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
+          </div>
+        </Card>
+      </Grid>
+    ))}
+  </Grid>
+</Box>
 
       {/* desc data */}
      
