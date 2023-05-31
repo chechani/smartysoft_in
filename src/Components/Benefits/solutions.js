@@ -143,7 +143,7 @@ function Solutions() {
         </DialogContent>
         <DialogActions sx={{display:"flex",justifyContent:"space-between"}}>
         <Button variant='outlined' color='success'>
-            <a style={{textDecoration:"none"}} href={`https://wa.me/7849945640?text=${encodeURIComponent(whatsappMsg)}`} target="_blank">
+            <a style={{textDecoration:"none"}} href={`https://wa.me/7849945640?text=${encodeURIComponent(WhatsappMsg)}`} target="_blank">
               <WhatsAppIcon sx={{ fontSize: "17px", mr: 1}} />WhatsApp
             </a>
           </Button>
