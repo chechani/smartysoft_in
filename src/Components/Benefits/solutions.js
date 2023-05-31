@@ -15,9 +15,11 @@ function Solutions() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [open, setOpen] = useState(false);
   const [HeadingData, setHeadingData] = useState("")
+  const [WhatsappMsg, setWhatsappMsg] = useState('');
 
-  const handleClickOpen = (short_title) => {
+  const handleClickOpen = (short_title,descriptive_title) => {
     setHeadingData(short_title)
+    setWhatsappMsg(descriptive_title)
     setOpen(true);
   };
 
@@ -109,11 +111,11 @@ function Solutions() {
                   {feature.descriptive_title}
                 </p>
                 <div className="button-container d-flex justify-content-center">
-                  <a href={feature.whatsapp_link} className="button-whatsapp">
+                  <a href= "https://wa.me/7849945640?text={descriptive_title}"  className="button-whatsapp">
                     <AiOutlineWhatsApp className="button-icon" />
                     <span className="button-label">WhatsApp</span>
                   </a>
-                  <a onClick={() => handleClickOpen(feature.short_title)} className="button-watch-video">
+                  <a onClick={() => handleClickOpen(feature.short_title, feature.descriptive_title)} className="button-watch-video">
                     <AiOutlinePlayCircle className="button-icon" />
                     <span className="button-label">Video</span>
                   </a>
@@ -140,8 +142,10 @@ function Solutions() {
           </DialogContentText>
         </DialogContent>
         <DialogActions sx={{display:"flex",justifyContent:"space-between"}}>
-        <Button onClick={handleClose} size="small" color='success' variant="outlined" sx={{ml:2}}>
-            <WhatsAppIcon sx={{fontSize:"17px",mr:1}}/>WhatsApp
+        <Button variant='outlined' color='success'>
+            <a style={{textDecoration:"none"}} href="https://wa.me/7849945640?text={WhatsappMsg}" target="_blank">
+              <WhatsAppIcon sx={{ fontSize: "17px", mr: 1}} />WhatsApp
+            </a>
           </Button>
         <Button onClick={handleClose} color="error" size="small" variant="outlined" sx={{mr:2}}>
            <CloseIcon sx={{fontSize:"17px",mr:1}}/> Close
