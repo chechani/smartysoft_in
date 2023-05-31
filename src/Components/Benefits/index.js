@@ -6,10 +6,6 @@ import {
   Collapse,
   IconButton,
 } from '@mui/material';
-import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
-import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
-import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-import ScheduleIcon from '@mui/icons-material/Schedule';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
@@ -45,8 +41,8 @@ function Benefits() {
         <Grid container spacing={2}>
           {benefitsData.map((benefit, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
-              <Box >
-                <benefit.icon fontSize="large" style={{ color: 'green' }} />
+              <Box>
+               {benefit.imageUrl}
                 <Typography
                   sx={{
                     color: 'black',
@@ -77,27 +73,27 @@ function Benefits() {
 
 const benefitsData = [
   {
-    icon: AddToHomeScreenIcon,
+    imageUrl: <img src='./company_images/HighlyExperinced.png' style={{width:"50px",height:"50px"}}/>,
     title: 'Highly Experinced and Techno Commercial Founders',
     description:
       'Our Founder and CEO, a Chartered Accountant with over 25 years of experience in the software business, brings a wealth of expertise and industry knowledge to our services. This unique combination of financial acumen and industry insight enables us to deliver crisp and appealing solutions to our clients.',
   },
   {
-    icon: SentimentSatisfiedAltIcon,
+    imageUrl: <img src='./company_images/CoreTeam.webp' style={{width:"50px",height:"50px"}}/>,
     title: 'Core Team Multifaceted Capabilities',
     description:
       'Our exceptional team comprises highly skilled individuals with extensive technical and functional knowledge. With diverse backgrounds and a wide range of expertise, they are equipped to handle any challenge that comes their way. Their collective proficiency enables us to consistently deliver outstanding results',
   },
 
   {
-    icon: ScheduleIcon,
+    imageUrl: <img src='./company_images/BusinessAcumen.png' style={{width:"50px",height:"50px"}}/>,
     title: 'Business acumen combined with high teck skills ',
     description:
       "Our team possesses exceptional skills in solution visualization and programming, bolstered by AI technologies. This proficiency enables us to excel in cutting-edge technologies like Python, JavaScript, React, and Vue.js. We leverage this expertise to conceptualize innovative solutions",
   },
 
   {
-    icon: ThumbUpOffAltIcon,
+    imageUrl: <img src='./company_images/OpenSourceTechnolgies.png' style={{width:"50px",height:"50px"}}/>,
     title: 'Experience with many useful Open Source Technolgies',
     description:
       'Our team possesses extensive expertise in a diverse array of open-source technologies, enabling us to harness their advantages effectively for businesses. With a deep understanding and substantial experience, we offer valuable guidance and support in utilizing these technologies to drive success',

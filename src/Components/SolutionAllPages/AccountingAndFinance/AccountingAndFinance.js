@@ -2,6 +2,7 @@ import { Button, Typography, Box, Card } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
+import AccountingCards from './AccountingCards';
 
 
 function AccountingAndFinance() {
@@ -76,19 +77,20 @@ function AccountingAndFinance() {
       </Box>
 
       {/* Cards of Data */}
-      <Box sx={{ width: 'auto', m: 5 }}>
+      <Box sx={{width: 'auto', m: 5 }}>
   <Grid container spacing={2}>
     {documentData.map((data, index) => (
       <Grid item xs={12} key={index}>
         <Card sx={{ display: 'flex', width: '100%', p: 5 }}>
           <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
-            <Typography>{data.document_name}</Typography>
-            <Typography>{data.document_detail}</Typography>
+            <Typography sx={{fontSize:40,fontWeight:"bold"}}>{data.document_name}</Typography>
+            <Typography sx={{fontSize:20,mt:5}}>{data.document_detail}</Typography>
           </div>
-          <div style={{ width: '50%', textAlign: 'right' }}>
+          <div style={{ width: '50%', textAlign: 'right'}}>
             <img 
-            src={"https://smartysoftware.in/" + data.image}
-             alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
+            // src={"https://smartysoftware.in/" + data.image}
+            src={data.image}
+             alt="Document Image" style={{width:"300px",height:"250px"}}/>
           </div>
         </Card>
       </Grid>
@@ -97,7 +99,7 @@ function AccountingAndFinance() {
 </Box>
 
       {/* desc data */}
-     
+<AccountingCards/>
     </>
   );
 }

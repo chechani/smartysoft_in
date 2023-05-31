@@ -8,6 +8,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { AiOutlinePlayCircle } from "react-icons/ai";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import CloseIcon from '@mui/icons-material/Close';
 
 const KeyFeatures = () => {
   const [open, setOpen] = useState(false);
@@ -157,9 +159,12 @@ const KeyFeatures = () => {
             <iframe width="550" height="280" src={selectedVideoUrl} title="Video Player" frameBorder="0" allowFullScreen></iframe>
           </DialogContentText>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} autoFocus size="small" variant="contained" sx={{mr:1}}>
-            Close
+        <DialogActions sx={{display:"flex",justifyContent:"space-between"}}>
+        <Button onClick={handleClose} size="small" color='success' variant="outlined" sx={{ml:2}}>
+            <WhatsAppIcon sx={{fontSize:"17px",mr:1}}/>WhatsApp
+          </Button>
+          <Button onClick={handleClose} color="error" size="small" variant="outlined" sx={{mr:2}}>
+           <CloseIcon sx={{fontSize:"17px",mr:1}}/> Close
           </Button>
         </DialogActions>
       </Dialog>

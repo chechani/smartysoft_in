@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
-import { AiOutlineLink, AiOutlinePlayCircle, AiOutlineWhatsApp } from "react-icons/ai";
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Button from '@mui/material/Button';
-import CloseIcon from '@mui/icons-material/Close';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-function Solutions() {
+
+function AccountingCards() {
   const [features, setFeatures] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [open, setOpen] = useState(false);
-  const [HeadingData, setHeadingData] = useState("")
+  const [documentData, setDocumentData] = useState([]);
 
-  const handleClickOpen = (short_title) => {
-    setHeadingData(short_title)
-    setOpen(true);
-  };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=accounting%20and%20finance"
+        );
+        const data = await response.json();
+        console.log(data.message);
+        setDocumentData(data.message.smarty_key_advantages)
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,11 +56,11 @@ function Solutions() {
         <div className="section-gap"></div>
         <div className="section-title-wrapper">
           <h2 className="section-title" style={{ marginTop: "-28px", fontSize: "32px", fontWeight: 700 }}>
-            Solutions We Offer
+            Advantages
           </h2>
         </div>
         <Row>
-          {features.map((feature, index) => (
+          {documentData.map((feature, index) => (
             <Col lg={4} md={4} sm={6} key={index}>
               <div
                 className={`d-flex flex-column feature-primary ${hoveredIndex === index ? "hovered" : ""}`}
@@ -78,7 +79,7 @@ function Solutions() {
                     src={"https://smartysoftware.in/" + feature.image}
                     width="60"
                     height="60"
-                    alt={feature.short_title}
+                    alt={feature.advantage}
                     style={{ marginBottom: "10px" }}
                   />
                 </div>
@@ -90,7 +91,7 @@ function Solutions() {
                     transition: "color 0.3s",
                   }}
                 >
-                  {feature.short_title}
+                  {feature.advantage}
                 </h4>
                 <p
                   className="text-muted para mb-0"
@@ -106,48 +107,13 @@ function Solutions() {
                     WebkitBoxOrient: "vertical",
                   }}
                 >
-                  {feature.descriptive_title}
+                  {feature.advantage_detail}
                 </p>
-                <div className="button-container d-flex justify-content-center">
-                  <a href={feature.whatsapp_link} className="button-whatsapp">
-                    <AiOutlineWhatsApp className="button-icon" />
-                    <span className="button-label">WhatsApp</span>
-                  </a>
-                  <a onClick={() => handleClickOpen(feature.short_title)} className="button-watch-video">
-                    <AiOutlinePlayCircle className="button-icon" />
-                    <span className="button-label">Video</span>
-                  </a>
-                  <a href={feature.more_link} className="button-more">
-                    <AiOutlineLink className="button-icon" />
-                    <span className="button-label">More</span>
-                  </a>
-                </div>
               </div>
             </Col>
           ))}
         </Row>
       </Container>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{HeadingData}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            <iframe width="550" height="280" src="https://www.youtube.com/embed/RSe1GFl3e2Q" title="Video Player" frameBorder="0" allowFullScreen></iframe>
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions sx={{display:"flex",justifyContent:"space-between"}}>
-        <Button onClick={handleClose} size="small" color='success' variant="outlined" sx={{ml:2}}>
-            <WhatsAppIcon sx={{fontSize:"17px",mr:1}}/>WhatsApp
-          </Button>
-        <Button onClick={handleClose} color="error" size="small" variant="outlined" sx={{mr:2}}>
-           <CloseIcon sx={{fontSize:"17px",mr:1}}/> Close
-          </Button>
-        </DialogActions>
-      </Dialog>
       <style>
         {`
         .feature-primary {
@@ -237,4 +203,4 @@ function Solutions() {
   );
 }
 
-export default Solutions;
+export default AccountingCards;

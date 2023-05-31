@@ -1,6 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import AbountInfo from "./AboutInfo";
 
 function AboutUs() {
   return (
@@ -40,6 +41,9 @@ function AboutUs() {
           play in helping businesses streamline operations, enhance efficiency, and
           achieve their goals.
         </Typography>
+      </Box>
+      <Box>
+        <AbountInfo/>
       </Box>
     </>
   );
