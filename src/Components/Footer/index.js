@@ -54,7 +54,7 @@ export default function Footer() {
               style={{ width: "25%", marginLeft: "7%" }}
             />
             <Typography sx={{ width: "60%", ml: 5, marginTop: 2, fontSize: "18px" }}>
-              Excel to Tally from AccXchange helps in Data Import from Excel to Tally seamlessly
+            Helping Businesses in 💯% Digitalization and Automation
             </Typography>
             <Box sx={{ ml: 4, mt: 1 }}>
             <a href="https://www.facebook.com/customexceltotally" target="_blank" rel="noopener noreferrer">

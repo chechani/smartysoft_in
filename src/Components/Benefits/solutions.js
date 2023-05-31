@@ -1,10 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { AiOutlineLink, AiOutlinePlayCircle, AiOutlineWhatsApp } from "react-icons/ai";
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Button from '@mui/material/Button';
 
 function Solutions() {
   const [features, setFeatures] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -94,7 +109,7 @@ function Solutions() {
                     <AiOutlineWhatsApp className="button-icon" />
                     <span className="button-label">WhatsApp</span>
                   </a>
-                  <a href={feature.video_link} className="button-watch-video">
+                  <a onClick={handleClickOpen} className="button-watch-video">
                     <AiOutlinePlayCircle className="button-icon" />
                     <span className="button-label">Video</span>
                   </a>
@@ -108,6 +123,24 @@ function Solutions() {
           ))}
         </Row>
       </Container>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">videos</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            <iframe width="550" height="280" src="https://www.youtube.com/embed/RSe1GFl3e2Q" title="Video Player" frameBorder="0" allowFullScreen></iframe>
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus size="small" variant="contained" sx={{mr:1}}>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
       <style>
         {`
         .feature-primary {

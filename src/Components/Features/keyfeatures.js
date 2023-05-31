@@ -12,15 +12,18 @@ import { AiOutlinePlayCircle } from "react-icons/ai";
 const KeyFeatures = () => {
   const [open, setOpen] = useState(false);
   const [selectedVideoUrl, setSelectedVideoUrl] = useState('');
+  const [selectedFeature, setSelectedFeature] = useState('');
 
-  const handleClickOpen = (videoUrl) => {
+  const handleClickOpen = (videoUrl,heading) => {
     setSelectedVideoUrl(videoUrl);
+    setSelectedFeature(heading);
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
     setSelectedVideoUrl('');
+    setSelectedFeature('');
   };
 
   const features = [
@@ -35,6 +38,7 @@ const KeyFeatures = () => {
       },
       desc: "Enterprise Resource Planning (ERP) Solution",
       videoUrl: "https://www.youtube.com/embed/RSe1GFl3e2Q",
+      heading:"ERPNext"
     },
     {
       id: 2,
@@ -47,6 +51,7 @@ const KeyFeatures = () => {
       },
       desc: "Marketing Automation - Campaign and Track",
       videoUrl: "https://www.youtube.com/embed/ZiWNBF-UuPw",
+      heading:"Mautic"
     },
     {
       id: 3,
@@ -59,6 +64,7 @@ const KeyFeatures = () => {
       },
       desc: "File Management and Collaboration Solution",
       videoUrl: "https://www.youtube.com/embed/nxX_Z6BKySw",
+      heading:"NextCloud"
     },
     {
       id: 4,
@@ -71,6 +77,7 @@ const KeyFeatures = () => {
       },
       desc: "Integration Solution - Connect any Software.",
       videoUrl: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+      heading:"n8n"
     },
     {
       id: 5,
@@ -83,6 +90,7 @@ const KeyFeatures = () => {
       },
       desc: "Customer Relationship Management Solution",
       videoUrl: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+      heading:"CRM"
     },
     {
       id: 6,
@@ -95,6 +103,7 @@ const KeyFeatures = () => {
       },
       desc: "Design, build, and deploy AI-powered Chatbots",
       videoUrl: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+      heading:"botpress"
     },
   ];
 
@@ -124,7 +133,7 @@ const KeyFeatures = () => {
                   <CardBody className="p-2">
                     <p className="text-muted mb-0 description">{feature.desc}</p>
                     <div className="button-container">
-                    <a onClick={() => handleClickOpen(feature.videoUrl)} className="button-watch-video">
+                    <a onClick={() => handleClickOpen(feature.videoUrl, feature.heading)} className="button-watch-video">
                       <AiOutlinePlayCircle className="button-icon" />
                       Video
                     </a>
@@ -142,7 +151,7 @@ const KeyFeatures = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">Video</DialogTitle>
+        <DialogTitle id="alert-dialog-title">{selectedFeature}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             <iframe width="550" height="280" src={selectedVideoUrl} title="Video Player" frameBorder="0" allowFullScreen></iframe>

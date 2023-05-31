@@ -15,7 +15,7 @@ function AccountingAndFinance() {
         );
         const data = await response.json();
         console.log(data.message);
-        setDocumentData(data.message.smarty_documents)
+        setDocumentData(data.message.smarty_key_points)
         SetAccountData(data.message);
       } catch (error) {
         console.log(error);
@@ -82,7 +82,7 @@ function AccountingAndFinance() {
       <Grid item xs={12} key={index}>
         <Card sx={{ display: 'flex', width: '100%', p: 5 }}>
           <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
-            <Typography>{data.document}</Typography>
+            <Typography>{data.document_name}</Typography>
             <Typography>{data.document_detail}</Typography>
           </div>
           <div style={{ width: '50%', textAlign: 'right' }}>
