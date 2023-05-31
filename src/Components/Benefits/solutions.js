@@ -39,17 +39,17 @@ function Solutions() {
             Solutions We Offer
           </h2>
         </div>
-        <Row className="row-gap">
+        <Row>
           {features.map((feature, index) => (
-            <Col lg={4} md={6} key={index}>
+            <Col lg={4} md={4} sm={6} key={index}>
               <div
                 className={`d-flex flex-column feature-primary ${hoveredIndex === index ? "hovered" : ""}`}
                 style={{
-                  marginBottom: "40px",
+                  marginBottom: "20px",
                   marginTop: "10px",
-                  marginLeft: "5px",
-                  marginRight: "5px",
-                  maxHeight: "300px",
+                  marginLeft: "-5px",
+                  marginRight: "-5px",
+                  flex: "1",
                 }}
                 onMouseEnter={() => handleCardHover(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -79,6 +79,12 @@ function Solutions() {
                     color: hoveredIndex === index ? "#ffffff" : "#00FF00",
                     textAlign: "center",
                     transition: "color 0.3s",
+                    maxHeight: "5em",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    display: "-webkit-box",
+                    WebkitLineClamp: "2",
+                    WebkitBoxOrient: "vertical",
                   }}
                 >
                   {feature.descriptive_title}
@@ -108,7 +114,8 @@ function Solutions() {
           cursor: pointer;
           transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
           perspective: 1000px;
-          margin: 10px -5px;
+          margin-bottom: 20px;
+          margin-top: 10px;
           padding: 20px;
           background-color: #ffffff;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -116,7 +123,7 @@ function Solutions() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          border: 1.5px solid #ccc;
+          border: 2px solid #ccc;
         }
 
         .feature-primary:hover {
@@ -151,12 +158,7 @@ function Solutions() {
         }
 
         .row-gap {
-          margin-top: 80px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          margin-left: -5px;
-          margin-right: -5px;
+          margin-top: 20px;
         }
 
         .button-container {

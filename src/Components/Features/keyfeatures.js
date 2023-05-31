@@ -45,7 +45,7 @@ const KeyFeatures = () => {
         marginTop: "20px",
         marginBottom: "15px",
       },
-      desc: "Marketing Automation - Manage Campaigns and Interaction",
+      desc: "Marketing Automation - Campaign and Track",
       videoUrl: "https://www.youtube.com/embed/ZiWNBF-UuPw",
     },
     {
