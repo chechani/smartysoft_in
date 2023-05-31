@@ -15,7 +15,7 @@ function InventoryManagement() {
         );
         const data = await response.json();
         console.log(data.message);
-        setDocumentData(data.message.smarty_documents)
+        setDocumentData(data.message.smarty_key_points)
         SetAccountData(data.message);
       } catch (error) {
         console.log(error);
@@ -76,17 +76,20 @@ function InventoryManagement() {
       </Box>
 
       {/* Cards of Data */}
-      <Box sx={{ width: 'auto', m: 5 }}>
+      <Box sx={{width: 'auto', m: 5 }}>
   <Grid container spacing={2}>
     {documentData.map((data, index) => (
       <Grid item xs={12} key={index}>
         <Card sx={{ display: 'flex', width: '100%', p: 5 }}>
           <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
-            <Typography>{data.document}</Typography>
-            <Typography>{data.document_detail}</Typography>
+            <Typography sx={{fontSize:"32px",fontWeight:"bold"}}>{data.document_name}</Typography>
+            <Typography sx={{fontSize:"22px",mt:5}}>{data.document_detail}</Typography>
           </div>
-          <div style={{ width: '50%', textAlign: 'right' }}>
-            <img src={data.image} alt="Document Image" style={{ Width: '100%',Height: '100%' }} />
+          <div style={{ width: '50%', textAlign: 'right'}}>
+            <img 
+            src={"https://smartysoftware.in/" + data.image}
+            // src={data.image}
+             alt="Document Image" style={{width:"100%",height:"100%"}}/>
           </div>
         </Card>
       </Grid>
