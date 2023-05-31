@@ -51,7 +51,7 @@ export default function Footer() {
             <img
               alt="footer-logo"
               src="./smarty_logo.png"
-              style={{ width: "25%", marginLeft: "7%" }}
+              style={{ width: "25%", marginLeft: "8%" }}
             />
             <Typography sx={{ width: "60%", ml: 5, marginTop: 2, fontSize: "18px" }}>
             Helping Businesses in 💯% Digitalization and Automation

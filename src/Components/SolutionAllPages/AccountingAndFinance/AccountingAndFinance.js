@@ -15,7 +15,7 @@ function AccountingAndFinance() {
           "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=accounting%20and%20finance"
         );
         const data = await response.json();
-        console.log(data.message);
+        console.log(data);
         setDocumentData(data.message.smarty_key_points)
         SetAccountData(data.message);
       } catch (error) {
@@ -41,7 +41,7 @@ function AccountingAndFinance() {
             <Typography
               sx={{ fontWeight: 700, mt: 3, fontSize: "40px" }}
             >
-              {AccountData.short_title}
+              {AccountData.tagline}
             </Typography>
             <Typography
               sx={{ fontWeight: 700, mt: 2, fontSize: "20px" }}
@@ -99,7 +99,9 @@ function AccountingAndFinance() {
 </Box>
 
       {/* desc data */}
+      <Box>
 <AccountingCards/>
+</Box>
     </>
   );
 }

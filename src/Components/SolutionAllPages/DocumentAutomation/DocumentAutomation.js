@@ -2,6 +2,7 @@ import { Button, Typography, Box, Card } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
+import DocumentAutomationCard from './DocumentAutomationCard';
 
 
 function DocumentAutomationManagement() {
@@ -40,7 +41,7 @@ function DocumentAutomationManagement() {
             <Typography
               sx={{ fontWeight: 700, mt: 3, fontSize: "40px" }}
             >
-              {AccountData.short_title}
+              {AccountData.tagline}
             </Typography>
             <Typography
               sx={{ fontWeight: 700, mt: 2, fontSize: "20px" }}
@@ -98,7 +99,9 @@ function DocumentAutomationManagement() {
 </Box>
 
       {/* desc data */}
-     
+     <Box>
+      <DocumentAutomationCard/>
+     </Box>
     </>
   );
 }

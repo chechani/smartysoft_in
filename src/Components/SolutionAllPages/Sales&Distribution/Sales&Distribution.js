@@ -2,6 +2,7 @@ import { Button, Typography, Box, Card } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
+import SalesDistributionCard from './SalesDistributionCard';
 
 function SalesDistribution() {
   const [AccountData, SetAccountData] = useState([]);
@@ -39,7 +40,7 @@ function SalesDistribution() {
             <Typography
               sx={{ fontWeight: 700, m: 2, fontSize: "40px" }}
             >
-              {AccountData.short_title}
+              {AccountData.tagline}
             </Typography>
             <Typography
               sx={{ fontWeight: 700, m:2, fontSize: "20px" }}
@@ -97,7 +98,9 @@ function SalesDistribution() {
 </Box>
 
       {/* desc data */}
-     
+     <Box>
+      <SalesDistributionCard/>
+     </Box>
     </>
   );
 }

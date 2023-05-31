@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 
 
-function AssetManagementCard() {
+function HumanResourcesCard() {
   const [features, setFeatures] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [documentData, setDocumentData] = useState([]);
@@ -12,7 +12,7 @@ function AssetManagementCard() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=asset%20management"
+          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=human%20resources%20management"
         );
         const data = await response.json();
         console.log(data.message);
@@ -203,4 +203,4 @@ function AssetManagementCard() {
   );
 }
 
-export default AssetManagementCard;
+export default HumanResourcesCard;
