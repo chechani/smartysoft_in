@@ -88,8 +88,8 @@ function AccountingAndFinance() {
           </div>
           <div style={{ width: '50%', textAlign: 'right'}}>
             <img 
-            // src={"https://smartysoftware.in/" + data.image}
-            src={data.image}
+            src={"https://smartysoftware.in/" + data.image}
+            // src={data.image}
              alt="Document Image" style={{width:"300px",height:"250px"}}/>
           </div>
         </Card>

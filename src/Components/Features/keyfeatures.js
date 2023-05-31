@@ -15,10 +15,12 @@ const KeyFeatures = () => {
   const [open, setOpen] = useState(false);
   const [selectedVideoUrl, setSelectedVideoUrl] = useState('');
   const [selectedFeature, setSelectedFeature] = useState('');
+  const [WhatsappMsg, setWhatsappMsg] = useState('');
 
-  const handleClickOpen = (videoUrl,heading) => {
+  const handleClickOpen = (videoUrl, heading) => {
     setSelectedVideoUrl(videoUrl);
     setSelectedFeature(heading);
+    setWhatsappMsg(heading);
     setOpen(true);
   };
 
@@ -40,7 +42,7 @@ const KeyFeatures = () => {
       },
       desc: "Enterprise Resource Planning (ERP) Solution",
       videoUrl: "https://www.youtube.com/embed/RSe1GFl3e2Q",
-      heading:"ERPNext"
+      heading: "ERPNext"
     },
     {
       id: 2,
@@ -53,7 +55,7 @@ const KeyFeatures = () => {
       },
       desc: "Marketing Automation - Campaign and Track",
       videoUrl: "https://www.youtube.com/embed/ZiWNBF-UuPw",
-      heading:"Mautic"
+      heading: "Mautic"
     },
     {
       id: 3,
@@ -66,7 +68,7 @@ const KeyFeatures = () => {
       },
       desc: "File Management and Collaboration Solution",
       videoUrl: "https://www.youtube.com/embed/nxX_Z6BKySw",
-      heading:"NextCloud"
+      heading: "NextCloud"
     },
     {
       id: 4,
@@ -79,7 +81,7 @@ const KeyFeatures = () => {
       },
       desc: "Integration Solution - Connect any Software.",
       videoUrl: "https://www.youtube.com/embed/VIDEO_ID_HERE",
-      heading:"n8n"
+      heading: "n8n"
     },
     {
       id: 5,
@@ -92,7 +94,7 @@ const KeyFeatures = () => {
       },
       desc: "Customer Relationship Management Solution",
       videoUrl: "https://www.youtube.com/embed/VIDEO_ID_HERE",
-      heading:"CRM"
+      heading: "CRM"
     },
     {
       id: 6,
@@ -105,7 +107,7 @@ const KeyFeatures = () => {
       },
       desc: "Design, build, and deploy AI-powered Chatbots",
       videoUrl: "https://www.youtube.com/embed/VIDEO_ID_HERE",
-      heading:"botpress"
+      heading: "botpress"
     },
   ];
 
@@ -135,10 +137,10 @@ const KeyFeatures = () => {
                   <CardBody className="p-2">
                     <p className="text-muted mb-0 description">{feature.desc}</p>
                     <div className="button-container">
-                    <a onClick={() => handleClickOpen(feature.videoUrl, feature.heading)} className="button-watch-video">
-                      <AiOutlinePlayCircle className="button-icon" />
-                      Video
-                    </a>
+                      <a onClick={() => handleClickOpen(feature.videoUrl, feature.heading)} className="button-watch-video">
+                        <AiOutlinePlayCircle className="button-icon" />
+                        Video
+                      </a>
                     </div>
                   </CardBody>
                 </Card>
@@ -159,12 +161,14 @@ const KeyFeatures = () => {
             <iframe width="550" height="280" src={selectedVideoUrl} title="Video Player" frameBorder="0" allowFullScreen></iframe>
           </DialogContentText>
         </DialogContent>
-        <DialogActions sx={{display:"flex",justifyContent:"space-between"}}>
-        <Button onClick={handleClose} size="small" color='success' variant="outlined" sx={{ml:2}}>
-            <WhatsAppIcon sx={{fontSize:"17px",mr:1}}/>WhatsApp
+        <DialogActions sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Button variant='outlined' color='success'>
+            <a style={{textDecoration:"none"}} href="https://wa.me/7849945640?text={WhatsappMsg}" target="_blank">
+              <WhatsAppIcon sx={{ fontSize: "17px", mr: 1}} />WhatsApp
+            </a>
           </Button>
-          <Button onClick={handleClose} color="error" size="small" variant="outlined" sx={{mr:2}}>
-           <CloseIcon sx={{fontSize:"17px",mr:1}}/> Close
+          <Button onClick={handleClose} color="error" size="small" variant="outlined" sx={{ mr: 2 }}>
+            <CloseIcon sx={{ fontSize: "17px", mr: 1 }} /> Close
           </Button>
         </DialogActions>
       </Dialog>

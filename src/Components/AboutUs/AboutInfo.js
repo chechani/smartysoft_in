@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import team1 from './images/CA B.C  Chechani.jpeg'
 import team2 from './images/Gopal Chechani.jpeg';
 import team3 from './images/mohit_chechani.jpeg';
-import team4 from './images/Ankit Pandey.jpeg';
-import team5 from './images/Anubhav jain.jpeg';
-import team6 from './images/Nitesh Kumar.jpeg';
-import team7 from './images/Sunil Verma.jpeg';
-import team8 from './images/Diksha jain.jpeg';
+import team4 from './images/Shreya.jfif';
+// import team5 from './images/monika.jpeg';
+import team6 from './images/Ankit Pandey.jpeg';
+import team7 from './images/Anubhav jain.jpeg';
+import team8 from './images/Nitesh Kumar.jpeg';
+import team9 from './images/Sunil Verma.jpeg';
+import team10 from './images/Diksha jain.jpeg';
 
 
 const AbountInfo = () => {
@@ -50,11 +52,13 @@ const AbountInfo = () => {
   const candidates2 = [
     { id: 1, image: team2, name: "Gopal Chechani", designation: "Co-founder" },
     { id: 2, image: team3, name: "Mohit Chechani", designation: "Co-founder" },
-    { id: 3, image: team4, name: "Ankit Pandey", designation: "Developer" },
-    { id: 4, image: team5, name: "Anubhav Jain", designation: "Developer" },
-    { id: 5, image: team6, name: "Nitesh Kumar", designation: "Developer" },
-    { id: 6, image: team7, name: "Sunil Verma", designation: "Marketing Executive" },
-    { id: 7, image: team8, name: "Diksha jain", designation: "Marketing Executive" },
+    { id: 3, image: team4, name: "Shreya Chechani", designation: "Developer" },
+    { id: 3, name: "Monika Chechani", designation: "HR" },
+    { id: 3, image: team6, name: "Ankit Pandey", designation: "Developer" },
+    { id: 4, image: team7, name: "Anubhav Jain", designation: "Developer" },
+    { id: 5, image: team8, name: "Nitesh Kumar", designation: "Developer" },
+    { id: 6, image: team9, name: "Sunil Verma", designation: "Marketing Executive" },
+    { id: 7, image: team10, name: "Diksha jain", designation: "Marketing Executive" },
     // Add other candidates here...
   ];
   const candidates = { id: 1, image: team1, name: "CA B.C Chechani", designation: "Foundedr and CEO " };
@@ -73,14 +77,6 @@ const AbountInfo = () => {
       <section className="section" style={{marginBottom:"15px"}}>
         <Container>
           <Row>
-            <Col xs={12} className="text-center">
-              <div className="section-title mb-4 pb-2">
-                <h4 className="title">Our Team</h4>
-              </div>
-            </Col>
-          </Row>
-
-          <Row>
           <Col className="mt-4 pt-2" style={{display:"flex",justifyContent:"center"}}>
                   <div className="d-flex align-items-center">
                     <img src={candidates.image} className="avatar avatar-medium rounded-circle img-thumbnail" alt="Landrick" style={{width:'150px',height:"150px"}} />
@@ -94,7 +90,7 @@ const AbountInfo = () => {
           <Row>
             {
               candidates2.map((candidate, key) => (
-                <Col lg={3} md={6} xs={12} key={key} className="mt-4 pt-2">
+                <Col lg={4} md={6} xs={12} key={key} className="mt-4 pt-2">
                   <div className="d-flex align-items-center">
                     <img src={candidate.image} className="avatar avatar-medium rounded-circle img-thumbnail" alt="Landrick" style={{width:'100px',height:"100px"}} />
                     <div className="content ms-3">

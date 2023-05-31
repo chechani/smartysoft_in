@@ -17,14 +17,6 @@ import TaskManager from '../Products/screen';
 import KeyFeatures from '../Features/keyfeatures';
 
 
-
-
-
-
-
-
-
-
 const AllPages = () => {
     return (
         <>
@@ -47,10 +39,10 @@ const AllPages = () => {
                 <AboutUs/>
             </Card>
             <Card>
-                <Benefits />
+                <Reasons />
             </Card>
             <Card>
-                <Reasons />
+                <Benefits />
             </Card>
         
          
