@@ -163,7 +163,7 @@ const KeyFeatures = () => {
         </DialogContent>
         <DialogActions sx={{ display: "flex", justifyContent: "space-between" }}>
           <Button variant='outlined' color='success'>
-            <a style={{textDecoration:"none"}} href="https://wa.me/7849945640?text={WhatsappMsg}" target="_blank">
+            <a style={{textDecoration:"none"}} href="https://wa.me/7849945640?text=Enterprise%20Resource%20Planning%20(ERP)%20Solution" target="_blank">
               <WhatsAppIcon sx={{ fontSize: "17px", mr: 1}} />WhatsApp
             </a>
           </Button>
