@@ -111,7 +111,7 @@ function Solutions() {
                   {feature.descriptive_title}
                 </p>
                 <div className="button-container d-flex justify-content-center">
-                  <a href= "https://wa.me/7849945640?text={descriptive_title}"  className="button-whatsapp">
+                  <a href={`https://wa.me/7849945640?text=${encodeURIComponent(feature.descriptive_title)}`} className="button-whatsapp">
                     <AiOutlineWhatsApp className="button-icon" />
                     <span className="button-label">WhatsApp</span>
                   </a>
@@ -143,7 +143,7 @@ function Solutions() {
         </DialogContent>
         <DialogActions sx={{display:"flex",justifyContent:"space-between"}}>
         <Button variant='outlined' color='success'>
-            <a style={{textDecoration:"none"}} href="https://wa.me/7849945640?text={WhatsappMsg}" target="_blank">
+            <a style={{textDecoration:"none"}} href={`https://wa.me/7849945640?text=${encodeURIComponent(whatsappMsg)}`} target="_blank">
               <WhatsAppIcon sx={{ fontSize: "17px", mr: 1}} />WhatsApp
             </a>
           </Button>
