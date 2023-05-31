@@ -90,7 +90,7 @@ function AccountingAndFinance() {
             <img 
             src={"https://smartysoftware.in/" + data.image}
             // src={data.image}
-             alt="Document Image" style={{width:"auto",height:"auto"}}/>
+             alt="Document Image" style={{width:"100%",height:"100%"}}/>
           </div>
         </Card>
       </Grid>
