@@ -17,10 +17,10 @@ const KeyFeatures = () => {
   const [selectedFeature, setSelectedFeature] = useState('');
   const [WhatsappMsg, setWhatsappMsg] = useState('');
 
-  const handleClickOpen = (videoUrl, heading,desc) => {
+  const handleClickOpen = (videoUrl, heading) => {
     setSelectedVideoUrl(videoUrl);
     setSelectedFeature(heading);
-    setWhatsappMsg(desc);
+    setWhatsappMsg(heading);
     setOpen(true);
   };
 
@@ -137,7 +137,7 @@ const KeyFeatures = () => {
                   <CardBody className="p-2">
                     <p className="text-muted mb-0 description">{feature.desc}</p>
                     <div className="button-container">
-                      <a onClick={() => handleClickOpen(feature.videoUrl, feature.heading,feature.desc)} className="button-watch-video">
+                      <a onClick={() => handleClickOpen(feature.videoUrl, feature.heading)} className="button-watch-video">
                         <AiOutlinePlayCircle className="button-icon" />
                         Video
                       </a>
@@ -163,7 +163,7 @@ const KeyFeatures = () => {
         </DialogContent>
         <DialogActions sx={{ display: "flex", justifyContent: "space-between" }}>
           <Button variant='outlined' color='success'>
-            <a style={{textDecoration:"none"}} href="https://wa.me/7849945640?text={WhatsappMsg}" target="_blank">
+            <a style={{textDecoration:"none"}} href={`https://wa.me/7849945640?text=${encodeURIComponent(WhatsappMsg)}`} target="_blank">
               <WhatsAppIcon sx={{ fontSize: "17px", mr: 1}} />WhatsApp
             </a>
           </Button>

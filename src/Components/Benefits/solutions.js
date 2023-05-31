@@ -17,9 +17,9 @@ function Solutions() {
   const [HeadingData, setHeadingData] = useState("")
   const [WhatsappMsg, setWhatsappMsg] = useState('');
 
-  const handleClickOpen = (short_title,descriptive_title) => {
+  const handleClickOpen = (short_title) => {
     setHeadingData(short_title)
-    setWhatsappMsg(descriptive_title)
+    setWhatsappMsg(short_title)
     setOpen(true);
   };
 
@@ -111,11 +111,11 @@ function Solutions() {
                   {feature.descriptive_title}
                 </p>
                 <div className="button-container d-flex justify-content-center">
-                  <a href={`https://wa.me/7849945640?text=${encodeURIComponent(feature.descriptive_title)}`} className="button-whatsapp">
+                  <a href={`https://wa.me/7849945640?text=${encodeURIComponent(feature.short_title)}`} className="button-whatsapp">
                     <AiOutlineWhatsApp className="button-icon" />
                     <span className="button-label">WhatsApp</span>
                   </a>
-                  <a onClick={() => handleClickOpen(feature.short_title, feature.descriptive_title)} className="button-watch-video">
+                  <a onClick={() => handleClickOpen(feature.short_title)} className="button-watch-video">
                     <AiOutlinePlayCircle className="button-icon" />
                     <span className="button-label">Video</span>
                   </a>
