@@ -83,8 +83,8 @@ function AccountingAndFinance() {
       <Grid item xs={12} key={index}>
         <Card sx={{ display: 'flex', width: '100%', p: 5 }}>
           <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
-            <Typography sx={{fontSize:40,fontWeight:"bold"}}>{data.document_name}</Typography>
-            <Typography sx={{fontSize:20,mt:5}}>{data.document_detail}</Typography>
+            <Typography sx={{fontSize:"32px",fontWeight:"bold"}}>{data.document_name}</Typography>
+            <Typography sx={{fontSize:"22px",mt:5}}>{data.document_detail}</Typography>
           </div>
           <div style={{ width: '50%', textAlign: 'right'}}>
             <img 
