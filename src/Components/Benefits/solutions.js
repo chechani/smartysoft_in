@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Col, Container, Row } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import { AiOutlineLink, AiOutlinePlayCircle, AiOutlineWhatsApp } from "react-icons/ai";
 
 function Solutions() {
   const [features, setFeatures] = useState([]);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +26,10 @@ function Solutions() {
     return null;
   }
 
+  const handleCardHover = (index) => {
+    setHoveredIndex(index);
+  };
+
   return (
     <section className="bg-light" style={{ paddingBottom: "10px" }}>
       <Container fluid>
@@ -34,39 +39,63 @@ function Solutions() {
             Solutions We Offer
           </h2>
         </div>
-        <Row>
+        <Row className="row-gap">
           {features.map((feature, index) => (
-            <Col lg={4} md={4} sm={6} xs={12} key={index}>
-              <div className="d-flex features feature-primary pt-4 pb-4" style={{ marginBottom: "20px" }}>
-                <div style={{ margin: "10px", marginLeft: "10px", marginRight: "10px" }}>
+            <Col lg={4} md={6} key={index}>
+              <div
+                className={`d-flex flex-column feature-primary ${hoveredIndex === index ? "hovered" : ""}`}
+                style={{
+                  marginBottom: "40px",
+                  marginTop: "10px",
+                  marginLeft: "5px",
+                  marginRight: "5px",
+                  maxHeight: "300px",
+                }}
+                onMouseEnter={() => handleCardHover(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <div className="d-flex align-items-center justify-content-center">
                   <img
                     src={"https://smartysoftware.in/" + feature.image}
                     width="60"
                     height="60"
                     alt={feature.short_title}
+                    style={{ marginBottom: "10px" }}
                   />
                 </div>
-                <div className="flex-1">
-                  <div className="feature-header">
-                    <h4 className="title">{feature.short_title}</h4>
-                  </div>
-                  <p className="text-muted para mb-0" style={{ marginRight: "10px", color: "#00FF00" }}>
-                    {feature.descriptive_title}
-                  </p>
-                  <div className="button-container"> 
-                    <a href={feature.whatsapp_link} className="button-whatsapp">
-                      <AiOutlineWhatsApp className="button-icon" />
-                      WhatsApp
-                    </a>
-                    <a href={feature.video_link} className="button-watch-video">
-                      <AiOutlinePlayCircle className="button-icon" />
-                      Video
-                    </a>
-                    <a href={feature.more_link} className="button-more">
-                      <AiOutlineLink className="button-icon" />
-                      More
-                    </a>
-                  </div>
+                <h4
+                  className={`title text-center ${hoveredIndex === index ? "hovered" : ""}`}
+                  style={{
+                    marginTop: "10px",
+                    color: "#333",
+                    transition: "color 0.3s",
+                  }}
+                >
+                  {feature.short_title}
+                </h4>
+                <p
+                  className="text-muted para mb-0"
+                  style={{
+                    color: hoveredIndex === index ? "#ffffff" : "#00FF00",
+                    textAlign: "center",
+                    transition: "color 0.3s",
+                  }}
+                >
+                  {feature.descriptive_title}
+                </p>
+                <div className="button-container d-flex justify-content-center">
+                  <a href={feature.whatsapp_link} className="button-whatsapp">
+                    <AiOutlineWhatsApp className="button-icon" />
+                    <span className="button-label">WhatsApp</span>
+                  </a>
+                  <a href={feature.video_link} className="button-watch-video">
+                    <AiOutlinePlayCircle className="button-icon" />
+                    <span className="button-label">Video</span>
+                  </a>
+                  <a href={feature.more_link} className="button-more">
+                    <AiOutlineLink className="button-icon" />
+                    <span className="button-label">More</span>
+                  </a>
                 </div>
               </div>
             </Col>
@@ -75,17 +104,31 @@ function Solutions() {
       </Container>
       <style>
         {`
-        .features {
-          position: relative;
+        .feature-primary {
           cursor: pointer;
-        }
-
-        .feature-header {
+          transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+          perspective: 1000px;
+          margin: 10px -5px;
+          padding: 20px;
+          background-color: #ffffff;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
           display: flex;
+          flex-direction: column;
           align-items: center;
+          border: 1.5px solid #ccc;
         }
 
-        .feature-header h4 {
+        .feature-primary:hover {
+          border-color: #1e90ff;
+        }
+
+        .hovered {
+          transform: translateY(-5px);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
           margin-bottom: 0;
         }
 
@@ -103,13 +146,17 @@ function Solutions() {
           font-weight: bold;
         }
 
-        .section-margin {
-          margin-top: 60px;
-          margin-bottom: 60px;
-        }
-
         .section-gap {
           height: 20px;
+        }
+
+        .row-gap {
+          margin-top: 80px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-left: -5px;
+          margin-right: -5px;
         }
 
         .button-container {
@@ -137,6 +184,10 @@ function Solutions() {
 
         .button-icon {
           margin-right: 5px;
+        }
+
+        .button-label {
+          color: #333;
         }
       `}
       </style>
