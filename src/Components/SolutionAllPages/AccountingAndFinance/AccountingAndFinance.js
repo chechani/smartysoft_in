@@ -1,4 +1,4 @@
-import { Button, Typography, Box, Card, CardContent, CardMedia } from '@mui/material';
+import { Button, Typography, Box, Card, CardContent, CardMedia, useMediaQuery } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
@@ -25,8 +25,7 @@ function AccountingAndFinance() {
     fetchData();
   }, []);
 
-  // Check if the current device is a mobile device
-  const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+  const isMobile = useMediaQuery('(max-width: 600px)');
 
   return (
     <>
@@ -80,7 +79,7 @@ function AccountingAndFinance() {
               <Card
                 sx={{
                   display: 'flex',
-                  flexDirection: 'column',
+                  flexDirection: isMobile ? 'column' : 'row',
                   boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
                   borderRadius: '4px',
                   transition: 'transform 0.3s, box-shadow 0.3s, border-color 0.3s',
@@ -88,8 +87,12 @@ function AccountingAndFinance() {
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
               >
-         
-                <CardContent sx={{ flex: '1 0 auto' }}>
+                <CardContent
+                  sx={{
+                    flex: isMobile ? '1 0 auto' : '0 0 35%',
+                    textAlign: isMobile ? 'center' : 'left',
+                  }}
+                >
                   <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
                   <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
                 </CardContent>
@@ -98,8 +101,8 @@ function AccountingAndFinance() {
                   src={"https://smartysoftware.in/" + data.image}
                   alt="Document Image"
                   sx={{
-                    width: "100%",
-                    height: "auto",
+                    width: isMobile ? '100%' : '65%',
+                    height: isMobile ? 'auto' : 'auto',
                     borderTopLeftRadius: '4px',
                     borderTopRightRadius: '4px',
                   }}
