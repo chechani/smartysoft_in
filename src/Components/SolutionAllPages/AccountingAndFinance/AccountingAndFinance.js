@@ -1,13 +1,13 @@
-import { Button, Typography, Box, Card } from '@mui/material';
+import { Button, Typography, Box, Card, CardContent, CardMedia } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
 import AccountingCards from './AccountingCards';
 
-
 function AccountingAndFinance() {
   const [AccountData, SetAccountData] = useState([]);
   const [documentData, setDocumentData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -16,7 +16,7 @@ function AccountingAndFinance() {
         );
         const data = await response.json();
         console.log(data);
-        setDocumentData(data.message.smarty_key_points)
+        setDocumentData(data.message.smarty_key_points);
         SetAccountData(data.message);
       } catch (error) {
         console.log(error);
@@ -24,6 +24,9 @@ function AccountingAndFinance() {
     };
     fetchData();
   }, []);
+
+  // Check if the current device is a mobile device
+  const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
 
   return (
     <>
@@ -38,20 +41,13 @@ function AccountingAndFinance() {
       >
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <Typography
-              sx={{ fontWeight: 700, mt: 3, fontSize: "40px" }}
-            >
+            <Typography sx={{ fontWeight: 700, mt: 3, fontSize: "40px" }}>
               {AccountData.tagline}
             </Typography>
-            <Typography
-              sx={{ fontWeight: 700, mt: 2, fontSize: "20px" }}
-            >
+            <Typography sx={{ fontWeight: 700, mt: 2, fontSize: "20px" }}>
               {AccountData.descriptive_title}
             </Typography>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="/excelfileform"
-            >
+            <Link style={{ textDecoration: "none" }} to="/excelfileform">
               <Button
                 variant="contained"
                 color="success"
@@ -77,31 +73,47 @@ function AccountingAndFinance() {
       </Box>
 
       {/* Cards of Data */}
-      <Box sx={{width: 'auto', m: 5 }}>
-  <Grid container spacing={2}>
-    {documentData.map((data, index) => (
-      <Grid item xs={12} key={index}>
-        <Card sx={{ display: 'flex', width: '100%', p: 5 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
-            <Typography sx={{fontSize:"32px",fontWeight:"bold"}}>{data.document_name}</Typography>
-            <Typography sx={{fontSize:"22px",mt:5}}>{data.document_detail}</Typography>
-          </div>
-          <div style={{ width: '50%', textAlign: 'right'}}>
-            <img 
-            src={"https://smartysoftware.in/" + data.image}
-            // src={data.image}
-             alt="Document Image" style={{width:"100%",height:"100%"}}/>
-          </div>
-        </Card>
-      </Grid>
-    ))}
-  </Grid>
-</Box>
+      <Box sx={{ width: 'auto', m: 5 }}>
+        <Grid container spacing={2}>
+          {documentData.map((data, index) => (
+            <Grid item xs={12} key={index}>
+              <Card
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+                  borderRadius: '4px',
+                  transition: 'transform 0.3s, box-shadow 0.3s, border-color 0.3s',
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              >
+         
+                <CardContent sx={{ flex: '1 0 auto' }}>
+                  <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
+                  <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
+                </CardContent>
+                <CardMedia
+                  component="img"
+                  src={"https://smartysoftware.in/" + data.image}
+                  alt="Document Image"
+                  sx={{
+                    width: "100%",
+                    height: "auto",
+                    borderTopLeftRadius: '4px',
+                    borderTopRightRadius: '4px',
+                  }}
+                />
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
 
       {/* desc data */}
       <Box>
-<AccountingCards/>
-</Box>
+        <AccountingCards />
+      </Box>
     </>
   );
 }

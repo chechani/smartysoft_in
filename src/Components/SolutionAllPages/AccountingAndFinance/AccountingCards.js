@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 
+
 function AccountingCards() {
   const [features, setFeatures] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [documentData, setDocumentData] = useState([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,13 +16,15 @@ function AccountingCards() {
         );
         const data = await response.json();
         console.log(data.message);
-        setDocumentData(data.message.smarty_key_advantages);
+        setDocumentData(data.message.smarty_key_advantages)
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
   }, []);
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,7 +61,7 @@ function AccountingCards() {
         </div>
         <Row>
           {documentData.map((feature, index) => (
-            <Col lg={6} key={index}>
+            <Col lg={4} md={4} sm={6} key={index}>
               <div
                 className={`d-flex flex-column feature-primary ${hoveredIndex === index ? "hovered" : ""}`}
                 style={{
@@ -71,44 +75,40 @@ function AccountingCards() {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <div className="d-flex align-items-center justify-content-center">
-                  <div className="desktop-view">
-                    <h4
-                      className={`title text-center ${hoveredIndex === index ? "hovered" : ""}`}
-                      style={{
-                        marginTop: "10px",
-                        color: "#333",
-                        transition: "color 0.3s",
-                      }}
-                    >
-                      {feature.advantage}
-                    </h4>
-                    <p
-                      className="text-muted para mb-0"
-                      style={{
-                        color: hoveredIndex === index ? "#ffffff" : "#00FF00",
-                        textAlign: "center",
-                        transition: "color 0.3s",
-                        maxHeight: "5em",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        display: "-webkit-box",
-                        WebkitLineClamp: "2",
-                        WebkitBoxOrient: "vertical",
-                      }}
-                    >
-                      {feature.advantage_detail}
-                    </p>
-                  </div>
-                  <div className="mobile-view">
-                    <img
-                      src={"https://smartysoftware.in/" + feature.image}
-                      width="60"
-                      height="60"
-                      alt={feature.advantage}
-                      style={{ marginBottom: "10px" }}
-                    />
-                  </div>
+                  <img
+                    src={"https://smartysoftware.in/" + feature.image}
+                    width="60"
+                    height="60"
+                    alt={feature.advantage}
+                    style={{ marginBottom: "10px" }}
+                  />
                 </div>
+                <h4
+                  className={`title text-center ${hoveredIndex === index ? "hovered" : ""}`}
+                  style={{
+                    marginTop: "10px",
+                    color: "#333",
+                    transition: "color 0.3s",
+                  }}
+                >
+                  {feature.advantage}
+                </h4>
+                <p
+                  className="text-muted para mb-0"
+                  style={{
+                    color: hoveredIndex === index ? "#ffffff" : "#00FF00",
+                    textAlign: "center",
+                    transition: "color 0.3s",
+                    maxHeight: "5em",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    display: "-webkit-box",
+                    WebkitLineClamp: "2",
+                    WebkitBoxOrient: "vertical",
+                  }}
+                >
+                  {feature.advantage_detail}
+                </p>
               </div>
             </Col>
           ))}
@@ -196,20 +196,6 @@ function AccountingCards() {
 
         .button-label {
           color: #333;
-        }
-
-        /* Desktop View */
-        @media (min-width: 768px) {
-          .mobile-view {
-            display: none;
-          }
-        }
-
-        /* Mobile View */
-        @media (max-width: 767px) {
-          .desktop-view {
-            display: none;
-          }
         }
       `}
       </style>
