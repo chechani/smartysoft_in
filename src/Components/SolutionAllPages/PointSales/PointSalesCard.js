@@ -12,7 +12,7 @@ function PointSalesCard() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=accounting%20and%20finance"
+          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=point%20of%20sales%20for%20retail%20outlets"
         );
         const data = await response.json();
         console.log(data.message);

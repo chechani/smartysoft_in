@@ -11,7 +11,7 @@ function KnowledgeManagement() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=accounting%20and%20finance"
+          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=Knowledge%20Management%20and%20WiKi"
         );
         const data = await response.json();
         console.log(data.message);
