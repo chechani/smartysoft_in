@@ -316,7 +316,7 @@ export default function Footer() {
         <Grid div xs={12} md={3}>
          
           <Box sx={{ mt: 5, ml: { xs: 13, sm: 8 } }}>
-            <ul style={{fontSize: "15px",listStyleType: "none" }}>
+            <ul style={{fontSize: "14px",listStyleType: "none" }}>
               <li style={{ marginTop: "25px" }}>
                 <a
                   href="/contactus"
