@@ -76,7 +76,7 @@ export default function Footer() {
         </Grid>
         <Grid div xs={12} sm={6} md={2}>
           <Box sx={{ mt: 5, ml: { xs: 11, sm: 10 } }}>
-            <ul style={{fontSize: "15px" }}>
+            <ul style={{fontSize: "14px",listStyleType: "none",textAlign:"center" }}>
               <li style={{ marginTop: "25px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
@@ -155,7 +155,7 @@ export default function Footer() {
         </Grid>
         <Grid div xs={12} sm={6} md={2}>
         <Box sx={{ mt: 5, ml: { xs: 11, sm: 10 } }}>
-            <ul style={{fontSize: "15px" }}>
+            <ul style={{fontSize: "14px",listStyleType: "none",textAlign:"center" }}>
               <li style={{ marginTop: "25px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
@@ -235,7 +235,7 @@ export default function Footer() {
         <Grid div xs={12} sm={6} md={2}>
           <Box sx={{ mt: 5, ml: { xs: 11, sm: 10 } }}>
             
-            <ul style={{fontSize: "15px" }}>
+            <ul style={{fontSize: "14px",listStyleType: "none",textAlign:"center" }}>
               <li style={{ marginTop: "25px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
@@ -314,7 +314,30 @@ export default function Footer() {
         </Grid>
        
         <Grid div xs={12} md={3}>
-          <Box sx={{ mt: 5, ml: { xs: 11, sm: 10 } }}>         
+         
+          <Box sx={{ mt: 5, ml: { xs: 13, sm: 8 } }}>
+            <ul style={{fontSize: "15px",listStyleType: "none" }}>
+              <li style={{ marginTop: "25px" }}>
+                <a
+                  href="/contactus"
+                  style={{ color: "black", textDecoration: "none" }}
+                >
+                  Contact Us
+                </a>
+              </li>
+
+              <li style={{ marginTop: "20px" }}>
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/privacypolicy"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+
+            </ul>
+          </Box>
+          <Box sx={{ ml: { xs: 11, sm: 10 } }}>         
             <Box sx={{ mr: 2 }}>
               <Box
                 sx={{
@@ -336,7 +359,7 @@ export default function Footer() {
                   sx={{
                     width: "100%",
                     mb: 2,
-                    mt: 4,
+                    mt: 2,
                   }}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -351,28 +374,6 @@ export default function Footer() {
               </Box>
             </Box>
             <br />
-          </Box>
-          <Box sx={{ mt: 5, ml: { xs: 13, sm: 8 } }}>
-            <ul style={{fontSize: "15px" }}>
-              <li style={{ marginTop: "25px" }}>
-                <a
-                  href="/contactus"
-                  style={{ color: "black", textDecoration: "none" }}
-                >
-                  Contact Us
-                </a>
-              </li>
-
-              <li style={{ marginTop: "20px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/privacypolicy"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-
-            </ul>
           </Box>
         </Grid>
       </Grid>

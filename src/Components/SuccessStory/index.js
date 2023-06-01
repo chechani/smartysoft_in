@@ -148,8 +148,8 @@ const SuccessStoryList = ({ onStoryClick }) => {
           }
         `}
       </style>
-      <h2 className="section-title">Success Stories</h2>
-      <div className="row" style={{marginTop:"50px",marginBottom:"60px"}}>
+      <h2 className="section-title" style={{paddingTop:"20px"}}>Success Stories</h2>
+      <div className="row" style={{marginTop:"50px",marginBottom:"70px"}}>
         {successStories.map((story) => (
           <div
             className="col"
