@@ -80,7 +80,7 @@ export default function Footer() {
               <li style={{ marginTop: "25px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://exceltotally.info"
+                  href="/accounting"
                 >
                   Accounting and Finance  
                 </a>
@@ -159,7 +159,7 @@ export default function Footer() {
               <li style={{ marginTop: "25px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://exceltotally.info"
+                  href="/salesdistribution"
                 >
                   Sales and Distribution
                 </a>
