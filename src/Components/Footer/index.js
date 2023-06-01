@@ -99,7 +99,7 @@ export default function Footer() {
                   style={{ color: "black", textDecoration: "none" }}
                   href="/pointsales"
                 >
-                  Point of Sales for Retail Outlets
+                  Point of Sales
                 </a>
               </li>
               <li style={{ marginTop: "15px" }}>
@@ -139,7 +139,7 @@ export default function Footer() {
                   style={{ color: "black", textDecoration: "none" }}
                   href="/businessintelligence"
                 >
-                  Knowledge Management and WiKi
+                  Knowledge Management
                 </a>
               </li>
               <li style={{ marginTop: "15px" }}>
@@ -168,7 +168,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://knowledgemanager.in"
+                  href="/salesdistribution"
                 >
                  Buying and Vendor Portal
                 </a>
@@ -176,7 +176,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/buyingvendorportal"
                 >
                   Manufacturing Operations
                 </a>
@@ -184,7 +184,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/manufacturingoperation"
                 >
                   Project and Task Management
                 </a>
@@ -192,7 +192,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/projectandtaskmanagement"
                 >
                   Customer Help Desk
                 </a>
@@ -200,7 +200,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/customerhelpdesk"
                 >
                   Website Builder
                 </a>
@@ -216,7 +216,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/expensetravelmanagement"
                 >
                  Document Automation & Management
                 </a>
@@ -224,7 +224,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/documentautomation"
                 >
                  Knowledge Manager
                 </a>
@@ -256,7 +256,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/inventorymanagement"
                 >
                   Project Accounting & Financial Analysis
                 </a>
@@ -264,7 +264,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/projectaccounting"
                 >
                   Time Recording and Billing
                 </a>
@@ -272,7 +272,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/timerecordingandbilling"
                 >
                   Maintenance Management
                 </a>
@@ -280,7 +280,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/maintenancemanagement"
                 >
                   eCommerce and Online Selling
                 </a>
