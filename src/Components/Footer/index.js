@@ -89,7 +89,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://knowledgemanager.in"
+                  href="/marketing"
                 >
                   Marketing Automation
                 </a>
@@ -97,7 +97,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/pointsales"
                 >
                   Point of Sales for Retail Outlets
                 </a>
@@ -105,7 +105,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/qualitymanagement"
                 >
                   Quality Management
                 </a>
@@ -113,7 +113,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/assetmanagement"
                 >
                   Asset Management
                 </a>
@@ -121,7 +121,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/humanresourcesmanagement"
                 >
                   Human Resources Management
                 </a>
@@ -129,7 +129,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/humanresourcesmanagement"
                 >
                   Business Intelligence
                 </a>
@@ -137,7 +137,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
+                  href="/businessintelligence"
                 >
                   Knowledge Management and WiKi
                 </a>
@@ -145,7 +145,7 @@ export default function Footer() {
               <li style={{ marginTop: "15px" }}>
                 <a
                   style={{ color: "black", textDecoration: "none" }}
-                  href="https://exceltotally.info"
+                  href="/knowledgemanagement"
                 >
                   Excel to Tally 
                 </a>
