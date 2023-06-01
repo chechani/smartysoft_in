@@ -2,7 +2,7 @@ import { Button, Typography, Box, Card, CardContent, CardMedia, useMediaQuery } 
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
-import AccountingCards from './SalesDistributionCard';
+import SalesDistributionCard from './SalesDistributionCard';
 
 function SalesDistribution() {
   const [AccountData, SetAccountData] = useState([]);
@@ -134,7 +134,7 @@ function SalesDistribution() {
 
       {/* desc data */}
       <Box>
-        <AccountingCards />
+        <SalesDistributionCard />
       </Box>
     </>
   );
