@@ -79,7 +79,7 @@ const benefitsData = [
       'Our Founder and CEO, a Chartered Accountant with over 25 years of experience in the software business, brings a wealth of expertise and industry knowledge to our services. This unique combination of financial acumen and industry insight enables us to deliver crisp and appealing solutions to our clients.',
   },
   {
-    imageUrl: <img src='./company_images/CoreTeam.webp' style={{width:"50px",height:"50px"}}/>,
+    imageUrl: <img src='./company_images/CoreTeam.png' style={{width:"50px",height:"50px"}}/>,
     title: 'Core Team Multifaceted Capabilities',
     description:
       'Our exceptional team comprises highly skilled individuals with extensive technical and functional knowledge. With diverse backgrounds and a wide range of expertise, they are equipped to handle any challenge that comes their way. Their collective proficiency enables us to consistently deliver outstanding results',

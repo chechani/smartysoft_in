@@ -24,7 +24,7 @@ function Home() {
               <iframe
                 width="80%"
                 height="320px"
-                 src="https://www.youtube.com/embed/u2uv_1H2UR0"
+                 src="https://www.youtube.com/embed/P_gn1TQQ97Q" 
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen="true"
