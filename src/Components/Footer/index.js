@@ -12,8 +12,9 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
 
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
   function handleSubscribe() {
     if (!email) {
       toast.error("Please enter an email address");
@@ -21,7 +22,8 @@ export default function Footer() {
       toast.error("Please enter a valid email address");
     } else {
       fetch(
-        `https://clients.smartysoft.in/api/method/professional.api.add_email_member?group=Excel to Tally&email=${email}`
+        "https://clients.smartysoft.in/api/method/professional.api.add_email_member?group=Excel to Tally&email=" +
+        email
       )
         .then((response) => {
           if (response.ok) {
@@ -34,7 +36,6 @@ export default function Footer() {
         .catch((error) => toast.error(error.message));
     }
   }
-
   return (
     <Box
       style={{
@@ -43,16 +44,16 @@ export default function Footer() {
       }}
     >
       <ToastContainer />
-      <Grid container spacing={5} style={{ paddingBottom: "50px" }}>
+      <Grid container spacing={3} style={{ paddingBottom: "50px" }}>
         <Grid item xs={12} md={3}>
-          <div style={{ marginLeft: "10px" }}>
+          <div style={{marginLeft:"20px"}}>
             <img
               alt="footer-logo"
               src="./smarty_logo.png"
               style={{ width: "50%", marginLeft: "11%" }}
             />
             <Typography sx={{ width: "60%", ml: 5, marginTop: 2, fontSize: "18px" }}>
-              Helping Businesses in 100% Digitalization
+              Helping Businesses in 💯% Digitalization and Automation
             </Typography>
             <Box sx={{ ml: 3, mt: 1 }}>
               <a href="https://www.facebook.com/customexceltotally" target="_blank" rel="noopener noreferrer">
@@ -70,175 +71,262 @@ export default function Footer() {
             </Box>
           </div>
         </Grid>
-        <Grid item xs={12} sm={6} md={2}>
-          <Box sx={{ mt: 5, ml: { xs: 11, sm: 10 } }}>
-            <ul style={{ fontSize: "14px", listStyleType: "none", textAlign: "center", paddingInlineStart: 0 }}>
-              <li style={{ marginTop: "15px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/accounting">
+        <Grid div xs={12} sm={6} md={2}>
+          <Box sx={{ mt: 5, ml: { xs: 2, sm: 1} }}>
+            <ul style={{ fontSize: "14px", listStyleType: "none", textAlign: "center" }}>
+              <li style={{ marginTop: "10px" }}>
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/accounting"
+                >
                   Accounting and Finance
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/marketing">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/marketing"
+                >
                   Marketing Automation
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/pointsales">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/pointsales"
+                >
                   Point of Sales
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/qualitymanagement">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/qualitymanagement"
+                >
                   Quality Management
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/assetmanagement">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/assetmanagement"
+                >
                   Asset Management
                 </a>
               </li>
-              <li style={{ marginTop: "15px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/humanresourcesmanagement">
+              <li style={{ marginTop: "10px" }}>
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/humanresourcesmanagement"
+                >
                   Human Resources Management
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/businessintelligence">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/businessintelligence"
+                >
                   Business Intelligence
                 </a>
               </li>
-              <li style={{ marginTop: "15px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/knowledgemanagement">
+              <li style={{ marginTop: "10px" }}>
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/knowledgemanagement"
+                >
                   Knowledge Management
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/exceltotally">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/knowledgemanagement"
+                >
                   Excel to Tally
                 </a>
               </li>
             </ul>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6} md={2}>
-          <Box sx={{ mt: 5, ml: { xs: 11, sm: 10 } }}>
-            <ul style={{ fontSize: "14px", listStyleType: "none", textAlign: "center", paddingInlineStart: 0 }}>
-              <li style={{ marginTop: "15px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/salesdistribution">
+        <Grid div xs={12} sm={6} md={2}>
+          <Box sx={{ mt: 5, ml: { xs: 2, sm: 1 } }}>
+            <ul style={{ fontSize: "14px", listStyleType: "none", textAlign: "center" }}>
+              <li style={{ marginTop: "10px" }}>
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/salesdistribution"
+                >
                   Sales and Distribution
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/buyingvendorportal">
-                  Buying and Vendor Management
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/salesdistribution"
+                >
+                  Buying and Vendor Portal
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/manufacturingoperation">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/buyingvendorportal"
+                >
                   Manufacturing Operations
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/projectandtaskmanagement">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/manufacturingoperation"
+                >
                   Project and Task Management
                 </a>
               </li>
-              <li style={{ marginTop: "15px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/customerhelpdesk">
+              <li style={{ marginTop: "10px" }}>
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/projectandtaskmanagement"
+                >
                   Customer Help Desk
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/websitebuilder">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/customerhelpdesk"
+                >
                   Website Builder
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/expensetravelmanagement">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="https://einvoicing.co.in"
+                >
                   Expense Management
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/documentautomation">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/expensetravelmanagement"
+                >
                   Document Management
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="https://knowledgemanager.in">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/documentautomation"
+                >
                   Knowledge Manager
                 </a>
               </li>
             </ul>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6} md={2}>
-          <Box sx={{ mt: 5, ml: { xs: 11, sm: 10 } }}>
-            <ul style={{ fontSize: "14px", listStyleType: "none", textAlign: "center", paddingInlineStart: 0 }}>
-              <li style={{ marginTop: "15px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/crmcustomerportal">
-                  CRM and Customer Portal
+        <Grid div xs={12} sm={6} md={2}>
+          <Box sx={{ mt: 5, ml: { xs: 2, sm: 1 } }}>
+            <ul style={{ fontSize: "14px", listStyleType: "none", textAlign: "center" }}>
+              <li style={{ marginTop: "10px" }}>
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="https://exceltotally.info"
+                >
+                  Customer Relationship Management
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/inventorymanagement">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="https://knowledgemanager.in"
+                >
                   Inventory Management
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/projectaccounting">
-                  Projectwise Accounting
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/inventorymanagement"
+                >
+                  Project Accounting
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/timerecordingandbilling">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/projectaccounting"
+                >
                   Time Recording and Billing
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/maintenancemanagement">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/timerecordingandbilling"
+                >
                   Maintenance Management
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/ecommerce">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/maintenancemanagement"
+                >
                   eCommerce and Online Selling
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/meetingagendataskexecution">
-                  Meeting Agenda and Tasks
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="https://einvoicing.co.in"
+                >
+                  Meeting Agenda and Task Execution
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/fleetmanagement">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="https://einvoicing.co.in"
+                >
                   Fleet Management
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="https://einvoicing.co.in">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="https://einvoicing.co.in"
+                >
                   eInvoicing
                 </a>
               </li>
             </ul>
           </Box>
         </Grid>
-        <Grid item xs={12} md={3}>
-          <Box sx={{ mt: 5, ml: { xs: 13, sm: 8 } }}>
+        <Grid div xs={12} md={3}>
+          <Box sx={{ mt: 5, ml: { xs: 5, sm: 3 } }}>
             <ul style={{ fontSize: "14px", listStyleType: "none" }}>
-              <li style={{ marginTop: "15px" }}>
-                <a href="/contactus" style={{ color: "black", textDecoration: "none" }}>
+              <li style={{ marginTop: "10px" }}>
+                <a
+                  href="/contactus"
+                  style={{ color: "black", textDecoration: "none" }}
+                >
                   Contact Us
                 </a>
               </li>
               <li style={{ marginTop: "10px" }}>
-                <a style={{ color: "black", textDecoration: "none" }} href="/privacypolicy">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href="/privacypolicy"
+                >
                   Privacy Policy
                 </a>
               </li>
             </ul>
           </Box>
-          <Box sx={{ ml: { xs: 11, sm: 10 } }}>
+          <Box sx={{ ml: { xs: 9, sm: 7 } }}>
             <Box sx={{ mr: 2 }}>
               <Box
                 sx={{
@@ -284,15 +372,16 @@ export default function Footer() {
             backgroundColor: "black",
             textAlign: "center",
             color: "white",
-            marginRight: "1%",
+            marginRight: "3%",
             height: "auto",
             textAlign: "center",
-            padding: "3px",
+            padding: "9px",
             width: "100%",
-            fontSize: "12px",
+            fontSize: "15px"
           }}
         >
-          Smarty Software Private Limited <br />©2023 All Rights Reserved
+          Smarty Software Private Limited <br></br>Copyright
+          ©2023 All Rights Reserved
         </Box>
       </Box>
     </Box>
