@@ -42,6 +42,8 @@ import MeetingAgendaTaskExecution from './Components/SolutionAllPages/MeetingAge
 import KnowledgeManagement from './Components/SolutionAllPages/KnowledgeManagement/KnowledgeManagement';
 import DocumentAutomationManagement from './Components/SolutionAllPages/DocumentAutomation/DocumentAutomation';
 import FleetManagement from './Components/SolutionAllPages/FleetManagement/FleetManagement';
+import KeyFeatures from './Components/Features/keyfeatures';
+import Technologies from './Components/Technologies';
 
 
 function App() {
@@ -64,6 +66,8 @@ function App() {
         <Route path ='/aboutus' element={<Aboutus/>}/>
         <Route path="/scheduledemothanks" element={<ScheduleDemoThanksPage/>}/>
         <Route path="/excelfilethanks" element={<ExcelfileThanksPage/>}/>
+        <Route path="/keyfeatures" element={<KeyFeatures/>}/>
+        <Route path="/technologies" element={<Technologies/>}/>
 
 
 {/* Solution All Pages */}

@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   const handleDemo = () => {
-    navigate('/happycustomers');
+    navigate('/keyfeatures');
     handleMenuClose();
   };
 
@@ -31,7 +31,7 @@ const Header = () => {
   };
 
   const handleFeature = () => {
-    navigate('/features');
+    navigate('/aboutus');
     handleMenuClose();
   };
 
@@ -46,7 +46,7 @@ const Header = () => {
   };
 
   const handleScheduleDemo = () => {
-    navigate('/scheduledemo');
+    navigate('/technologies');
     handleMenuClose();
   };
 
@@ -93,10 +93,9 @@ const Header = () => {
               onClose={handleMenuClose}
             >
               <MenuItem onClick={handleDemo}>Solutions</MenuItem>
-              <MenuItem onClick={handleDemo}>Services</MenuItem>
               <MenuItem onClick={handleFeature}>About Us</MenuItem>
               <MenuItem onClick={handleBenefits}>Why We</MenuItem>
-              <MenuItem onClick={handleDemo}>Technologies</MenuItem>
+              <MenuItem onClick={handleScheduleDemo}>Technologies</MenuItem>
               <MenuItem onClick={handlePricing}>Success Story</MenuItem>
             </Menu>
           ) : (

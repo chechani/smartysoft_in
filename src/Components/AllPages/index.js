@@ -24,7 +24,6 @@ const AllPages = () => {
         <Card>
             <WhatsAppButton/>
         </Card>
-  
             <Card>
                 <Home />
             </Card>
