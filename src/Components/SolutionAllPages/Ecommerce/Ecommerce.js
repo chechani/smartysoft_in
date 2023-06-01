@@ -1,4 +1,4 @@
-import { Button, Typography, Box, Card } from '@mui/material';
+import { Button, Typography, Box, Card, CardContent, CardMedia, useMediaQuery } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
@@ -24,6 +24,8 @@ function Ecommerce() {
     };
     fetchData();
   }, []);
+
+  const isMobile = useMediaQuery('(max-width: 600px)');
 
   return (
     <>
@@ -77,26 +79,65 @@ function Ecommerce() {
       </Box>
 
       {/* Cards of Data */}
-      <Box sx={{width: 'auto', m: 5 }}>
-  <Grid container spacing={2}>
-    {documentData.map((data, index) => (
-      <Grid item xs={12} key={index}>
-        <Card sx={{ display: 'flex', width: '100%', p: 5 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
-            <Typography sx={{fontSize:"32px",fontWeight:"bold"}}>{data.document_name}</Typography>
-            <Typography sx={{fontSize:"22px",mt:5}}>{data.document_detail}</Typography>
-          </div>
-          <div style={{ width: '50%', textAlign: 'right'}}>
-            <img 
-            src={"https://smartysoftware.in/" + data.image}
-            // src={data.image}
-             alt="Document Image" style={{width:"100%",height:"100%"}}/>
-          </div>
-        </Card>
-      </Grid>
-    ))}
-  </Grid>
-</Box>
+      <Box sx={{ width: 'auto', m: 5 }}>
+        <Grid container spacing={2}>
+          {documentData.map((data, index) => (
+            <Grid item xs={12} key={index}>
+              <Card
+                sx={{
+                  display: 'flex',
+                  flexDirection: isMobile ? 'column' : 'row',
+                  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+                  borderRadius: '4px',
+                  transition: 'transform 0.3s, box-shadow 0.3s, border-color 0.3s',
+                  border: '1px solid #ccc',
+                  marginBottom: '10px',
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              >
+                {isMobile ? (
+                  <>
+                    <CardContent>
+                      <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
+                      <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
+                    </CardContent>
+                    <CardMedia
+                      component="img"
+                      src={"https://smartysoftware.in/" + data.image}
+                      alt="Document Image"
+                      sx={{
+                        width: '100%',
+                        height: 'auto',
+                        borderTopLeftRadius: '4px',
+                        borderBottomLeftRadius: '4px',
+                      }}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <CardContent sx={{ flex: '0 0 35%' }}>
+                      <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
+                      <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
+                    </CardContent>
+                    <CardMedia
+                      component="img"
+                      src={"https://smartysoftware.in/" + data.image}
+                      alt="Document Image"
+                      sx={{
+                        width: '65%',
+                        height: 'auto',
+                        borderTopLeftRadius: '4px',
+                        borderTopRightRadius: '4px',
+                      }}
+                    />
+                  </>
+                )}
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
 
 
       {/* desc data */}

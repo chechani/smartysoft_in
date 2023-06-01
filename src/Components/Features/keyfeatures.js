@@ -149,7 +149,7 @@ const KeyFeatures = () => {
           </Row>
         </Container>
       </section>
-      <Dialog
+      {/* <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
@@ -171,7 +171,45 @@ const KeyFeatures = () => {
             <CloseIcon sx={{ fontSize: "17px", mr: 1 }} /> Close
           </Button>
         </DialogActions>
-      </Dialog>
+      </Dialog> */}      
+      <Dialog
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+      fullWidth
+      maxWidth="sm"
+    >
+      <DialogTitle id="alert-dialog-title">{selectedFeature}</DialogTitle>
+      <DialogContent>
+        <div style={{ position: "relative", paddingTop: "56.25%" }}>
+          <iframe
+            src={selectedVideoUrl}
+            title="Video Player"
+            frameBorder="0"
+            allowFullScreen
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+          />
+        </div>
+      </DialogContent>
+      <DialogActions sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Button variant="outlined" color="success">
+          <a
+            href={`https://wa.me/7849945640?text=${encodeURIComponent(WhatsappMsg)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", display: "flex", alignItems: "center" }}
+          >
+            <WhatsAppIcon sx={{ fontSize: "17px", mr: 1 }} />
+            WhatsApp
+          </a>
+        </Button>
+        <Button onClick={handleClose} color="error" size="small" variant="outlined" sx={{ mr: 2 }}>
+          <CloseIcon sx={{ fontSize: "17px", mr: 1 }} />
+          Close
+        </Button>
+      </DialogActions>
+    </Dialog>
     </React.Fragment>
   );
 };
