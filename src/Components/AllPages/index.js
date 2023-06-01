@@ -15,6 +15,7 @@ import Products from '../Products/index';
 import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
 import KeyFeatures from '../Features/keyfeatures';
+import SuccessStory from '../SuccessStory';
 
 
 const AllPages = () => {
@@ -59,12 +60,14 @@ const AllPages = () => {
             {/* <Card>
                 <HappyCustomers />
             </Card> */}
-     
-        
-       
+           
             <Card>
                 <Technologies />
             </Card>
+            <Card>
+                <SuccessStory />
+            </Card>
+     
      
        
  

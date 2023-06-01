@@ -4,7 +4,7 @@ import React from 'react';
 function Technologies() {
     return (
         <>
-            <Box style={{ textAlign: "center", paddingTop: "50px", paddingBottom: "70px", fontFamily: "Poppins',sans-serif", marginBottom: "60px" }}>
+            <Box style={{ textAlign: "center", paddingTop: "50px",fontFamily: "Poppins',sans-serif", marginBottom: "40px" }}>
                 <Typography variant='h4' sx={{ fontWeight: 700, fontSize: "32px" }}>Proficient in Technologies</Typography>
 
                 <Grid container spacing={2} sx={{ mt: 5 }}>
