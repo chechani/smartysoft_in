@@ -83,30 +83,49 @@ function AccountingAndFinance() {
                   boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
                   borderRadius: '4px',
                   transition: 'transform 0.3s, box-shadow 0.3s, border-color 0.3s',
+                  border: '1px solid #ccc',
+                  marginBottom: '10px',
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
               >
-                <CardContent
-                  sx={{
-                    flex: isMobile ? '1 0 auto' : '0 0 35%',
-                    textAlign: isMobile ? 'center' : 'left',
-                  }}
-                >
-                  <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
-                  <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
-                </CardContent>
-                <CardMedia
-                  component="img"
-                  src={"https://smartysoftware.in/" + data.image}
-                  alt="Document Image"
-                  sx={{
-                    width: isMobile ? '100%' : '65%',
-                    height: isMobile ? 'auto' : 'auto',
-                    borderTopLeftRadius: '4px',
-                    borderTopRightRadius: '4px',
-                  }}
-                />
+                {isMobile ? (
+                  <>
+                    <CardContent>
+                      <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
+                      <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
+                    </CardContent>
+                    <CardMedia
+                      component="img"
+                      src={"https://smartysoftware.in/" + data.image}
+                      alt="Document Image"
+                      sx={{
+                        width: '100%',
+                        height: 'auto',
+                        borderTopLeftRadius: '4px',
+                        borderBottomLeftRadius: '4px',
+                      }}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <CardContent sx={{ flex: '0 0 35%' }}>
+                      <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
+                      <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
+                    </CardContent>
+                    <CardMedia
+                      component="img"
+                      src={"https://smartysoftware.in/" + data.image}
+                      alt="Document Image"
+                      sx={{
+                        width: '65%',
+                        height: 'auto',
+                        borderTopLeftRadius: '4px',
+                        borderTopRightRadius: '4px',
+                      }}
+                    />
+                  </>
+                )}
               </Card>
             </Grid>
           ))}
