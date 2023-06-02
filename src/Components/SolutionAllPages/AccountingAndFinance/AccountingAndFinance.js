@@ -4,6 +4,8 @@ import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
 import AccountingCards from './AccountingCards';
 
+
+
 function AccountingAndFinance() {
   const [AccountData, SetAccountData] = useState([]);
   const [documentData, setDocumentData] = useState([]);
@@ -136,6 +138,9 @@ function AccountingAndFinance() {
       <Box>
         <AccountingCards />
       </Box>
+      
+  
+     
     </>
   );
 }

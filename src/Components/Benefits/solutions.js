@@ -10,11 +10,11 @@ import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-function Solutions() {
+function Solutions({ segment }) {
   const [features, setFeatures] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [open, setOpen] = useState(false);
-  const [HeadingData, setHeadingData] = useState("")
+  const [HeadingData, setHeadingData] = useState("");
   const [WhatsappMsg, setWhatsappMsg] = useState('');
 
   const handleClickOpen = (short_title) => {
@@ -31,7 +31,7 @@ function Solutions() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.api.get_smarty_solutions"
+          `https://smartysoftware.in/api/method/professional.web.get_solutions?segment=${encodeURIComponent(segment)}`
         );
         const data = await response.json();
         setFeatures(data.message);
@@ -41,7 +41,7 @@ function Solutions() {
     };
 
     fetchData();
-  }, []);
+  }, [segment]);
 
   if (features.length === 0) {
     return null;
@@ -130,43 +130,43 @@ function Solutions() {
         </Row>
       </Container>
       <Dialog
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-      fullWidth
-      maxWidth="sm"
-    >
-      <DialogTitle id="alert-dialog-title">{HeadingData}</DialogTitle>
-      <DialogContent>
-        <div style={{ position: "relative", paddingTop: "56.25%" }}>
-          <iframe
-            src="https://www.youtube.com/embed/RSe1GFl3e2Q"
-            title="Video Player"
-            frameBorder="0"
-            allowFullScreen
-            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-          />
-        </div>
-      </DialogContent>
-      <DialogActions sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Button variant="outlined" color="success">
-          <a
-            href={`https://wa.me/7849945640?text=${encodeURIComponent(WhatsappMsg)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", display: "flex", alignItems: "center" }}
-          >
-            <WhatsAppIcon sx={{ fontSize: "17px", mr: 1 }} />
-            WhatsApp
-          </a>
-        </Button>
-        <Button onClick={handleClose} color="error" size="small" variant="outlined" sx={{ mr: 2 }}>
-          <CloseIcon sx={{ fontSize: "17px", mr: 1 }} />
-          Close
-        </Button>
-      </DialogActions>
-    </Dialog>
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+        fullWidth
+        maxWidth="sm"
+      >
+        <DialogTitle id="alert-dialog-title">{HeadingData}</DialogTitle>
+        <DialogContent>
+          <div style={{ position: "relative", paddingTop: "56.25%" }}>
+            <iframe
+              src="https://www.youtube.com/embed/RSe1GFl3e2Q"
+              title="Video Player"
+              frameBorder="0"
+              allowFullScreen
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+            />
+          </div>
+        </DialogContent>
+        <DialogActions sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Button variant="outlined" color="success">
+            <a
+              href={`https://wa.me/7849945640?text=${encodeURIComponent(WhatsappMsg)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", display: "flex", alignItems: "center" }}
+            >
+              <WhatsAppIcon sx={{ fontSize: "17px", mr: 1 }} />
+              WhatsApp
+            </a>
+          </Button>
+          <Button onClick={handleClose} color="error" size="small" variant="outlined" sx={{ mr: 2 }}>
+            <CloseIcon sx={{ fontSize: "17px", mr: 1 }} />
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
       <style>
         {`
         .feature-primary {

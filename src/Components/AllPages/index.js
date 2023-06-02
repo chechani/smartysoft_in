@@ -15,7 +15,7 @@ import Products from '../Products/index';
 import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
 import KeyFeatures from '../Features/keyfeatures';
-import SuccessStory from '../SuccessStory';
+// import SuccessStory from '../SuccessStory';
 
 
 const AllPages = () => {
@@ -31,7 +31,7 @@ const AllPages = () => {
                 <KeyFeatures/>
             </Card>
             <Card>
-                <Solutions />
+                <Solutions segment="Smarty Home" />
             </Card>
             <Card>
                 <AboutUs/>
@@ -63,9 +63,9 @@ const AllPages = () => {
             <Card>
                 <Technologies />
             </Card>
-            <Card>
+            {/* <Card>
                 <SuccessStory />
-            </Card>
+            </Card> */}
      
      
        
