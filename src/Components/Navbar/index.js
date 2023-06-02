@@ -92,7 +92,7 @@ const Header = () => {
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
-              <MenuItem onClick={handleDemo}>Solutions</MenuItem>
+       
               <MenuItem onClick={handleFeature}>About Us</MenuItem>
               <MenuItem onClick={handleBenefits}>Why We</MenuItem>
               <MenuItem onClick={handleScheduleDemo}>Technologies</MenuItem>
@@ -120,12 +120,8 @@ const Header = () => {
                   },
                 }}
               >
-                <Typography variant="subtitle1" onClick={handleDemo}>
-                  Solutions
-                </Typography>
-                <Typography variant="subtitle1" onClick={handleDemo}>
-                  Services
-                </Typography>
+    
+         
                 <Typography variant="subtitle1" onClick={handleFeature}>
                   About Us
                 </Typography>
