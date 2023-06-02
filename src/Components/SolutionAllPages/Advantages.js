@@ -2,11 +2,9 @@ import { Button, Typography, Box, Card, CardContent, CardMedia, useMediaQuery } 
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
-import AccountingCards from './AccountingCards';
 
 
-
-function AccountingAndFinance() {
+function AccountingAndFinance({docname}) {
   const [AccountData, SetAccountData] = useState([]);
   const [documentData, setDocumentData] = useState([]);
 
@@ -14,7 +12,7 @@ function AccountingAndFinance() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=accounting%20and%20finance"
+          `https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=${encodeURIComponent(docname)}`
         );
         const data = await response.json();
         console.log(data);
@@ -133,14 +131,7 @@ function AccountingAndFinance() {
           ))}
         </Grid>
       </Box>
-
-      {/* desc data */}
-      <Box>
-        <AccountingCards />
-      </Box>
-      
-  
-     
+       
     </>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 
 
-function AccountingCards() {
+function AllFeatures({docname}) {
   const [features, setFeatures] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [documentData, setDocumentData] = useState([]);
@@ -12,7 +12,7 @@ function AccountingCards() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=accounting%20and%20finance"
+          `https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=${encodeURIComponent(docname)}`
         );
         const data = await response.json();
         console.log(data.message);
@@ -203,4 +203,4 @@ function AccountingCards() {
   );
 }
 
-export default AccountingCards;
+export default AllFeatures;

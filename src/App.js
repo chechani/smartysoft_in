@@ -26,7 +26,6 @@ import InventoryManagement from './Components/SolutionAllPages/InventoryManageme
 import PointSales from './Components/SolutionAllPages/PointSales/PointSales';
 import ManufacturingOperation from './Components/SolutionAllPages/ManufacturingOperation/ManufacturingOperation';
 import ProjectAccounting from './Components/SolutionAllPages/ProjectAccounting/ProjectAccounting';
-import AccountingAndFinance from './Components/SolutionAllPages/AccountingAndFinance/AccountingAndFinance';
 import QualityManagement from './Components/SolutionAllPages/QualityManagement/QualityManagement';
 import ProjectAndTaskManagement from './Components/SolutionAllPages/ProjectAndTaskManagement/ProjectAndTaskManagement';
 import TimeRecordingAndBilling from './Components/SolutionAllPages/TimeRecordingAndBilling/TimeRecordingAndBilling';
@@ -44,6 +43,7 @@ import DocumentAutomationManagement from './Components/SolutionAllPages/Document
 import FleetManagement from './Components/SolutionAllPages/FleetManagement/FleetManagement';
 import KeyFeatures from './Components/Features/keyfeatures';
 import Technologies from './Components/Technologies';
+import Accounting from './Components/SolutionAllPages/Accounting';
 
 
 function App() {
@@ -68,10 +68,11 @@ function App() {
         <Route path="/excelfilethanks" element={<ExcelfileThanksPage/>}/>
         <Route path="/keyfeatures" element={<KeyFeatures/>}/>
         <Route path="/technologies" element={<Technologies/>}/>
+        
 
 
 {/* Solution All Pages */}
-        <Route path="/accounting" element={<AccountingAndFinance/>}/>
+        <Route path="/accounting" element={<Accounting/>}/>
         <Route path="/marketing" element={<MarketingAutomation/>}/>
         <Route path="/salesdistribution" element={<SalesDistribution/>}/>
         <Route path="/crmcustomerportal" element={<CrmCustomerPortal/>}/>
