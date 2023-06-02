@@ -64,7 +64,7 @@ const AllPages = () => {
                 <Technologies />
             </Card>
             <Card>
-                <SuccessStoryContainer/>
+                <SuccessStoryContainer segment="CFO"/>
             </Card>
      
      
