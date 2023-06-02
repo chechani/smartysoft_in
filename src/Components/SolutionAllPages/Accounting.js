@@ -1,5 +1,5 @@
 import React from 'react';
-import AllFeatures from './AllFeatures';
+import AllFeatures from './Features';
 import Advantages from './Advantages';
 
 

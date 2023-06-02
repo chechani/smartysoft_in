@@ -16,34 +16,33 @@ import PrivacyPolicy from './Components/PrivacyPolicy';
 import Aboutus from './Components/AboutUs';
 import ScheduleDemoThanksPage from './Components/ScheduleDemoThanksPage';
 import ExcelfileThanksPage from './Components/ExcelfileThanksPage';
-import Products from './Components/Products';
 import DemoButton from './Components/DemoButton';
-import MarketingAutomation from './Components/SolutionAllPages/MarketingAutomation/MarketingAutomation';
-import SalesDistribution from './Components/SolutionAllPages/Sales&Distribution/Sales&Distribution';
-import CrmCustomerPortal from './Components/SolutionAllPages/CRM&CustomerPortal/CRM&CustomerPortal';
-import BuyingVendorPortal from './Components/SolutionAllPages/Buying&VendorPortal/Buying&VendorPortal';
-import InventoryManagement from './Components/SolutionAllPages/InventoryManagement/InventoryManagement';
-import PointSales from './Components/SolutionAllPages/PointSales/PointSales';
-import ManufacturingOperation from './Components/SolutionAllPages/ManufacturingOperation/ManufacturingOperation';
-import ProjectAccounting from './Components/SolutionAllPages/ProjectAccounting/ProjectAccounting';
-import QualityManagement from './Components/SolutionAllPages/QualityManagement/QualityManagement';
-import ProjectAndTaskManagement from './Components/SolutionAllPages/ProjectAndTaskManagement/ProjectAndTaskManagement';
-import TimeRecordingAndBilling from './Components/SolutionAllPages/TimeRecordingAndBilling/TimeRecordingAndBilling';
-import AssetManagement from './Components/SolutionAllPages/AssetManagement/AssetManagement';
-import CustomerHelpDesk from './Components/SolutionAllPages/CustomerHelpDesk/CustomerHelpDesk';
-import MaintenanceManagement from './Components/SolutionAllPages/MaintenanceManagement/MaintenanceManagement';
-import HumanResourcesManagement from './Components/SolutionAllPages/HumanResourcesManagement/HumanResourcesManagement';
-import WebsiteBuilder from './Components/SolutionAllPages/WebsiteBuilder/WebsiteBuilder';
-import Ecommerce from './Components/SolutionAllPages/Ecommerce/Ecommerce';
-import BusinessIntelligence from './Components/SolutionAllPages/BusinessIntelligence/BusinessIntelligence';
-import ExpenseTravelManagement from './Components/SolutionAllPages/ExpenseTravelManagement/ExpenseTravelManagement';
-import MeetingAgendaTaskExecution from './Components/SolutionAllPages/MeetingAgendaTaskExecution/MeetingAgendaTaskExecution';
-import KnowledgeManagement from './Components/SolutionAllPages/KnowledgeManagement/KnowledgeManagement';
-import DocumentAutomationManagement from './Components/SolutionAllPages/DocumentAutomation/DocumentAutomation';
-import FleetManagement from './Components/SolutionAllPages/FleetManagement/FleetManagement';
 import KeyFeatures from './Components/Features/keyfeatures';
 import Technologies from './Components/Technologies';
 import Accounting from './Components/SolutionAllPages/Accounting';
+import AssetManagement from './Components/SolutionAllPages/AssetManagement';
+import Businessintelligence from './Components/SolutionAllPages/BusinessIntelligence';
+import BuyingAndVendorPortal from './Components/SolutionAllPages/Buying&VendorPortal';
+import CRMAndCustomerPortal from './Components/SolutionAllPages/CRM&CustomerPortal';
+import CustomerHelpDesk from './Components/SolutionAllPages/CustomerHelpDesk';
+import DocumentAutomation from './Components/SolutionAllPages/DocumentAutomation';
+import Ecommerce from './Components/SolutionAllPages/Ecommerce';
+import ExpenseTravelManagement from './Components/SolutionAllPages/ExpenseTravelManagement';
+import FleetManagement from './Components/SolutionAllPages/FleetManagement';
+import HumanResources from './Components/SolutionAllPages/HumanResources';
+import InventoryManagement from './Components/SolutionAllPages/InventoryManagement';
+import KnowledgeManagement from './Components/SolutionAllPages/KnowledgeManagement';
+import MaintenanceManagement from './Components/SolutionAllPages/MaintenanceManagement';
+import ManufacturingOperation from './Components/SolutionAllPages/ManufacturingOperation';
+import MarketingAutomation from './Components/SolutionAllPages/MarketingAutomation';
+import MeetingAgenda from './Components/SolutionAllPages/MeetingAgenda';
+import PointSales from './Components/SolutionAllPages/PointSales';
+import ProjectAccounting from './Components/SolutionAllPages/ProjectAccounting';
+import ProjectAndTaskManagement from './Components/SolutionAllPages/ProjectAndTaskManagement';
+import QualityManagement from './Components/SolutionAllPages/QualityManagement';
+import SalesAndDistribution from './Components/SolutionAllPages/Sales&Distribution';
+import TimeRecordingAndBilling from './Components/SolutionAllPages/TimeRecordingAndBilling';
+import WebsiteBuilder from './Components/SolutionAllPages/WebsiteBuilder';
 
 
 function App() {
@@ -74,9 +73,9 @@ function App() {
 {/* Solution All Pages */}
         <Route path="/accounting" element={<Accounting/>}/>
         <Route path="/marketing" element={<MarketingAutomation/>}/>
-        <Route path="/salesdistribution" element={<SalesDistribution/>}/>
-        <Route path="/crmcustomerportal" element={<CrmCustomerPortal/>}/>
-        <Route path="/buyingvendorportal" element={<BuyingVendorPortal/>}/>
+        <Route path="/salesdistribution" element={<SalesAndDistribution/>}/>
+        <Route path="/crmcustomerportal" element={<CRMAndCustomerPortal/>}/>
+        <Route path="/buyingvendorportal" element={<BuyingAndVendorPortal/>}/>
         <Route path="/inventorymanagement" element={<InventoryManagement/>}/>
         <Route path="/pointsales" element={<PointSales/>}/>
         <Route path="/manufacturingoperation" element={<ManufacturingOperation/>}/>
@@ -87,14 +86,14 @@ function App() {
         <Route path="/assetmanagement" element={<AssetManagement/>}/>
         <Route path="/customerhelpdesk" element={<CustomerHelpDesk/>}/>
         <Route path="/maintenancemanagement" element={<MaintenanceManagement/>}/>
-        <Route path="/humanresourcesmanagement" element={<HumanResourcesManagement/>}/>
+        <Route path="/humanresourcesmanagement" element={<HumanResources/>}/>
         <Route path="/websitebuilder" element={<WebsiteBuilder/>}/>
         <Route path="/ecommerce" element={<Ecommerce/>}/>
-        <Route path="/businessintelligence" element={<BusinessIntelligence/>}/>
+        <Route path="/businessintelligence" element={<Businessintelligence/>}/>
         <Route path="/expensetravelmanagement" element={<ExpenseTravelManagement/>}/>
-        <Route path="/meetingagendataskexecution" element={<MeetingAgendaTaskExecution/>}/>
+        <Route path="/meetingagendataskexecution" element={<MeetingAgenda/>}/>
         <Route path="/knowledgemanagement" element={<KnowledgeManagement/>}/>
-        <Route path="/documentautomation" element={<DocumentAutomationManagement/>}/>
+        <Route path="/documentautomation" element={<DocumentAutomation/>}/>
         <Route path="/fleetmanagement" element={<FleetManagement/>}/>
 
         {/* <Route path="/services" element={<Services/>}/> */}
