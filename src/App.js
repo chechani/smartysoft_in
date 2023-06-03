@@ -20,7 +20,6 @@ import PrivacyPolicy from './Components/PrivacyPolicy';
 import Aboutus from './Components/AboutUs';
 import ScheduleDemoThanksPage from './Components/ScheduleDemoThanksPage';
 import ExcelfileThanksPage from './Components/ExcelfileThanksPage';
-import DemoButton from './Components/DemoButton';
 import Technologies from './Components/Technologies';
 import Accounting from './Components/SolutionAllPages/Accounting';
 import AssetManagement from './Components/SolutionAllPages/AssetManagement';
@@ -107,7 +106,6 @@ function App() {
         <Route path="/fleetmanagement" element={<FleetManagement/>}/>
 
         {/* <Route path="/services" element={<Services/>}/> */}
-        <Route path="/demobutton" element={<DemoButton/>}/>
         <Route path='*' element={<AllPages/>}/>
       </Routes>
       <Footer/>
