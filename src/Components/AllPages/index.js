@@ -6,7 +6,7 @@ import Technologies from '../Technologies';
 import Pricing from '../Pricing';
 import PurchaseConversion from '../PurchaseConversion';
 import Testimonial from '../Testimonial/index.js';
-import AboutUs from '../AboutUs';
+// import AboutUs from '../AboutUs';
 import { Data } from "../Question/Data";
 import WhatsAppButton from '../WhatsAppButton';
 import Reasons from '../HappyCustomers/reasons';
@@ -36,9 +36,9 @@ const AllPages = () => {
             <Card>
                 <Solutions segment="Smarty Home" />
             </Card>
-            <Card>
+            {/* <Card>
                 <AboutUs/>
-            </Card>
+            </Card> */}
             <Card>
                 <Reasons />
             </Card>

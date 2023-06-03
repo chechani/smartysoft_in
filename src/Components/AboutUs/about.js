@@ -3,16 +3,15 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import TeamMember from "./TeamMember";
 
-function AboutUs() {
+function About() {
   return (
     <>
       <Box
         style={{
-          marginTop:"60px",
-          marginBottom:"20px",
+
           textAlign: "center",
           fontFamily: "Arial, sans-serif",
-          padding: "4rem",
+          padding: "2rem",
           width: "100%", // Set width to 100%
           boxSizing: "border-box", // Include padding and border in the width calculation
         }}
@@ -50,4 +49,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default About;

@@ -10,7 +10,7 @@ import Auto from './Components/AllPages/auto';
 import Realestate from './Components/AllPages/realestate';
 import Distribution from './Components/AllPages/distribution';
 import Registration from './Components/Registration';
-import ThankYou from './Components/ThankYou/ThankYou';
+import ThankYou from './Components/ThanksPages/ThankYou';
 import Pricing from './Components/Pricing';
 import HappyCustomers from './Components/HappyCustomers';
 import ExcelFileForm from './Components/ExcelFileForm';
@@ -48,6 +48,7 @@ import WebsiteBuilder from './Components/SolutionAllPages/WebsiteBuilder';
 import Productline from './Components/Productline/index'
 import { FAQ } from './Components/FAQ/faqs';
 import USP from './Components/AboutUs/usp';
+import About from './Components/AboutUs/about'
 
 
 
@@ -71,6 +72,7 @@ function App() {
         <Route path="/scheduledemothanks" element={<ScheduleDemoThanksPage/>}/>
         <Route path="/excelfilethanks" element={<ExcelfileThanksPage/>}/>
         <Route path="/technologies" element={<Technologies/>}/>
+        <Route path="/about" element={<About/>}/>
    
 
 {/* Solution All Pages */}
