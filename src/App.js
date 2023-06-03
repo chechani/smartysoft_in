@@ -19,7 +19,6 @@ import PageContactDetail from './Components/ContactUs';
 import PrivacyPolicy from './Components/PrivacyPolicy';
 import Aboutus from './Components/AboutUs';
 import ScheduleDemoThanksPage from './Components/ScheduleDemoThanksPage';
-import ExcelfileThanksPage from './Components/ExcelfileThanksPage';
 import Technologies from './Components/Technologies';
 import Accounting from './Components/SolutionAllPages/Accounting';
 import AssetManagement from './Components/SolutionAllPages/AssetManagement';
@@ -28,6 +27,7 @@ import BuyingAndVendorPortal from './Components/SolutionAllPages/Buying&VendorPo
 import CRMAndCustomerPortal from './Components/SolutionAllPages/CRM&CustomerPortal';
 import CustomerHelpDesk from './Components/SolutionAllPages/CustomerHelpDesk';
 import DocumentAutomation from './Components/SolutionAllPages/DocumentAutomation';
+import ExcelfileThanksPage from './Components/ThanksPages/index'
 import Ecommerce from './Components/SolutionAllPages/Ecommerce';
 import ExpenseTravelManagement from './Components/SolutionAllPages/ExpenseTravelManagement';
 import FleetManagement from './Components/SolutionAllPages/FleetManagement';
