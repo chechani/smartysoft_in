@@ -49,6 +49,7 @@ import QualityManagement from './Components/SolutionAllPages/QualityManagement';
 import SalesAndDistribution from './Components/SolutionAllPages/Sales&Distribution';
 import TimeRecordingAndBilling from './Components/SolutionAllPages/TimeRecordingAndBilling';
 import WebsiteBuilder from './Components/SolutionAllPages/WebsiteBuilder';
+import Productline from './Components/Productline/index'
 
 
 

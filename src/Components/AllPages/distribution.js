@@ -15,6 +15,7 @@ import Products from '../Products/index';
 import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
 import KeyFeatures from '../Features/keyfeatures';
+import Productline from '../Productline';
 // import SuccessStory from '../SuccessStory';
 
 
@@ -28,7 +29,7 @@ const Distribution = () => {
                 <Home />
             </Card>
             <Card>
-                <KeyFeatures/>
+                <Productline/>
             </Card>
             <Card>
                 <Solutions segment="CFO" />

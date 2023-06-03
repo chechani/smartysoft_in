@@ -11,7 +11,7 @@ import AboutUs from '../AboutUs';
 import { Data } from "../Question/Data";
 import WhatsAppButton from '../WhatsAppButton';
 import Reasons from '../HappyCustomers/reasons';
-import Products from '../Products/index';
+import Productline from '../Productline';
 import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
 import KeyFeatures from '../Features/keyfeatures';
@@ -28,7 +28,7 @@ const Realestate = () => {
                 <Home />
             </Card>
             <Card>
-                <KeyFeatures/>
+                <Productline/>
             </Card>
             <Card>
                 <Solutions segment="CFO" />

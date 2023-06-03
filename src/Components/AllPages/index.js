@@ -14,8 +14,8 @@ import Reasons from '../HappyCustomers/reasons';
 import Products from '../Products/index';
 import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
-import KeyFeatures from '../Features/keyfeatures';
 import SuccessStoryContainer from '../Success';
+import Productline from '../Productline';
 
 
 const AllPages = () => {
@@ -28,7 +28,7 @@ const AllPages = () => {
                 <Home />
             </Card>
             <Card>
-                <KeyFeatures/>
+                <Productline/>
             </Card>
             <Card>
                 <Solutions segment="Smarty Home" />
