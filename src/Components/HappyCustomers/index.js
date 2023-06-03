@@ -1,11 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
-// import PersonalVideoIcon from '@mui/icons-material/PersonalVideo';
-// import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
-// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-// import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
-// import DevicesOtherIcon from '@mui/icons-material/DevicesOther';
-// import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 
 function HappyCustomers() {
     return (

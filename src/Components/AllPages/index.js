@@ -40,7 +40,7 @@ const AllPages = () => {
                 <AboutUs/>
             </Card> */}
             <Card>
-                <Reasons />
+                <Reasons segment="Smarty Home" />
             </Card>
             <Card>
                 <USP segment="Smarty Home"/>
