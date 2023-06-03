@@ -105,7 +105,7 @@ export const FAQ = ({ category }) => {
                       >
                         <Typography>
                           <Typography
-                            sx={{  fontSize: "18px", textAlign: "start" }}
+                            sx={{ fontSize: "18px", textAlign: "start" }}
                           >
                             <DoubleArrowIcon />
                             {faq.question}

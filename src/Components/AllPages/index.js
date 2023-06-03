@@ -73,7 +73,7 @@ const AllPages = () => {
      
        
             <Card>
-                <FAQ/>
+                <FAQ segment="Smarty Home"/>
             </Card>
      
      
@@ -84,9 +84,9 @@ const AllPages = () => {
             {/* <Card>
                 <Pricing />
             </Card> */}
-        
-            {/* <Card>
-                <Data/>
+{/*         
+            <Card>
+                <TaskManager/>
             </Card> */}
             {/* <Card>
                 <PurchaseConversion/>

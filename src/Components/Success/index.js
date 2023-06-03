@@ -3,6 +3,7 @@ import './index.css';
 
 const SuccessStoryList = ({ onStoryClick, stories }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleCardHover = (storyId) => {
     setHoveredCard(storyId);
@@ -12,41 +13,50 @@ const SuccessStoryList = ({ onStoryClick, stories }) => {
     setHoveredCard(null);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="success-story-list">
       <h2 className="section-title" style={{ paddingTop: '20px' }}>
         Success Stories
       </h2>
-      <div className="row" style={{ marginTop: '50px', marginBottom: '70px' }}>
+      <div className={`card-container ${isMobile ? 'mobile' : ''}`}>
         {stories.map((story, index) => (
           <div
-            className="col"
+            className={`card ${hoveredCard === index ? 'hovered' : ''}`}
             key={index}
             onMouseEnter={() => handleCardHover(index)}
             onMouseLeave={handleCardLeave}
           >
-            <div className={`card ${hoveredCard === index ? 'hovered' : ''}`}>
-              <img
-                src={`https://smartysoftware.in/${story.client_logo}`}
-                alt={story.client}
-                className="company-logo"
-              />
-              <h3 className="company-name">{story.client}</h3>
-              <p className="tagline">{story.tagline || 'No tagline available'}</p>
-              <p className="contact-person">Contact: {story.contact_person || 'Not specified'}</p>
-              <p className="description">{story.description || 'No description available'}</p>
-              {hoveredCard === index && (
-                <div className="overlay">
-                  <div className="overlay-content">
-                    <p className="solution">Solution: {story.solutions || 'Not specified'}</p>
-                    <p className="benefits">Benefits: {story.benefits || 'Not specified'}</p>
-                    <button className="jump-to-case-study" onClick={() => onStoryClick(story)}>
-                      Jump to Case Study
-                    </button>
-                  </div>
+            <img
+              src={`https://smartysoftware.in/${story.client_logo}`}
+              alt={story.client}
+              className="company-logo"
+            />
+            <h3 className="company-name">{story.client}</h3>
+            <p className="tagline">{story.tagline || 'No tagline available'}</p>
+            <p className="contact-person">Contact: {story.contact_person || 'Not specified'}</p>
+            <p className="description">{story.description || 'No description available'}</p>
+            {hoveredCard === index && (
+              <div className="overlay">
+                <div className="overlay-content">
+                  <p className="solution">Solution: {story.solutions || 'Not specified'}</p>
+                  <p className="benefits">Benefits: {story.benefits || 'Not specified'}</p>
+                  <button className="jump-to-case-study" onClick={() => onStoryClick(story)}>
+                    Jump to Case Study
+                  </button>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         ))}
       </div>
