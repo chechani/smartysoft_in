@@ -43,7 +43,7 @@ const AllPages = () => {
                 <Reasons />
             </Card>
             <Card>
-                <USP />
+                <USP segment="Smarty Home"/>
             </Card>
         
          
