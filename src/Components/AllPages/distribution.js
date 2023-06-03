@@ -60,9 +60,9 @@ const Distribution = () => {
                 <HappyCustomers />
             </Card> */}
            
-            {/* <Card>
+            <Card>
                 <Technologies />
-            </Card> */}
+            </Card>
             {/* <Card>
                 <SuccessStory />
             </Card> */}

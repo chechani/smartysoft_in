@@ -7,12 +7,13 @@ import Advantages from './Advantages';
 function DocumentAutomation() {
   return (
     <>
-<Advantages docname="Document Automation and Management
-"/>
-<AllFeatures docname="Document Automation and Management
-"/>
+<Advantages docname="Document Automation and Management"/>
+
+<AllFeatures docname="Document Automation and Management"/>
+
     </>
   );
 }
 
 export default DocumentAutomation;
+
