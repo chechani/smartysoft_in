@@ -16,6 +16,7 @@ import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
 import SuccessStoryContainer from '../Success';
 import Productline from '../Productline';
+import { FAQ } from '../FAQ/faqs';
 
 
 const AllPages = () => {
@@ -69,7 +70,9 @@ const AllPages = () => {
      
      
        
- 
+            <Card>
+                <FAQ/>
+            </Card>
      
      
        

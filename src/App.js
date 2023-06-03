@@ -49,6 +49,7 @@ import SalesAndDistribution from './Components/SolutionAllPages/Sales&Distributi
 import TimeRecordingAndBilling from './Components/SolutionAllPages/TimeRecordingAndBilling';
 import WebsiteBuilder from './Components/SolutionAllPages/WebsiteBuilder';
 import Productline from './Components/Productline/index'
+import { FAQ } from './Components/FAQ/faqs';
 
 
 
