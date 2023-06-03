@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import AbountInfo from "./AboutInfo";
+import TeamMember from "./TeamMember";
 
 function AboutUs() {
   return (
@@ -43,7 +43,7 @@ function AboutUs() {
         </Typography>
       </Box>
       <Box>
-        <AbountInfo/>
+        <TeamMember/>
       </Box>
     </>
   );

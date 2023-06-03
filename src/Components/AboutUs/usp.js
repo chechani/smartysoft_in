@@ -9,7 +9,7 @@ import {
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
-function Benefits() {
+function USP() {
   const [expanded, setExpanded] = useState([false, false, false, false]);
 
   const handleExpandClick = (index) => {
@@ -100,4 +100,4 @@ const benefitsData = [
   }
 ];
 
-export default Benefits;
+export default USP;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './AboutInfo.css';
+import './TeamMember.css';
 
-const AboutInfo = () => {
+const TeamMember = () => {
   const [teamMembers, setTeamMembers] = useState([]);
 
   useEffect(() => {
@@ -46,4 +46,4 @@ const AboutInfo = () => {
   );
 };
 
-export default AboutInfo;
+export default TeamMember;

@@ -11,8 +11,6 @@ import Realestate from './Components/AllPages/realestate';
 import Distribution from './Components/AllPages/distribution';
 import Registration from './Components/Registration';
 import ThankYou from './Components/ThankYou/ThankYou';
-import Benefits from './Components/Benefits';
-import Features from './Components/Features';
 import Pricing from './Components/Pricing';
 import HappyCustomers from './Components/HappyCustomers';
 import ExcelFileForm from './Components/ExcelFileForm';
@@ -50,6 +48,7 @@ import TimeRecordingAndBilling from './Components/SolutionAllPages/TimeRecording
 import WebsiteBuilder from './Components/SolutionAllPages/WebsiteBuilder';
 import Productline from './Components/Productline/index'
 import { FAQ } from './Components/FAQ/faqs';
+import USP from './Components/AboutUs/usp';
 
 
 
@@ -61,8 +60,7 @@ function App() {
       <Routes>
         <Route path='/' element={<AllPages/>} exact/>
         <Route path='/registration' element={<Registration/>}/> 
-        <Route path='/benefits' element={<Benefits/>}/>
-        <Route path='/features' element={<Features/>}/>
+        <Route path='/usp' element={<USP/>}/>
         <Route path='/pricing' element={<Pricing/>}/>
         <Route path='/happycustomers' element={<HappyCustomers/>}/>
         <Route path='/excelfileform' element={<ExcelFileForm/>}/>

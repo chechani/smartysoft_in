@@ -3,7 +3,6 @@ import Home from '../Home';
 import { Card} from '@mui/material';
 import HappyCustomers from '../HappyCustomers';
 import Technologies from '../Technologies';
-import Benefits from '../Benefits';
 import Pricing from '../Pricing';
 import PurchaseConversion from '../PurchaseConversion';
 import Testimonial from '../Testimonial/index.js';
@@ -17,6 +16,9 @@ import TaskManager from '../Products/screen';
 import SuccessStoryContainer from '../Success';
 import Productline from '../Productline';
 import { FAQ } from '../FAQ/faqs';
+import USP from '../AboutUs/usp';
+
+
 
 
 const AllPages = () => {
@@ -41,7 +43,7 @@ const AllPages = () => {
                 <Reasons />
             </Card>
             <Card>
-                <Benefits />
+                <USP />
             </Card>
         
          
@@ -75,7 +77,6 @@ const AllPages = () => {
             </Card>
      
      
-       
           
             {/* <Card>
                 <Testimonial/>

@@ -3,7 +3,7 @@ import Home from '../Home';
 import { Card} from '@mui/material';
 import HappyCustomers from '../HappyCustomers';
 import Technologies from '../Technologies';
-import Benefits from '../Benefits';
+import USP from '../AboutUs/usp';
 import Pricing from '../Pricing';
 import PurchaseConversion from '../PurchaseConversion';
 import Testimonial from '../Testimonial/index.js';
@@ -40,7 +40,7 @@ const Chartered = () => {
                 <Reasons />
             </Card>
             <Card>
-                <Benefits />
+                <USP />
             </Card>
         
          
