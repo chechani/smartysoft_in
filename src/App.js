@@ -27,7 +27,7 @@ import BuyingAndVendorPortal from './Components/SolutionAllPages/Buying&VendorPo
 import CRMAndCustomerPortal from './Components/SolutionAllPages/CRM&CustomerPortal';
 import CustomerHelpDesk from './Components/SolutionAllPages/CustomerHelpDesk';
 import DocumentAutomation from './Components/SolutionAllPages/DocumentAutomation';
-import ExcelfileThanksPage from './Components/ThanksPages/index'
+import ThanksPage from './Components/ThanksPages/index'
 import Ecommerce from './Components/SolutionAllPages/Ecommerce';
 import ExpenseTravelManagement from './Components/SolutionAllPages/ExpenseTravelManagement';
 import FleetManagement from './Components/SolutionAllPages/FleetManagement';
@@ -70,7 +70,7 @@ function App() {
         <Route path ='/privacypolicy' element={<PrivacyPolicy/>}/>
         <Route path ='/aboutus' element={<Aboutus/>}/>
         <Route path="/scheduledemothanks" element={<ScheduleDemoThanksPage/>}/>
-        <Route path="/excelfilethanks" element={<ExcelfileThanksPage/>}/>
+        <Route path="/excelfilethanks" element={<ThanksPage/>}/>
         <Route path="/technologies" element={<Technologies/>}/>
         <Route path="/about" element={<About/>}/>
    

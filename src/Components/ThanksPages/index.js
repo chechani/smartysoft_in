@@ -3,7 +3,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import { Box, Card, Typography } from '@mui/material';
 
 
-const ExcelfileThanksPage = ()=>{
+const ThanksPage = ()=>{
 
     return(
         <>
@@ -37,4 +37,4 @@ const ExcelfileThanksPage = ()=>{
     )
 } 
 
-export default ExcelfileThanksPage;
+export default ThanksPage;
