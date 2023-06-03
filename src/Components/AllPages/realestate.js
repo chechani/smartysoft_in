@@ -18,7 +18,7 @@ import KeyFeatures from '../Features/keyfeatures';
 // import SuccessStory from '../SuccessStory';
 
 
-const Healthcare = () => {
+const Realestate = () => {
     return (
         <>
         <Card>
@@ -92,4 +92,4 @@ const Healthcare = () => {
     )
 }
 
-export default Healthcare;
+export default Realestate;

@@ -3,6 +3,12 @@ import './App.css';
 import Header from './Components/Navbar';
 import Footer from './Components/Footer';
 import AllPages from './Components/AllPages';
+import Healthcare from './Components/AllPages/healthcare';
+import Ca from './Components/AllPages/ca';
+import Engineering from './Components/AllPages/engineering';
+import Auto from './Components/AllPages/auto';
+import Realestate from './Components/AllPages/realestate';
+import Distribution from './Components/AllPages/distribution';
 import Registration from './Components/Registration';
 import ThankYou from './Components/ThankYou/ThankYou';
 import Benefits from './Components/Benefits';
@@ -45,6 +51,7 @@ import TimeRecordingAndBilling from './Components/SolutionAllPages/TimeRecording
 import WebsiteBuilder from './Components/SolutionAllPages/WebsiteBuilder';
 
 
+
 function App() {
   return (
     <>
@@ -67,10 +74,15 @@ function App() {
         <Route path="/excelfilethanks" element={<ExcelfileThanksPage/>}/>
         <Route path="/keyfeatures" element={<KeyFeatures/>}/>
         <Route path="/technologies" element={<Technologies/>}/>
-        
-
+   
 
 {/* Solution All Pages */}
+        <Route path="/healthcare" element={<Healthcare/>}/>
+        <Route path="/engineering" element={<Engineering/>}/>
+        <Route path="/ca" element={<Ca/>}/>
+        <Route path="/distribution" element={<Distribution/>}/>
+        <Route path="/realestate" element={<Realestate/>}/>
+        <Route path="/auto" element={<Auto/>}/>
         <Route path="/accounting" element={<Accounting/>}/>
         <Route path="/marketing" element={<MarketingAutomation/>}/>
         <Route path="/salesdistribution" element={<SalesAndDistribution/>}/>

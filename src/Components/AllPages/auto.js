@@ -18,7 +18,7 @@ import KeyFeatures from '../Features/keyfeatures';
 // import SuccessStory from '../SuccessStory';
 
 
-const Healthcare = () => {
+const Auto = () => {
     return (
         <>
         <Card>
@@ -60,9 +60,9 @@ const Healthcare = () => {
                 <HappyCustomers />
             </Card> */}
            
-            {/* <Card>
+            <Card>
                 <Technologies />
-            </Card> */}
+            </Card>
             {/* <Card>
                 <SuccessStory />
             </Card> */}
@@ -92,4 +92,4 @@ const Healthcare = () => {
     )
 }
 
-export default Healthcare;
+export default Auto;
