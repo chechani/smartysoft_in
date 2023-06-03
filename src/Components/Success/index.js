@@ -79,9 +79,7 @@ const SuccessStoryContainer = ({ segment }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://smartysoftware.in/api/method/professional.web.get_success_stories?segment=${encodeURIComponent(
-            segment
-          )}`
+          `https://smartysoftware.in/api/method/professional.web.get_success_stories?segment=${encodeURIComponent(segment)}`
         );
         const data = await response.json();
 
