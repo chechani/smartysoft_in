@@ -1,0 +1,45 @@
+.team-members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .team-member-card {
+    width: 23%;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .member-details h3 {
+    margin-top: 0;
+  }
+  
+  .member-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .team-members-container::after {
+    content: "";
+    flex: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .team-member-card {
+      width: 48%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-member-card {
+      width: 100%;
+    }
+  }
+  
