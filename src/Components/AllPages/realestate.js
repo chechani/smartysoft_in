@@ -14,8 +14,6 @@ import Reasons from '../HappyCustomers/reasons';
 import Productline from '../Productline';
 import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
-import KeyFeatures from '../Features/keyfeatures';
-// import SuccessStory from '../SuccessStory';
 
 
 const Realestate = () => {

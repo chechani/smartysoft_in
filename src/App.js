@@ -23,7 +23,6 @@ import Aboutus from './Components/AboutUs';
 import ScheduleDemoThanksPage from './Components/ScheduleDemoThanksPage';
 import ExcelfileThanksPage from './Components/ExcelfileThanksPage';
 import DemoButton from './Components/DemoButton';
-import KeyFeatures from './Components/Features/keyfeatures';
 import Technologies from './Components/Technologies';
 import Accounting from './Components/SolutionAllPages/Accounting';
 import AssetManagement from './Components/SolutionAllPages/AssetManagement';
@@ -73,7 +72,6 @@ function App() {
         <Route path ='/aboutus' element={<Aboutus/>}/>
         <Route path="/scheduledemothanks" element={<ScheduleDemoThanksPage/>}/>
         <Route path="/excelfilethanks" element={<ExcelfileThanksPage/>}/>
-        <Route path="/keyfeatures" element={<KeyFeatures/>}/>
         <Route path="/technologies" element={<Technologies/>}/>
    
 
