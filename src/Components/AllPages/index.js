@@ -1,7 +1,6 @@
 import React from 'react';
 import Home from '../Home';
 import { Card} from '@mui/material';
-import HappyCustomers from '../HappyCustomers';
 import Technologies from '../Technologies';
 import Pricing from '../Pricing';
 import PurchaseConversion from '../PurchaseConversion';
@@ -9,7 +8,7 @@ import Testimonial from '../Testimonial/index.js';
 // import AboutUs from '../AboutUs';
 import { Data } from "../Question/Data";
 import WhatsAppButton from '../WhatsAppButton';
-import Reasons from '../HappyCustomers/reasons';
+import Services from '../Services/services';
 import Products from '../Products/index';
 import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
@@ -40,7 +39,7 @@ const AllPages = () => {
                 <AboutUs/>
             </Card> */}
             <Card>
-                <Reasons segment="Smarty Home" />
+                <Services segment="Smarty Home" />
             </Card>
             <Card>
                 <USP segment="Smarty Home"/>
@@ -59,10 +58,7 @@ const AllPages = () => {
                 <Products />
             </Card> */}
 
-            {/* <Card>
-                <HappyCustomers />
-            </Card> */}
-           
+       
             <Card>
                 <Technologies />
             </Card>

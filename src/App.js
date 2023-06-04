@@ -12,7 +12,6 @@ import Distribution from './Components/AllPages/distribution';
 import Registration from './Components/Registration';
 import ThankYou from './Components/ThanksPages/ThankYou';
 import Pricing from './Components/Pricing';
-import HappyCustomers from './Components/HappyCustomers';
 import ExcelFileForm from './Components/ExcelFileForm';
 import SchaduleDemo from './Components/ScheduleDemo';
 import PageContactDetail from './Components/ContactUs';
@@ -62,7 +61,6 @@ function App() {
         <Route path='/registration' element={<Registration/>}/> 
         <Route path='/usp' element={<USP/>}/>
         <Route path='/pricing' element={<Pricing/>}/>
-        <Route path='/happycustomers' element={<HappyCustomers/>}/>
         <Route path='/excelfileform' element={<ExcelFileForm/>}/>
         <Route path ='/thankyou' element={<ThankYou/>}/>
         <Route path ='/scheduledemo' element={<SchaduleDemo/>}/>

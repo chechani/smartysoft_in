@@ -43,7 +43,7 @@ function Reason({ title, description, icon }) {
   );
 }
 
-function Reasons({ segment }) {
+function Services({ segment }) {
   const [reasonsData, setReasonsData] = useState([]);
 
   useEffect(() => {
@@ -56,8 +56,6 @@ function Reasons({ segment }) {
       })
       .catch(error => console.log(error));
   }, [segment]);
-
-
 
   return (
     <Box sx={{ mt: 1 }}>
@@ -74,7 +72,7 @@ function Reasons({ segment }) {
             <Reason
               title={reason.service}
               description={reason.description}
-              icon={<img src={"https://smartysoftware.in/" + reason.image} style={{ width: "50px", height: "50px" }} />}
+              icon={<img src={"https://smartysoftware.in/" + reason.image} alt={reason.service} style={{ width: "50px", height: "50px" }} />}
             />
           </Grid>
         ))}
@@ -83,4 +81,4 @@ function Reasons({ segment }) {
   );
 }
 
-export default Reasons;
+export default Services;

@@ -1,7 +1,6 @@
 import React from 'react';
 import Home from '../Home';
 import { Card} from '@mui/material';
-import HappyCustomers from '../HappyCustomers';
 import Technologies from '../Technologies';
 import USP from '../AboutUs/usp';
 import Pricing from '../Pricing';
@@ -10,7 +9,7 @@ import Testimonial from '../Testimonial/index.js';
 import AboutUs from '../AboutUs';
 import { Data } from "../Question/Data";
 import WhatsAppButton from '../WhatsAppButton';
-import Reasons from '../HappyCustomers/reasons';
+import Services from '../Services/services';
 import Productline from '../Productline';
 import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
@@ -35,7 +34,7 @@ const Realestate = () => {
                 <AboutUs/>
             </Card>
             <Card>
-                <Reasons />
+                <Services/>
             </Card>
             <Card>
                 <USP />
@@ -54,9 +53,7 @@ const Realestate = () => {
                 <Products />
             </Card> */}
 
-            {/* <Card>
-                <HappyCustomers />
-            </Card> */}
+
            
             {/* <Card>
                 <Technologies />
