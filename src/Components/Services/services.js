@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Grid, Typography, IconButton } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 function Reason({ title, description, icon }) {
   const [expanded, setExpanded] = useState(false);
@@ -28,7 +29,11 @@ function Reason({ title, description, icon }) {
         </Grid>
         <Grid item>
           <IconButton onClick={() => setExpanded(!expanded)}>
-            <ExpandMoreIcon fontSize="large" style={{ color: 'green' }} />
+            {expanded ? (
+              <RemoveIcon fontSize="large" style={{ color: 'green' }} /> // Minus sign icon for expanded state
+            ) : (
+              <ExpandMoreIcon fontSize="large" style={{ color: 'green' }} />
+            )}
           </IconButton>
         </Grid>
       </Grid>

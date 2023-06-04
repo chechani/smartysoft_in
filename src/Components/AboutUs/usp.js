@@ -5,9 +5,23 @@ import {
   Typography,
   Collapse,
   IconButton,
+  styled,
 } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+const DarkGreenExpandMoreIcon = styled(ExpandMoreIcon)({
+  color: 'darkgreen', // Set the color to dark green
+  width: '32px', // Increase the width
+  height: '32px', // Increase the height
+});
+
+const DarkGreenRemoveIcon = styled(RemoveIcon)({
+  color: 'darkgreen', // Set the color to dark green
+  width: '32px', // Increase the width
+  height: '32px', // Increase the height
+});
 
 function USP({ segment }) {
   const [expanded, setExpanded] = useState([]);
@@ -56,7 +70,7 @@ function USP({ segment }) {
                 {benefit.image && (
                   <img
                     src={`https://smartysoftware.in${benefit.image}`}
-                    style={{ width: "50px", height: "50px" }}
+                    style={{ width: '50px', height: '50px' }}
                     alt={benefit.usp}
                   />
                 )}
@@ -71,7 +85,11 @@ function USP({ segment }) {
                   {benefit.usp}
                 </Typography>
                 <IconButton onClick={() => handleExpandClick(index)}>
-                  {expanded[index] ? <RemoveIcon /> : <AddIcon />}
+                  {expanded[index] ? (
+                    <DarkGreenRemoveIcon /> // Use DarkGreenRemoveIcon for expanded state
+                  ) : (
+                    <DarkGreenExpandMoreIcon /> // Use DarkGreenExpandMoreIcon for collapsed state
+                  )}
                 </IconButton>
                 <Collapse in={expanded[index]}>
                   <Typography sx={{ color: 'black' }}>

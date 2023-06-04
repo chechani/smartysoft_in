@@ -12,9 +12,9 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Footer() {
-
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+
   function handleSubscribe() {
     if (!email) {
       toast.error("Please enter an email address");
@@ -23,7 +23,7 @@ export default function Footer() {
     } else {
       fetch(
         "https://clients.smartysoft.in/api/method/professional.api.add_email_member?group=Excel to Tally&email=" +
-        email
+          email
       )
         .then((response) => {
           if (response.ok) {
@@ -36,6 +36,49 @@ export default function Footer() {
         .catch((error) => toast.error(error.message));
     }
   }
+
+  const linkColumns = [
+    { label: "Accounting and Finance", href: "/accounting" },
+    { label: "Marketing Automation", href: "/marketing" },
+    { label: "Point of Sales", href: "/pointsales" },
+    { label: "Quality Management", href: "/qualitymanagement" },
+    { label: "Asset Management", href: "/assetmanagement" },
+    { label: "Human Resources Management", href: "/humanresourcesmanagement" },
+    { label: "Business Intelligence", href: "/businessintelligence" },
+    { label: "Knowledge Management", href: "/knowledgemanagement" },
+    { label: "Excel to Tally", href: "/knowledgemanagement" },
+    { label: "Sales and Distribution", href: "/salesdistribution" },
+    { label: "Buying and Vendor Portal", href: "/salesdistribution" },
+    { label: "Manufacturing Operations", href: "/buyingvendorportal" },
+    { label: "Project and Task Management", href: "/manufacturingoperation" },
+    { label: "Customer Help Desk", href: "/projectandtaskmanagement" },
+    { label: "Website Builder", href: "/customerhelpdesk" },
+    { label: "Expense Management", href: "https://einvoicing.co.in" },
+    { label: "Document Management", href: "/expensetravelmanagement" },
+    { label: "Knowledge Manager", href: "/documentautomation" },
+    { label: "Customer Relationship Management", href: "https://exceltotally.info" },
+    { label: "Inventory Management", href: "https://knowledgemanager.in" },
+    { label: "Project Accounting", href: "/inventorymanagement" },
+    { label: "Time Recording and Billing", href: "/projectaccounting" },
+    { label: "Maintenance Management", href: "/timerecordingandbilling" },
+    { label: "eCommerce and Online Selling", href: "/maintenancemanagement" },
+    { label: "Meeting Agenda and Task Execution", href: "https://einvoicing.co.in" },
+    { label: "Fleet Management", href: "https://einvoicing.co.in" },
+    { label: "eInvoicing", href: "https://einvoicing.co.in" },
+  ];
+
+  // Calculate the number of rows based on the link count
+  const rowCount = Math.ceil(linkColumns.length / 4);
+
+  // Divide the links into four columns dynamically
+  const linkColumnData = [];
+  for (let i = 0; i < 4; i++) {
+    const start = i * rowCount;
+    const end = start + rowCount;
+    const columnLinks = linkColumns.slice(start, end);
+    linkColumnData.push(columnLinks);
+  }
+
   return (
     <Box
       style={{
@@ -46,267 +89,82 @@ export default function Footer() {
       <ToastContainer />
       <Grid container spacing={3} style={{ paddingBottom: "50px" }}>
         <Grid item xs={12} md={3}>
-          <div style={{marginLeft:"20px"}}>
-            <img
-              alt="footer-logo"
-              src="./smarty_logo.png"
-              style={{ width: "50%", marginLeft: "11%" }}
-            />
-            <Typography sx={{ width: "60%", ml: 5, marginTop: 2, fontSize: "18px" }}>
+          <div style={{ marginLeft: "20px", width: "fit-content" }}>
+            <Typography
+              sx={{ width: "70%", ml: 5, marginTop: 6, fontSize: "18px", alignSelf: 'flex-start' }}
+            >
               Helping Businesses in 💯% Digitalization and Automation
             </Typography>
             <Box sx={{ ml: 3, mt: 1 }}>
-              <a href="https://www.facebook.com/customexceltotally" target="_blank" rel="noopener noreferrer">
-                <InstagramIcon fontSize="large" sx={{ color: "darkRed", pl: 1 }} />
+              <a
+                href="https://www.facebook.com/customexceltotally"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon
+                  fontSize="large"
+                  sx={{ color: "darkRed", pl: 1 }}
+                />
               </a>
-              <a href="https://www.facebook.com/customexceltotally" target="_blank" rel="noopener noreferrer">
-                <FacebookIcon fontSize="large" sx={{ color: "darkBlue", pl: 1 }} />
+              <a
+                href="https://www.facebook.com/customexceltotally"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FacebookIcon
+                  fontSize="large"
+                  sx={{ color: "darkBlue", pl: 1 }}
+                />
               </a>
-              <a href="https://www.youtube.com/@accxchange6845" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.youtube.com/@accxchange6845"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <YouTubeIcon fontSize="large" sx={{ color: "red", pl: 1 }} />
               </a>
-              <a href="https://www.facebook.com/customexceltotally" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/customexceltotally"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <LinkedInIcon fontSize="large" sx={{ color: "blue", pl: 1 }} />
               </a>
             </Box>
           </div>
         </Grid>
-        <Grid div xs={12} sm={6} md={2}>
-          <Box sx={{ mt: 5, ml: { xs: 2, sm: 1} }}>
-            <ul style={{ fontSize: "14px", listStyleType: "none", textAlign: "center" }}>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/accounting"
-                >
-                  Accounting and Finance
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/marketing"
-                >
-                  Marketing Automation
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/pointsales"
-                >
-                  Point of Sales
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/qualitymanagement"
-                >
-                  Quality Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/assetmanagement"
-                >
-                  Asset Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/humanresourcesmanagement"
-                >
-                  Human Resources Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/businessintelligence"
-                >
-                  Business Intelligence
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/knowledgemanagement"
-                >
-                  Knowledge Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/knowledgemanagement"
-                >
-                  Excel to Tally
-                </a>
-              </li>
-            </ul>
-          </Box>
-        </Grid>
-        <Grid div xs={12} sm={6} md={2}>
+        <Grid item xs={12} sm={9} md={7} sx={{ margin: "auto" }}>
           <Box sx={{ mt: 5, ml: { xs: 2, sm: 1 } }}>
-            <ul style={{ fontSize: "14px", listStyleType: "none", textAlign: "center" }}>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/salesdistribution"
-                >
-                  Sales and Distribution
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/salesdistribution"
-                >
-                  Buying and Vendor Portal
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/buyingvendorportal"
-                >
-                  Manufacturing Operations
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/manufacturingoperation"
-                >
-                  Project and Task Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/projectandtaskmanagement"
-                >
-                  Customer Help Desk
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/customerhelpdesk"
-                >
-                  Website Builder
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
-                >
-                  Expense Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/expensetravelmanagement"
-                >
-                  Document Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/documentautomation"
-                >
-                  Knowledge Manager
-                </a>
-              </li>
-            </ul>
+            <Grid container spacing={2}>
+              {linkColumnData.map((columnLinks, columnIndex) => (
+                <Grid item xs={6} sm={3} key={columnIndex}>
+                  <ul
+                    style={{
+                      fontSize: "14px",
+                      listStyleType: "none",
+                      paddingInlineStart: 0,
+                      marginTop: 0,
+                      paddingTop: 0,
+                    }}
+                  >
+                    {columnLinks.map((link, index) => (
+                      <li style={{ marginTop: "10px" }} key={index}>
+                        <a
+                          style={{ color: "black", textDecoration: "none" }}
+                          href={link.href}
+                        >
+                          {link.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </Grid>
+              ))}
+            </Grid>
           </Box>
         </Grid>
-        <Grid div xs={12} sm={6} md={2}>
-          <Box sx={{ mt: 5, ml: { xs: 2, sm: 1 } }}>
-            <ul style={{ fontSize: "14px", listStyleType: "none", textAlign: "center" }}>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="https://exceltotally.info"
-                >
-                  Customer Relationship Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="https://knowledgemanager.in"
-                >
-                  Inventory Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/inventorymanagement"
-                >
-                  Project Accounting
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/projectaccounting"
-                >
-                  Time Recording and Billing
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/timerecordingandbilling"
-                >
-                  Maintenance Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="/maintenancemanagement"
-                >
-                  eCommerce and Online Selling
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
-                >
-                  Meeting Agenda and Task Execution
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
-                >
-                  Fleet Management
-                </a>
-              </li>
-              <li style={{ marginTop: "10px" }}>
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href="https://einvoicing.co.in"
-                >
-                  eInvoicing
-                </a>
-              </li>
-            </ul>
-          </Box>
-        </Grid>
-        <Grid div xs={12} md={3}>
-          <Box sx={{ mt: 5, ml: { xs: 5, sm: 3 } }}>
+        <Grid item xs={12} md={2}>
+          <Box sx={{ mt: 5, ml: { xs: 7, sm: 5 } }}>
             <ul style={{ fontSize: "14px", listStyleType: "none" }}>
               <li style={{ marginTop: "10px" }}>
                 <a
@@ -326,7 +184,7 @@ export default function Footer() {
               </li>
             </ul>
           </Box>
-          <Box sx={{ ml: { xs: 9, sm: 7 } }}>
+          <Box sx={{ ml: { xs: 7, sm: 5 } }}>
             <Box sx={{ mr: 2 }}>
               <Box
                 sx={{
@@ -377,10 +235,10 @@ export default function Footer() {
             textAlign: "center",
             padding: "9px",
             width: "100%",
-            fontSize: "15px"
+            fontSize: "15px",
           }}
         >
-          Smarty Software Private Limited <br></br>Copyright
+          Smarty Software Private Limited <br />Copyright
           ©2023 All Rights Reserved
         </Box>
       </Box>

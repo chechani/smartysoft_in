@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { Card, CardContent, Grid, Box } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -43,16 +42,17 @@ export const FAQ = ({ category }) => {
     return <p>{error}</p>;
   }
 
-  if (faqData.length === 0) {
-    return <p>No FAQs found.</p>;
-  }
-
   const handleAccordionToggle = (faqName) => {
     setExpanded((prevState) => ({
       ...prevState,
       [faqName]: !prevState[faqName],
     }));
   };
+
+  const totalFAQs = faqData.length;
+  const leftColumnFAQsCount = Math.ceil(totalFAQs / 2);
+  const leftColumnFAQs = faqData.slice(0, leftColumnFAQsCount);
+  const rightColumnFAQs = faqData.slice(leftColumnFAQsCount);
 
   return (
     <>
@@ -68,34 +68,26 @@ export const FAQ = ({ category }) => {
         Frequently Asked Questions
       </Box>
 
-  
       <Box
         sx={{
-          width: "95%", // Increase the width to "100%" for more space
+          width: "95%",
           textAlign: "center",
           pb: 2,
-          ml: { xs: 1, sm: 5 },
+          ml: "auto",
+          mr: "auto",
           position: "relative",
           marginTop: "20px",
         }}
       >
         <Card variant="outlined">
           <CardContent>
-            <Grid container spacing={0}>
-              <Grid item xs={12} md={6}>
-                <img
-                  src="https://smartysoftware.in/en/img/features/faq-qa.png"
-                  alt="mmm"
-                  style={{ width: "80%", height: "auto", maxHeight: "350px" }} // Set fixed width, height, and maxHeight for the image
-                />
-              </Grid>
-
+            <Grid container spacing={2}>
               <Grid item xs={12} md={6}>
                 <Box>
-                  {faqData.map((faq) => (
+                  {leftColumnFAQs.map((faq) => (
                     <Accordion
                       key={faq.name}
-                      expanded={expanded[faq.name]} // Pass the expanded state for each accordion
+                      expanded={expanded[faq.name]}
                       onChange={() => handleAccordionToggle(faq.name)}
                     >
                       <AccordionSummary
@@ -107,7 +99,43 @@ export const FAQ = ({ category }) => {
                           <Typography
                             sx={{ fontSize: "18px", textAlign: "start" }}
                           >
-                            <DoubleArrowIcon />
+                            <ExpandMoreIcon />
+                            {faq.question}
+                          </Typography>
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography style={{ textAlign: "start" }}>
+                          <Typography
+                            style={{ color: "grey", fontSize: "16px" }}
+                          >
+                            {faq.answer}
+                          </Typography>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                  ))}
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} md={6}>
+                <Box>
+                  {rightColumnFAQs.map((faq) => (
+                    <Accordion
+                      key={faq.name}
+                      expanded={expanded[faq.name]}
+                      onChange={() => handleAccordionToggle(faq.name)}
+                    >
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls={`panel-${faq.name}-content`}
+                        id={`panel-${faq.name}-header`}
+                      >
+                        <Typography>
+                          <Typography
+                            sx={{ fontSize: "18px", textAlign: "start" }}
+                          >
+                            <ExpandMoreIcon />
                             {faq.question}
                           </Typography>
                         </Typography>
