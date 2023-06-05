@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import MailIcon from "@mui/icons-material/Mail";
@@ -11,9 +11,28 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-export default function Footer() {
+export default function Footer({segment}) {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [linkColumns, setLinkColumns] = useState([]);
+
+  useEffect(() => {
+    const fetchLinks = async () => {
+      try {
+        const response = await fetch(`https://smartysoftware.in/api/method/professional.web.get_links?segment=${encodeURIComponent(segment)}`);
+        if (response.ok) {
+          const data = await response.json();
+          setLinkColumns(data.message);
+        } else {
+          throw new Error("Something went wrong");
+        }
+      } catch (error) {
+        toast.error(error.message);
+      }
+    };
+
+    fetchLinks();
+  }, []);
 
   function handleSubscribe() {
     if (!email) {
@@ -36,36 +55,6 @@ export default function Footer() {
         .catch((error) => toast.error(error.message));
     }
   }
-
-  const linkColumns = [
-    { label: "Accounting and Finance", href: "/accounting" },
-    { label: "Marketing Automation", href: "/marketing" },
-    { label: "Point of Sales", href: "/pointsales" },
-    { label: "Quality Management", href: "/qualitymanagement" },
-    { label: "Asset Management", href: "/assetmanagement" },
-    { label: "Human Resources Management", href: "/humanresourcesmanagement" },
-    { label: "Business Intelligence", href: "/businessintelligence" },
-    { label: "Knowledge Management", href: "/knowledgemanagement" },
-    { label: "Excel to Tally", href: "/knowledgemanagement" },
-    { label: "Sales and Distribution", href: "/salesdistribution" },
-    { label: "Buying and Vendor Portal", href: "/salesdistribution" },
-    { label: "Manufacturing Operations", href: "/buyingvendorportal" },
-    { label: "Project and Task Management", href: "/manufacturingoperation" },
-    { label: "Customer Help Desk", href: "/projectandtaskmanagement" },
-    { label: "Website Builder", href: "/customerhelpdesk" },
-    { label: "Expense Management", href: "https://einvoicing.co.in" },
-    { label: "Document Management", href: "/expensetravelmanagement" },
-    { label: "Knowledge Manager", href: "/documentautomation" },
-    { label: "Customer Relationship Management", href: "https://exceltotally.info" },
-    { label: "Inventory Management", href: "https://knowledgemanager.in" },
-    { label: "Project Accounting", href: "/inventorymanagement" },
-    { label: "Time Recording and Billing", href: "/projectaccounting" },
-    { label: "Maintenance Management", href: "/timerecordingandbilling" },
-    { label: "eCommerce and Online Selling", href: "/maintenancemanagement" },
-    { label: "Meeting Agenda and Task Execution", href: "https://einvoicing.co.in" },
-    { label: "Fleet Management", href: "https://einvoicing.co.in" },
-    { label: "eInvoicing", href: "https://einvoicing.co.in" },
-  ];
 
   // Calculate the number of rows based on the link count
   const rowCount = Math.ceil(linkColumns.length / 4);

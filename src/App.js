@@ -108,7 +108,7 @@ function App() {
         {/* <Route path="/services" element={<Services/>}/> */}
         <Route path='*' element={<AllPages/>}/>
       </Routes>
-      <Footer/>
+      {/* <Footer segment="Smarty Home"/> */}
     </BrowserRouter>
     </>
   );

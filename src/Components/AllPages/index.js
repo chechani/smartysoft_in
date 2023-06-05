@@ -16,6 +16,7 @@ import SuccessStoryContainer from '../Success';
 import Productline from '../Productline';
 import { FAQ } from '../FAQ/faqs';
 import USP from '../AboutUs/usp';
+import Footer from '../Footer';
 
 
 
@@ -64,15 +65,17 @@ const AllPages = () => {
             </Card>
             <Card>
                 <SuccessStoryContainer segment="Smarty Home"/>
-            </Card>
-     
+            </Card>   
      
        
             <Card>
-                <FAQ segment="Smarty Home"/>
+                <FAQ category="About Accxchange"/>
             </Card>
      
-     
+            <card>
+            <Footer segment="Smarty Home"/>
+            </card>
+            
           
             {/* <Card>
                 <Testimonial/>
