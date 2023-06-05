@@ -133,14 +133,14 @@ const Header = () => {
                   About Us
                 </Typography>
                 <Typography variant="subtitle1" onClick={handleBenefits}>
-                  Why We
+                  Why Us
                 </Typography>
-                <Typography variant="subtitle1" onClick={handleDemo}>
+                {/* <Typography variant="subtitle1" onClick={handleDemo}>
                   Technologies
-                </Typography>
-                <Typography variant="subtitle1" onClick={handlePricing}>
+                </Typography> */}
+                {/* <Typography variant="subtitle1" onClick={handlePricing}>
                   Success Story
-                </Typography>
+                </Typography> */}
               </Box>
               <Button
                 variant="contained"

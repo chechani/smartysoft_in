@@ -1,6 +1,8 @@
 import React from 'react';
 import AllFeatures from './Features';
 import Advantages from './Advantages';
+import { FAQ } from '../FAQ/faqs';
+import Footer from '../Footer';
 
 
 function TimeRecordingAndBilling() {
@@ -8,6 +10,8 @@ function TimeRecordingAndBilling() {
     <>
 <AllFeatures docname="Time Recording and Billing"/>
 <Advantages docname="Time Recording and Billing"/>
+<FAQ category="About Accxchange"/>
+<Footer segment="Smarty Home"/>
     </>
   );
 }

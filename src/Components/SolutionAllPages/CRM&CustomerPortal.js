@@ -1,6 +1,8 @@
 import React from 'react';
 import AllFeatures from './Features';
 import Advantages from './Advantages';
+import { FAQ } from '../FAQ/faqs';
+import Footer from '../Footer';
 
 
 
@@ -9,6 +11,8 @@ function CRMAndCustomerPortal() {
     <>
 <AllFeatures docname="CRM and Customer Portal"/>
 <Advantages docname="CRM and Customer Portal"/>
+<FAQ category="About Accxchange"/>
+<Footer segment="Smarty Home"/>
     </>
   );
 }

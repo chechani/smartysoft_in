@@ -1,6 +1,8 @@
 import React from 'react';
 import AllFeatures from './Features';
 import Advantages from './Advantages';
+import { FAQ } from '../FAQ/faqs';
+import Footer from '../Footer';
 
 
 function MarketingAutomation() {
@@ -8,6 +10,8 @@ function MarketingAutomation() {
     <>
 <AllFeatures docname="Marketing Automation"/>
 <Advantages docname="Marketing Automation"/>
+<FAQ category="About Accxchange"/>
+<Footer segment="Smarty Home"/>
     </>
   );
 }
