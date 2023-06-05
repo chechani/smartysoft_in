@@ -9,8 +9,8 @@ import { FAQ } from '../FAQ/faqs';
 function Accounting() {
   return (
     <>
-<Advantages docname="Accounting and Finance"/>
 <AllFeatures docname="Accounting and Finance"/>
+<Advantages docname="Accounting and Finance"/>
 <FAQ category="About Accxchange"/>
 <Footer segment="Smarty Home"/>
          
