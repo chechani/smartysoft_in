@@ -103,7 +103,7 @@ const Header = () => {
               onClose={handleMenuClose}
             >
               <MenuItem onClick={handleFeature}>About Us</MenuItem>
-              <MenuItem onClick={handleBenefits}>Why We</MenuItem>
+              <MenuItem onClick={handleBenefits}>Why Us</MenuItem>
               <MenuItem onClick={handleScheduleDemo}>Technologies</MenuItem>
               <MenuItem onClick={handlePricing}>Success Story</MenuItem>
             </Menu>

@@ -61,7 +61,7 @@ function USP({ segment }) {
             fontSize: '32px',
           }}
         >
-          Why We
+          Why Us
         </Typography>
         <Grid container spacing={2}>
           {benefitsData.map((benefit, index) => (
