@@ -14,6 +14,8 @@ import Products from '../Products/index';
 import Solutions from '../Benefits/solutions';
 import TaskManager from '../Products/screen';
 import Productline from '../Productline';
+import Footer from '../Footer';
+import { FAQ } from '../FAQ/faqs';
 // import SuccessStory from '../SuccessStory';
 
 
@@ -64,7 +66,13 @@ const Engineering = () => {
             </Card> */}
      
      
-       
+     <Card>
+                <FAQ category="About Accxchange"/>
+            </Card>
+     
+            <card>
+            <Footer segment="Smarty Home"/>
+            </card>
  
      
      
