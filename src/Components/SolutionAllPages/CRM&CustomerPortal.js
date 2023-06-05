@@ -7,8 +7,8 @@ import Advantages from './Advantages';
 function CRMAndCustomerPortal() {
   return (
     <>
-<Advantages docname="CRM and Customer Portal"/>
 <AllFeatures docname="CRM and Customer Portal"/>
+<Advantages docname="CRM and Customer Portal"/>
     </>
   );
 }

@@ -9,8 +9,8 @@ import Advantages from './Advantages';
 function InventoryManagement() {
   return (
     <>
-<Advantages docname="Inventory Management"/>
 <AllFeatures docname="Inventory Management"/>
+<Advantages docname="Inventory Management"/>
     </>
   );
 }

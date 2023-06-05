@@ -7,8 +7,8 @@ import Advantages from './Advantages';
 function CustomerHelpDesk() {
   return (
     <>
-<Advantages docname="Customer Help Desk"/>
 <AllFeatures docname="Customer Help Desk"/>
+<Advantages docname="Customer Help Desk"/>
     </>
   );
 }

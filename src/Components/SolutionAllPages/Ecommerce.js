@@ -8,8 +8,8 @@ import Advantages from './Advantages';
 function Ecommerce() {
   return (
     <>
-<Advantages docname="eCommerce and Online Selling"/>
 <AllFeatures docname="eCommerce and Online Selling"/>
+<Advantages docname="eCommerce and Online Selling"/>
     </>
   );
 }

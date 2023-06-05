@@ -7,8 +7,8 @@ import Advantages from './Advantages';
 function Businessintelligence() {
   return (
     <>
-<Advantages docname="Business Intelligence"/>
 <AllFeatures docname="Business Intelligence"/>
+<Advantages docname="Business Intelligence"/>
     </>
   );
 }

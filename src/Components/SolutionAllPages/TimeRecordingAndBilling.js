@@ -6,8 +6,8 @@ import Advantages from './Advantages';
 function TimeRecordingAndBilling() {
   return (
     <>
-<Advantages docname="Time Recording and Billing"/>
 <AllFeatures docname="Time Recording and Billing"/>
+<Advantages docname="Time Recording and Billing"/>
     </>
   );
 }

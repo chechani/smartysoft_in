@@ -6,8 +6,8 @@ import Advantages from './Advantages';
 function ManufacturingOperation() {
   return (
     <>
-<Advantages docname="Manufacturing Operations"/>
 <AllFeatures docname="Manufacturing Operations"/>
+<Advantages docname="Manufacturing Operations"/>
     </>
   );
 }

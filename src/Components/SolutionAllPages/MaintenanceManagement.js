@@ -6,8 +6,8 @@ import Advantages from './Advantages';
 function MaintenanceManagement() {
   return (
     <>
-<Advantages docname="Maintenance Management"/>
 <AllFeatures docname="Maintenance Management"/>
+<Advantages docname="Maintenance Management"/>
     </>
   );
 }

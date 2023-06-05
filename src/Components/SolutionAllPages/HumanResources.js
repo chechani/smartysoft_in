@@ -9,8 +9,8 @@ import Advantages from './Advantages';
 function HumanResources() {
   return (
     <>
-<Advantages docname="Human Resources Management"/>
 <AllFeatures docname="Human Resources Management"/>
+<Advantages docname="Human Resources Management"/>
     </>
   );
 }

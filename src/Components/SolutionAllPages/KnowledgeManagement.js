@@ -7,8 +7,8 @@ import Advantages from './Advantages';
 function KnowledgeManagement() {
   return (
     <>
-<Advantages docname="Knowledge Management and WiKi"/>
 <AllFeatures docname="Knowledge Management and WiKi"/>
+<Advantages docname="Knowledge Management and WiKi"/>
     </>
   );
 }

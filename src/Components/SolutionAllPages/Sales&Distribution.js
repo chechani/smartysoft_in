@@ -6,8 +6,8 @@ import Advantages from './Advantages';
 function SalesAndDistribution() {
   return (
     <>
-<Advantages docname="Sales and Distribution"/>
 <AllFeatures docname="Sales and Distribution"/>
+<Advantages docname="Sales and Distribution"/>
     </>
   );
 }

@@ -6,8 +6,8 @@ import Advantages from './Advantages';
 function WebsiteBuilder() {
   return (
     <>
-<Advantages docname="Website Builder"/>
 <AllFeatures docname="Website Builder"/>
+<Advantages docname="Website Builder"/>
     </>
   );
 }

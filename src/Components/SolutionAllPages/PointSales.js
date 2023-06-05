@@ -6,8 +6,8 @@ import Advantages from './Advantages';
 function PointSales() {
   return (
     <>
-<Advantages docname="Point of Sales for Retail Outlets"/>
 <AllFeatures docname="Point of Sales for Retail Outlets"/>
+<Advantages docname="Point of Sales for Retail Outlets"/>
     </>
   );
 }

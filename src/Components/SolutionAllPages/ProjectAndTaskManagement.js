@@ -6,8 +6,8 @@ import Advantages from './Advantages';
 function ProjectAndTaskManagement() {
   return (
     <>
-<Advantages docname="Project and Task Management"/>
 <AllFeatures docname="Project and Task Management"/>
+<Advantages docname="Project and Task Management"/>
     </>
   );
 }

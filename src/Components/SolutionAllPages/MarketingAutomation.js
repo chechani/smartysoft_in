@@ -6,8 +6,8 @@ import Advantages from './Advantages';
 function MarketingAutomation() {
   return (
     <>
-<Advantages docname="Marketing Automation"/>
 <AllFeatures docname="Marketing Automation"/>
+<Advantages docname="Marketing Automation"/>
     </>
   );
 }
