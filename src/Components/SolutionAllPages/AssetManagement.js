@@ -1,6 +1,6 @@
 import React from 'react';
-import AllFeatures from './Features';
-import Advantages from './Functionalities';
+import Features from './Features';
+import Advantages from './Advantages';
 import Footer from '../Footer';
 import { FAQ } from '../FAQ/faqs';
 
@@ -9,7 +9,7 @@ import { FAQ } from '../FAQ/faqs';
 function AssetManagement() {
   return (
     <>
-<AllFeatures docname="Asset Management"/>
+<Features docname="Asset Management"/>
 <Advantages docname="Asset Management"/>
 <FAQ category="About Accxchange"/>
 <Footer segment="Smarty Home"/>

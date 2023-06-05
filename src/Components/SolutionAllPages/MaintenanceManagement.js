@@ -1,6 +1,6 @@
 import React from 'react';
-import AllFeatures from './Features';
-import Advantages from './Functionalities';
+import Features from './Features';
+import Advantages from './Advantages';
 import { FAQ } from '../FAQ/faqs';
 import Footer from '../Footer';
 
@@ -8,7 +8,7 @@ import Footer from '../Footer';
 function MaintenanceManagement() {
   return (
     <>
-<AllFeatures docname="Maintenance Management"/>
+<Features docname="Maintenance Management"/>
 <Advantages docname="Maintenance Management"/>
 <FAQ category="About Accxchange"/>
 <Footer segment="Smarty Home"/>

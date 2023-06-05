@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
 
 
-function AccountingAndFinance({docname}) {
+function Features({docname}) {
   const [AccountData, SetAccountData] = useState([]);
   const [documentData, setDocumentData] = useState([]);
 
@@ -138,7 +138,7 @@ function AccountingAndFinance({docname}) {
   );
 }
 
-export default AccountingAndFinance;
+export default Features;
 
 
 

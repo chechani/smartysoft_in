@@ -1,6 +1,6 @@
 import React from 'react';
-import AllFeatures from './Features';
-import Advantages from './Functionalities';
+import Features from './Features';
+import Advantages from './Advantages';
 import { FAQ } from '../FAQ/faqs';
 import Footer from '../Footer';
 
@@ -9,7 +9,7 @@ import Footer from '../Footer';
 function BuyingAndVendorPortal() {
   return (
     <>
-<AllFeatures docname="Buying and Vendor Portal"/>
+<Features docname="Buying and Vendor Portal"/>
 <Advantages docname="Buying and Vendor Portal"/>
 <FAQ category="About Accxchange"/>
 <Footer segment="Smarty Home"/>

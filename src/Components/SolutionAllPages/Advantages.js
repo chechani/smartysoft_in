@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 
 
-function AllFeatures({docname}) {
+function Advantages({docname}) {
   const [features, setFeatures] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [documentData, setDocumentData] = useState([]);
@@ -204,5 +204,5 @@ function AllFeatures({docname}) {
   );
 }
 
-export default AllFeatures;
+export default Advantages;
 

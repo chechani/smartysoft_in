@@ -1,6 +1,6 @@
 import React from 'react';
-import AllFeatures from './Features';
-import Advantages from './Functionalities';
+import Features from './Features';
+import Advantages from './Advantages';
 import { FAQ } from '../FAQ/faqs';
 import Footer from '../Footer';
 
@@ -8,7 +8,7 @@ import Footer from '../Footer';
 function WebsiteBuilder() {
   return (
     <>
-<AllFeatures docname="Website Builder"/>
+<Features docname="Website Builder"/>
 <Advantages docname="Website Builder"/>
 <FAQ category="About Accxchange"/>
 <Footer segment="Smarty Home"/>
