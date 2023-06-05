@@ -1,5 +1,14 @@
 import React from 'react';
-import { Button, Container, IconButton, Typography, useMediaQuery, useTheme, Menu, MenuItem } from '@mui/material';
+import {
+  Button,
+  Container,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+  Menu,
+  MenuItem,
+} from '@mui/material';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,6 +19,7 @@ const Header = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleMenuOpen = (event) => {
@@ -58,7 +68,7 @@ const Header = () => {
     <AppBar position="fixed" style={{ backgroundColor: 'whitesmoke' }}>
       <Container maxWidth="xl">
         <Toolbar>
-          {isMobile && (
+          {(isMobile || isTablet) && (
             <IconButton edge="start" color="primary" aria-label="menu" onClick={handleMenuOpen}>
               <MenuIcon />
             </IconButton>
@@ -77,7 +87,7 @@ const Header = () => {
               }}
             />
           </Box>
-          {isMobile ? (
+          {isMobile || isTablet ? (
             <Menu
               id="menu-appbar"
               anchorEl={anchorEl}
@@ -92,7 +102,6 @@ const Header = () => {
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
-       
               <MenuItem onClick={handleFeature}>About Us</MenuItem>
               <MenuItem onClick={handleBenefits}>Why We</MenuItem>
               <MenuItem onClick={handleScheduleDemo}>Technologies</MenuItem>
@@ -120,8 +129,6 @@ const Header = () => {
                   },
                 }}
               >
-    
-         
                 <Typography variant="subtitle1" onClick={handleFeature}>
                   About Us
                 </Typography>
