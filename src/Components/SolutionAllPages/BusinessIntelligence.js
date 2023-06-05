@@ -1,6 +1,6 @@
 import React from 'react';
 import AllFeatures from './Features';
-import Advantages from './Advantages';
+import Advantages from './Functionalities';
 import Footer from '../Footer';
 import { FAQ } from '../FAQ/faqs';
 
