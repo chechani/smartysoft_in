@@ -112,6 +112,7 @@ function AccountingAndFinance({docname}) {
                     <CardContent sx={{ flex: '0 0 35%' }}>
                       <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
                       <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
+                      <Typography  sx={{ fontSize: "14px", mt: 5 }}dangerouslySetInnerHTML={{ __html: data.detailed_description }} />
                     </CardContent>
                     <CardMedia
                       component="img"
