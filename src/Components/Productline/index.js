@@ -25,8 +25,8 @@ const Productline = () => {
       .then(data => {
         // Extract the features array from the message object
         const featuresData = data.message;
+        console.log(data)
         // Map the fields properly
-
      
         const mappedFeatures = featuresData.map(item => ({
           id: item.order,
@@ -42,6 +42,7 @@ const Productline = () => {
           heading: item.product_name
         }));
         setFeatures(mappedFeatures);
+
       })
       .catch(error => {
         console.error('Error fetching API:', error);
