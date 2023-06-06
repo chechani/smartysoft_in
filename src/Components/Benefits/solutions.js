@@ -65,7 +65,7 @@ function Solutions({ segment, cardCount }) {
         </div>
         <Row>
           {visibleFeatures.map((feature, index) => (
-            <Col lg={4} md={4} sm={6} key={index}>
+            <Col lg={3} md={3} sm={6} key={index}>
               <div
                 className={`d-flex flex-column feature-primary ${hoveredIndex === index ? "hovered" : ""}`}
                 style={{
