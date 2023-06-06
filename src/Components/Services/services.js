@@ -1,13 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, Typography, IconButton } from '@mui/material';
+import { Box, Grid, Typography, IconButton, styled } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import RemoveIcon from '@mui/icons-material/Remove';
+
+const LightGreyBox = styled(Box)({
+  backgroundColor: '#f5f5f5',
+  padding: '16px',
+  borderRadius: '8px',
+  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+});
+
+const DarkGreenExpandMoreIcon = styled(ExpandMoreIcon)({
+  color: 'darkgreen',
+  width: '36px',
+  height: '36px',
+  verticalAlign: 'middle',
+});
+
+const DarkGreenRemoveIcon = styled(RemoveIcon)({
+  color: 'darkgreen',
+  width: '36px',
+  height: '36px',
+  verticalAlign: 'middle',
+});
 
 function Reason({ title, description, icon }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <Box sx={{ p: 2 }}>
+    <LightGreyBox sx={{ p: 2 }}>
       <Grid container direction="column" alignItems="center">
         <Grid item>
           {icon}
@@ -30,9 +51,9 @@ function Reason({ title, description, icon }) {
         <Grid item>
           <IconButton onClick={() => setExpanded(!expanded)}>
             {expanded ? (
-              <RemoveIcon fontSize="large" style={{ color: 'green' }} /> // Minus sign icon for expanded state
+              <DarkGreenRemoveIcon fontSize="large" /> // Minus sign icon for expanded state
             ) : (
-              <ExpandMoreIcon fontSize="large" style={{ color: 'green' }} />
+              <DarkGreenExpandMoreIcon fontSize="large" />
             )}
           </IconButton>
         </Grid>
@@ -44,7 +65,7 @@ function Reason({ title, description, icon }) {
           </Typography>
         </Box>
       )}
-    </Box>
+    </LightGreyBox>
   );
 }
 
@@ -77,7 +98,7 @@ function Services({ segment }) {
             <Reason
               title={reason.service}
               description={reason.description}
-              icon={<img src={"https://smartysoftware.in/" + reason.image} alt={reason.service} style={{ width: "50px", height: "50px" }} />}
+              icon={<img src={`https://smartysoftware.in/${reason.image}`} alt={reason.service} style={{ width: '50px', height: '50px' }} />}
             />
           </Grid>
         ))}

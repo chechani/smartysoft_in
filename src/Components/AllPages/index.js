@@ -34,7 +34,7 @@ const AllPages = () => {
                 <Productline/>
             </Card>
             <Card>
-                <Solutions segment="Smarty Home" />
+            <Solutions segment="Smarty Home" cardCount={12} />
             </Card>
             {/* <Card>
                 <AboutUs/>
@@ -71,15 +71,15 @@ const AllPages = () => {
             <Card>
                 <FAQ category="About Accxchange"/>
             </Card>
-     
+            <Card>
+                <Testimonial/>
+            </Card>
             <card>
             <Footer segment="Smarty Home"/>
             </card>
             
           
-            {/* <Card>
-                <Testimonial/>
-            </Card> */}
+
             {/* <Card>
                 <Pricing />
             </Card> */}

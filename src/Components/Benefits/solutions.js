@@ -10,16 +10,17 @@ import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-function Solutions({ segment }) {
+function Solutions({ segment, cardCount }) {
   const [features, setFeatures] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [open, setOpen] = useState(false);
-  const [HeadingData, setHeadingData] = useState("");
-  const [WhatsappMsg, setWhatsappMsg] = useState('');
+  const [headingData, setHeadingData] = useState("");
+  const [whatsappMsg, setWhatsappMsg] = useState("");
+  const [showAll, setShowAll] = useState(false);
 
-  const handleClickOpen = (short_title) => {
-    setHeadingData(short_title)
-    setWhatsappMsg(short_title)
+  const handleClickOpen = (shortTitle) => {
+    setHeadingData(shortTitle);
+    setWhatsappMsg(shortTitle);
     setOpen(true);
   };
 
@@ -43,13 +44,15 @@ function Solutions({ segment }) {
     fetchData();
   }, [segment]);
 
-  if (features.length === 0) {
-    return null;
-  }
-
   const handleCardHover = (index) => {
     setHoveredIndex(index);
   };
+
+  const handleExploreMore = () => {
+    setShowAll(true);
+  };
+
+  const visibleFeatures = showAll ? features : features.slice(0, cardCount);
 
   return (
     <section className="bg-light" style={{ paddingBottom: "10px" }}>
@@ -61,7 +64,7 @@ function Solutions({ segment }) {
           </h2>
         </div>
         <Row>
-          {features.map((feature, index) => (
+          {visibleFeatures.map((feature, index) => (
             <Col lg={4} md={4} sm={6} key={index}>
               <div
                 className={`d-flex flex-column feature-primary ${hoveredIndex === index ? "hovered" : ""}`}
@@ -100,12 +103,7 @@ function Solutions({ segment }) {
                     color: hoveredIndex === index ? "#ffffff" : "#00FF00",
                     textAlign: "center",
                     transition: "color 0.3s",
-                    maxHeight: "5em",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    display: "-webkit-box",
-                    WebkitLineClamp: "2",
-                    WebkitBoxOrient: "vertical",
+                    whiteSpace: "normal",
                   }}
                 >
                   {feature.descriptive_title}
@@ -128,6 +126,13 @@ function Solutions({ segment }) {
             </Col>
           ))}
         </Row>
+        {features.length > cardCount && !showAll && (
+          <div className="explore-more-container">
+            <Button className="explore-more-button" onClick={handleExploreMore}>
+              Explore More Solutions
+            </Button>
+          </div>
+        )}
       </Container>
       <Dialog
         open={open}
@@ -137,7 +142,7 @@ function Solutions({ segment }) {
         fullWidth
         maxWidth="sm"
       >
-        <DialogTitle id="alert-dialog-title">{HeadingData}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">{headingData}</DialogTitle>
         <DialogContent>
           <div style={{ position: "relative", paddingTop: "56.25%" }}>
             <iframe
@@ -152,7 +157,7 @@ function Solutions({ segment }) {
         <DialogActions sx={{ display: "flex", justifyContent: "space-between" }}>
           <Button variant="outlined" color="success">
             <a
-              href={`https://wa.me/7849945640?text=${encodeURIComponent(WhatsappMsg)}`}
+              href={`https://wa.me/7849945640?text=${encodeURIComponent(whatsappMsg)}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none", display: "flex", alignItems: "center" }}
@@ -176,7 +181,7 @@ function Solutions({ segment }) {
           margin-bottom: 20px;
           margin-top: 10px;
           padding: 20px;
-          background-color: #ffffff;
+          background-color: #f2f2f2;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
           border-radius: 4px;
           display: flex;
@@ -184,46 +189,48 @@ function Solutions({ segment }) {
           align-items: center;
           border: 2px solid #ccc;
         }
-
+        
         .feature-primary:hover {
           border-color: #1e90ff;
+          transform: translateY(-5px);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-
+        
         .hovered {
           transform: translateY(-5px);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-
+        
         .title {
           margin-bottom: 0;
         }
-
+        
         .text-muted.para {
           margin-top: 10px;
         }
-
+        
         .section-title-wrapper {
           margin: 40px 0;
         }
-
+        
         .section-title {
           text-align: center;
           font-size: 28px;
           font-weight: bold;
         }
-
+        
         .section-gap {
           height: 20px;
         }
-
+        
         .row-gap {
           margin-top: 20px;
         }
-
+        
         .button-container {
           margin-top: 10px;
         }
-
+        
         .button-container a {
           display: inline-flex;
           align-items: center;
@@ -238,18 +245,27 @@ function Solutions({ segment }) {
           border-radius: 4px;
           transition: background-color 0.3s;
         }
-
+        
         .button-container a:hover {
           background-color: #e5e5e5;
         }
-
-        .button-icon {
-          margin-right: 5px;
+        
+        .explore-more-container {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
         }
-
-        .button-label {
-          color: #333;
+        
+        .explore-more-button {
+          background-color: #000;
+          color: #fff;
         }
+        
+        .explore-more-button:hover {
+          background-color: #1e90ff;
+          color: #fff;
+        }
+        
       `}
       </style>
     </section>

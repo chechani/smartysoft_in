@@ -12,15 +12,17 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const DarkGreenExpandMoreIcon = styled(ExpandMoreIcon)({
-  color: 'darkgreen', // Set the color to dark green
-  width: '32px', // Increase the width
-  height: '32px', // Increase the height
+  color: 'darkgreen',
+  width: '36px',
+  height: '36px',
+  verticalAlign: 'middle',
 });
 
 const DarkGreenRemoveIcon = styled(RemoveIcon)({
-  color: 'darkgreen', // Set the color to dark green
-  width: '32px', // Increase the width
-  height: '32px', // Increase the height
+  color: 'darkgreen',
+  width: '36px',
+  height: '36px',
+  verticalAlign: 'middle',
 });
 
 function USP({ segment }) {
@@ -49,7 +51,7 @@ function USP({ segment }) {
       <Box
         sx={{
           textAlign: 'center',
-          padding: 8,
+          padding: '16px',
           fontFamily: "Poppins',sans-serif",
         }}
       >
@@ -58,15 +60,22 @@ function USP({ segment }) {
           sx={{
             fontWeight: 700,
             mb: 3,
-            fontSize: '32px',
+            fontSize: '36px',
           }}
         >
           Why Us
         </Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
           {benefitsData.map((benefit, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
-              <Box>
+              <Box
+                sx={{
+                  backgroundColor: '#f5f5f5',
+                  padding: '16px',
+                  borderRadius: '8px',
+                  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+                }}
+              >
                 {benefit.image && (
                   <img
                     src={`https://smartysoftware.in${benefit.image}`}
@@ -86,9 +95,9 @@ function USP({ segment }) {
                 </Typography>
                 <IconButton onClick={() => handleExpandClick(index)}>
                   {expanded[index] ? (
-                    <DarkGreenRemoveIcon /> // Use DarkGreenRemoveIcon for expanded state
+                    <DarkGreenRemoveIcon />
                   ) : (
-                    <DarkGreenExpandMoreIcon /> // Use DarkGreenExpandMoreIcon for collapsed state
+                    <DarkGreenExpandMoreIcon />
                   )}
                 </IconButton>
                 <Collapse in={expanded[index]}>
