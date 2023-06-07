@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
 
-
-function Features({docname}) {
+function Features({ docname }) {
   const [AccountData, SetAccountData] = useState([]);
   const [documentData, setDocumentData] = useState([]);
 
@@ -12,7 +11,9 @@ function Features({docname}) {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=${encodeURIComponent(docname)}`
+          `https://smartysoftware.in/api/method/professional.web.get_solution_landing?docname=${encodeURIComponent(
+            docname
+          )}`
         );
         const data = await response.json();
         console.log(data);
@@ -31,27 +32,24 @@ function Features({docname}) {
     <>
       <Box
         style={{
-          paddingTop: "170px",
-          textAlign: "center",
-          paddingBottom: "50px",
-          background: "linear-gradient(#add8e6,#f5f5f5,#b0c4de)",
-          height: "auto",
+          paddingTop: '170px',
+          textAlign: 'center',
+          paddingBottom: '50px',
+          background: 'linear-gradient(#add8e6,#f5f5f5,#b0c4de)',
+          height: 'auto',
+          margin: '0',
         }}
       >
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <Typography sx={{ fontWeight: 700, mt: 3, fontSize: "40px" }}>
+            <Typography sx={{ fontWeight: 700, mt: 3, fontSize: '40px' }}>
               {AccountData.tagline}
             </Typography>
-            <Typography sx={{ fontWeight: 700, mt: 2, fontSize: "20px" }}>
+            <Typography sx={{ fontWeight: 700, mt: 2, fontSize: '20px' }}>
               {AccountData.descriptive_title}
             </Typography>
-            <Link style={{ textDecoration: "none" }} to="/excelfileform">
-              <Button
-                variant="contained"
-                color="success"
-                sx={{ mt: 3, ml: 2, mb: 2 }}
-              >
+            <Link style={{ textDecoration: 'none' }} to="/excelfileform">
+              <Button variant="contained" color="success" sx={{ mt: 3, ml: 2, mb: 2 }}>
                 Schedule a Meeting
               </Button>
             </Link>
@@ -72,7 +70,7 @@ function Features({docname}) {
       </Box>
 
       {/* Cards of Data */}
-      <Box sx={{ width: 'auto', m: 5 }}>
+      <Box sx={{ width: 'auto', m: 0 }}>
         <Grid container spacing={2}>
           {documentData.map((data, index) => (
             <Grid item xs={12} key={index}>
@@ -82,48 +80,77 @@ function Features({docname}) {
                   flexDirection: isMobile ? 'column' : 'row',
                   boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
                   borderRadius: '4px',
-                  transition: 'transform 0.3s, box-shadow 0.3s, border-color 0.3s',
+                  transition: 'transform 0.3s, box-shadow 0.3s',
                   border: '1px solid #ccc',
                   marginBottom: '10px',
+                  marginLeft: '0',
+                  marginRight: '0',
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                onMouseEnter={(e) => {
+                  const image = e.currentTarget.querySelector('img');
+                  image.style.transform = 'translateY(-5px)';
+                  image.style.transition = 'transform 0.3s';
+                }}
+                onMouseLeave={(e) => {
+                  const image = e.currentTarget.querySelector('img');
+                  image.style.transform = 'translateY(0)';
+                }}
               >
                 {isMobile ? (
                   <>
                     <CardContent>
-                      <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
-                      <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
-                      <Typography  sx={{ fontSize: "14px", mt: 5 }}dangerouslySetInnerHTML={{ __html: data.detailed_description }} />
+                      <Typography sx={{ fontSize: '32px', fontWeight: 'bold' }}>
+                        {data.document_name}
+                      </Typography>
+                      <Typography sx={{ fontSize: '22px', mt: 5 }}>{data.document_detail}</Typography>
+                      <Typography
+                        sx={{ fontSize: '14px', mt: 5 }}
+                        dangerouslySetInnerHTML={{ __html: data.detailed_description }}
+                      />
                     </CardContent>
                     <CardMedia
                       component="img"
-                      src={"https://smartysoftware.in/" + data.image}
+                      src={'https://smartysoftware.in/' + data.image}
                       alt="Document Image"
                       sx={{
                         width: '100%',
                         height: 'auto',
                         borderTopLeftRadius: '4px',
                         borderBottomLeftRadius: '4px',
+                        marginBottom: '20px',
+                        marginTop: '40px',
+                        marginRight: '20px',
+                        transformStyle: 'preserve-3d',
+                        backfaceVisibility: 'hidden',
                       }}
                     />
                   </>
                 ) : (
                   <>
                     <CardContent sx={{ flex: '0 0 35%' }}>
-                      <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>{data.document_name}</Typography>
-                      <Typography sx={{ fontSize: "22px", mt: 5 }}>{data.document_detail}</Typography>
-                      <Typography  sx={{ fontSize: "14px", mt: 5 }}dangerouslySetInnerHTML={{ __html: data.detailed_description }} />
+                      <Typography sx={{ fontSize: '32px', fontWeight: 'bold' }}>
+                        {data.document_name}
+                      </Typography>
+                      <Typography sx={{ fontSize: '22px', mt: 5 }}>{data.document_detail}</Typography>
+                      <Typography
+                        sx={{ fontSize: '14px', mt: 5 }}
+                        dangerouslySetInnerHTML={{ __html: data.detailed_description }}
+                      />
                     </CardContent>
                     <CardMedia
                       component="img"
-                      src={"https://smartysoftware.in/" + data.image}
+                      src={'https://smartysoftware.in/' + data.image}
                       alt="Document Image"
                       sx={{
                         width: '65%',
                         height: 'auto',
                         borderTopLeftRadius: '4px',
                         borderTopRightRadius: '4px',
+                        marginBottom: '20px',
+                        marginTop: '40px',
+                        marginRight: '20px',
+                        transformStyle: 'preserve-3d',
+                        backfaceVisibility: 'hidden',
                       }}
                     />
                   </>
@@ -133,12 +160,8 @@ function Features({docname}) {
           ))}
         </Grid>
       </Box>
-       
     </>
   );
 }
 
 export default Features;
-
-
-
