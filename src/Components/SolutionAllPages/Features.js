@@ -81,10 +81,10 @@ function Features({ docname }) {
                   boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
                   borderRadius: '4px',
                   transition: 'transform 0.3s, box-shadow 0.3s',
-                  border: '1px solid #ccc',
                   marginBottom: '10px',
                   marginLeft: '0',
                   marginRight: '0',
+                  border: 'none', // Remove the border around the content
                 }}
                 onMouseEnter={(e) => {
                   const image = e.currentTarget.querySelector('img');
@@ -122,6 +122,7 @@ function Features({ docname }) {
                         marginRight: '20px',
                         transformStyle: 'preserve-3d',
                         backfaceVisibility: 'hidden',
+                        border: '1px solid #ccc', // Add a border to the image
                       }}
                     />
                   </>
@@ -151,6 +152,7 @@ function Features({ docname }) {
                         marginRight: '20px',
                         transformStyle: 'preserve-3d',
                         backfaceVisibility: 'hidden',
+                        border: '1px solid #ccc', // Add a border to the image
                       }}
                     />
                   </>
