@@ -10,7 +10,7 @@ function WebsiteBuilder() {
     <>
 <Features docname="Website Builder"/>
 <Advantages docname="Website Builder"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Website Builder"/>
 <Footer segment="Smarty Home"/>
     </>
   );

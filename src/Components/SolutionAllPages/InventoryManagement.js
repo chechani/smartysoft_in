@@ -13,7 +13,7 @@ function InventoryManagement() {
     <>
 <Features docname="Inventory Management"/>
 <Advantages docname="Inventory Management"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Inventory Management"/>
 <Footer segment="Smarty Home"/>
     </>
   );

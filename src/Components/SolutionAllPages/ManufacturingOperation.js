@@ -10,7 +10,7 @@ function ManufacturingOperation() {
     <>
 <Features docname="Manufacturing Operations"/>
 <Advantages docname="Manufacturing Operations"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Manufacturing Operations"/>
 <Footer segment="Smarty Home"/>
     </>
   );

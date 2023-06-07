@@ -10,7 +10,7 @@ function Businessintelligence() {
     <>
 <Features docname="Business Intelligence"/>
 <Advantages docname="Business Intelligence"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Business Intelligence"/>
 <Footer segment="Smarty Home"/>
 
     </>

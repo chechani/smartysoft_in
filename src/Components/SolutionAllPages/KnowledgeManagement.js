@@ -11,7 +11,7 @@ function KnowledgeManagement() {
     <>
 <Features docname="Knowledge Management and WiKi"/>
 <Advantages docname="Knowledge Management and WiKi"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Knowledge Management and WiKi"/>
 <Footer segment="Smarty Home"/>
     </>
   );

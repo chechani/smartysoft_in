@@ -10,7 +10,7 @@ function SalesAndDistribution() {
     <>
 <Features docname="Sales and Distribution"/>
 <Advantages docname="Sales and Distribution"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Sales and Distribution"/>
 <Footer segment="Smarty Home"/>
     </>
   );

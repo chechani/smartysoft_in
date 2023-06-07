@@ -10,7 +10,7 @@ function MaintenanceManagement() {
     <>
 <Features docname="Maintenance Management"/>
 <Advantages docname="Maintenance Management"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Maintenance Management"/>
 <Footer segment="Smarty Home"/>
     </>
   );
