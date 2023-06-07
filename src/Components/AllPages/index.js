@@ -71,7 +71,7 @@ const AllPages = () => {
             </Card>
             
             <Card>
-                <Testimonial/>
+                <Testimonial segment="Smarty Home"/>
             </Card>
             <card>
             <Footer segment="Smarty Home"/>
