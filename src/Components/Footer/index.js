@@ -78,13 +78,13 @@ export default function Footer({segment}) {
       <ToastContainer />
       <Grid container spacing={3} style={{ paddingBottom: "50px" }}>
         <Grid item xs={12} md={3}>
-          <div style={{ marginLeft: "20px", width: "fit-content" }}>
+          <div style={{ marginLeft: "18px", width: "fit-content" }}>
             <Typography
-              sx={{ width: "70%", ml: 5, marginTop: 6, fontSize: "18px", alignSelf: 'flex-start' }}
+              sx={{ width: "70%", marginTop: 5, fontSize: "18px", alignSelf: 'flex-start' }}
             >
               Helping Businesses in 💯% Digitalization and Automation
             </Typography>
-            <Box sx={{ ml: 3, mt: 1 }}>
+            <Box sx={{mt: 1 }}>
               <a
                 href="https://www.facebook.com/customexceltotally"
                 target="_blank"
@@ -123,7 +123,7 @@ export default function Footer({segment}) {
           </div>
         </Grid>
         <Grid item xs={12} sm={9} md={7} sx={{ margin: "auto" }}>
-          <Box sx={{ mt: 5, ml: { xs: 2, sm: 1 } }}>
+          <Box sx={{ mt: 4, ml: { xs: 2, sm: 1 } }}>
             <Grid container spacing={2}>
               {linkColumnData.map((columnLinks, columnIndex) => (
                 <Grid item xs={6} sm={3} key={columnIndex}>
@@ -153,7 +153,7 @@ export default function Footer({segment}) {
           </Box>
         </Grid>
         <Grid item xs={12} md={2}>
-          <Box sx={{ mt: 5, ml: { xs: 7, sm: 5 } }}>
+          <Box sx={{ mt:5}}>
             <ul style={{ fontSize: "14px", listStyleType: "none" }}>
               <li style={{ marginTop: "10px" }}>
                 <a
@@ -173,7 +173,7 @@ export default function Footer({segment}) {
               </li>
             </ul>
           </Box>
-          <Box sx={{ ml: { xs: 7, sm: 5 } }}>
+          <Box sx={{ ml:{ xs: 3}}}>
             <Box sx={{ mr: 2 }}>
               <Box
                 sx={{
