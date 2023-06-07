@@ -17,6 +17,7 @@ import Productline from '../Productline';
 import { FAQ } from '../FAQ/faqs';
 import USP from '../AboutUs/usp';
 import Footer from '../Footer';
+import Clients from '../AboutUs/clients';
 
 
 
@@ -31,7 +32,7 @@ const AllPages = () => {
                 <Home />
             </Card>
             <Card>
-                <Productline/>
+                <Productline segment="Smarty Home"/>
             </Card>
             <Card>
             <Solutions segment="Smarty Home" cardCount={8} />
@@ -44,12 +45,7 @@ const AllPages = () => {
             </Card>
             <Card>
                 <USP segment="Smarty Home"/>
-            </Card>
-        
-         
-
-           
-          
+            </Card>            
 
             {/* <Card>
                 <TaskManager/>
@@ -58,35 +54,34 @@ const AllPages = () => {
             {/* <Card>
                 <Products />
             </Card> */}
-
-       
+      
             <Card>
-                <Technologies />
+                <Technologies segment="Smarty Home"/>
             </Card>
             <Card>
                 <SuccessStoryContainer segment="Smarty Home"/>
             </Card>   
      
-       
-            <Card>
+             <Card>
                 <FAQ category="About Accxchange"/>
             </Card>
+
+            <Card>
+                <Clients segment="Smarty Home"/>
+            </Card>
+            
             <Card>
                 <Testimonial/>
             </Card>
             <card>
             <Footer segment="Smarty Home"/>
             </card>
-            
-          
+               
 
             {/* <Card>
                 <Pricing />
             </Card> */}
-{/*         
-            <Card>
-                <TaskManager/>
-            </Card> */}
+
             {/* <Card>
                 <PurchaseConversion/>
             </Card> */}

@@ -12,7 +12,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CloseIcon from '@mui/icons-material/Close';
 
 
-const Productline = () => {
+const Productline = ({segment}) => {
   const [open, setOpen] = useState(false);
   const [selectedVideoUrl, setSelectedVideoUrl] = useState('');
   const [selectedFeature, setSelectedFeature] = useState('');
@@ -20,7 +20,7 @@ const Productline = () => {
   const [features, setFeatures] = useState([]);
 
   useEffect(() => {
-    fetch('https://smartysoftware.in/api/method/professional.web.get_products?segment=Smarty%20Home')
+    fetch(`https://smartysoftware.in/api/method/professional.web.get_products?segment=${encodeURIComponent(segment)}`)
       .then(response => response.json())
       .then(data => {
         // Extract the features array from the message object
