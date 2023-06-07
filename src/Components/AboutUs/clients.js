@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
-function Clients({segment}) {
+function Clients({ segment }) {
   const [images, setImages] = useState([]);
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
@@ -28,12 +28,12 @@ function Clients({segment}) {
 
   return (
     <Box style={{ textAlign: "center", paddingTop: "50px", paddingBottom: "50px", fontFamily: "Poppins, sans-serif", margin: "0 auto", marginLeft: "20px", marginRight: "20px" }}>
-      <Typography variant='h4' sx={{ fontWeight: 700, fontSize: "32px", marginBottom: "40px" }}>Clients who trused us </Typography>
+      <Typography variant='h4' sx={{ fontWeight: 700, fontSize: "32px", marginBottom: "40px" }}>Clients who trusted us</Typography>
 
       <Grid container spacing={2} justifyContent="center">
         {images.map((imageUrl, index) => (
           <Grid item xs={6} sm={6} md={calculateGridColumns()} key={index}>
-            <Card sx={{ height: '100%', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.05)' } }}>
+            <Card sx={{ height: '100%', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.05)' }, border: '1px solid #ccc', borderRadius: '8px' }}>
               <CardContent>
                 <img src={imageUrl} alt="Technology" style={{ height: "50px", width: "100px" }} />
               </CardContent>

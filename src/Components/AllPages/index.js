@@ -35,7 +35,7 @@ const AllPages = () => {
                 <Productline segment="Smarty Home"/>
             </Card>
             <Card>
-            <Solutions segment="Smarty Home" cardCount={8} />
+            <Solutions segment="Smarty Home" cardCount={12} />
             </Card>
             {/* <Card>
                 <AboutUs/>

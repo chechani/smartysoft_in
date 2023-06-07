@@ -33,7 +33,7 @@ function Technologies({segment}) {
       <Grid container spacing={2} justifyContent="center">
         {images.map((imageUrl, index) => (
           <Grid item xs={6} sm={6} md={calculateGridColumns()} key={index}>
-            <Card sx={{ height: '100%', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.05)' } }}>
+            <Card sx={{ height: '100%', border: '1px solid darkgrey' }}>
               <CardContent>
                 <img src={"https://smartysoftware.in/"+imageUrl} alt="Technology" style={{ height: "50px", width: "100px" }} />
               </CardContent>

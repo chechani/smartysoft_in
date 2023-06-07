@@ -74,6 +74,7 @@ function USP({ segment }) {
                   padding: '16px',
                   borderRadius: '8px',
                   boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+                  border: '1px solid #ccc',
                 }}
               >
                 {benefit.image && (
