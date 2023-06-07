@@ -13,7 +13,7 @@ function FleetManagement() {
     <>
 <Features docname="Fleet Management"/>
 <Advantages docname="Fleet Management"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Fleet Management"/>
 <Footer segment="Smarty Home"/>
     </>
   );

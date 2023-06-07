@@ -10,7 +10,7 @@ function PointSales() {
     <>
 <Features docname="Point of Sales for Retail Outlets"/>
 <Advantages docname="Point of Sales for Retail Outlets"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Point of Sales for Retail Outlets"/>
 <Footer segment="Smarty Home"/>
     </>
   );

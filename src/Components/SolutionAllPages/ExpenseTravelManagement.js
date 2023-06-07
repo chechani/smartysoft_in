@@ -13,7 +13,7 @@ function ExpenseTravelManagement() {
     <>
 <Features docname="Expense and Travel management"/>
 <Advantages docname="Expense and Travel management"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Expense and Travel Management"/>
 <Footer segment="Smarty Home"/>
     </>
   );

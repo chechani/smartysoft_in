@@ -11,7 +11,7 @@ function BuyingAndVendorPortal() {
     <>
 <Features docname="Buying and Vendor Portal"/>
 <Advantages docname="Buying and Vendor Portal"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Buying and Vendor Portal"/>
 <Footer segment="Smarty Home"/>
     </>
   );

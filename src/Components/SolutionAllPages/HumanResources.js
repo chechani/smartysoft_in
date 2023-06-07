@@ -13,7 +13,7 @@ function HumanResources() {
     <>
 <Features docname="Human Resources Management"/>
 <Advantages docname="Human Resources Management"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Human Resources Management"/>
 <Footer segment="Smarty Home"/>
     </>
   );

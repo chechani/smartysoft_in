@@ -12,7 +12,7 @@ function Ecommerce() {
     <>
 <Features docname="eCommerce and Online Selling"/>
 <Advantages docname="eCommerce and Online Selling"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="eCommerce and Online Selling"/>
 <Footer segment="Smarty Home"/>
     </>
   );

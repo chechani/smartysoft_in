@@ -11,7 +11,7 @@ function Accounting() {
     <>
 <Features docname="Accounting and Finance"/>
 <Advantages docname="Accounting and Finance"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Accounting and Finance"/>
 <Footer segment="Smarty Home"/>
          
     </>

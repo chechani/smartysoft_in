@@ -11,7 +11,7 @@ function DocumentAutomation() {
     <>
 <Features docname="Document Automation and Management"/>
 <Advantages docname="Document Automation and Management"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Document Automation & Management"/>
 <Footer segment="Smarty Home"/>
     </>
   );
