@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, Typography, IconButton, styled } from '@mui/material';
+import { Box, Grid, Typography, IconButton } from '@mui/material';
+import { styled } from '@mui/system';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import RemoveIcon from '@mui/icons-material/Remove';
 
@@ -8,6 +9,7 @@ const LightGreyBox = styled(Box)({
   padding: '16px',
   borderRadius: '8px',
   boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+  border: '1px solid #ccc', // Add this line to set the border
 });
 
 const DarkGreenExpandMoreIcon = styled(ExpandMoreIcon)({
@@ -30,9 +32,7 @@ function Reason({ title, description, icon }) {
   return (
     <LightGreyBox sx={{ p: 2 }}>
       <Grid container direction="column" alignItems="center">
-        <Grid item>
-          {icon}
-        </Grid>
+        <Grid item>{icon}</Grid>
         <Grid item>
           <Typography
             variant="h4"
@@ -60,9 +60,7 @@ function Reason({ title, description, icon }) {
       </Grid>
       {expanded && (
         <Box sx={{ pl: 3, pr: 3 }}>
-          <Typography sx={{ textAlign: 'center' }}>
-            {description}
-          </Typography>
+          <Typography sx={{ textAlign: 'center' }}>{description}</Typography>
         </Box>
       )}
     </LightGreyBox>
@@ -74,13 +72,13 @@ function Services({ segment }) {
 
   useEffect(() => {
     fetch(`https://smartysoftware.in/api/method/professional.web.get_services?segment=${encodeURIComponent(segment)}`)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         if (data && data.message && Array.isArray(data.message)) {
           setReasonsData(data.message);
         }
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }, [segment]);
 
   return (
@@ -98,7 +96,13 @@ function Services({ segment }) {
             <Reason
               title={reason.service}
               description={reason.description}
-              icon={<img src={`https://smartysoftware.in/${reason.image}`} alt={reason.service} style={{ width: '50px', height: '50px' }} />}
+              icon={
+                <img
+                  src={`https://smartysoftware.in/${reason.image}`}
+                  alt={reason.service}
+                  style={{ width: '50px', height: '50px' }}
+                />
+              }
             />
           </Grid>
         ))}
