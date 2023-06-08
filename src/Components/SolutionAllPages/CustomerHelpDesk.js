@@ -11,7 +11,7 @@ function CustomerHelpDesk() {
     <>
 <Features docname="Customer Help Desk"/>
 <Advantages docname="Customer Help Desk"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Customer Help Desk"/>
 <Footer segment="Smarty Home"/>
     </>
   );

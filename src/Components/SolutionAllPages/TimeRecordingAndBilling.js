@@ -10,7 +10,7 @@ function TimeRecordingAndBilling() {
     <>
 <Features docname="Time Recording and Billing"/>
 <Advantages docname="Time Recording and Billing"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Time Recording and Billing"/>
 <Footer segment="Smarty Home"/>
     </>
   );

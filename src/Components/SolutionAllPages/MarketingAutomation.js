@@ -10,7 +10,7 @@ function MarketingAutomation() {
     <>
 <Features docname="Marketing Automation"/>
 <Advantages docname="Marketing Automation"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Marketing Automation"/>
 <Footer segment="Smarty Home"/>
     </>
   );

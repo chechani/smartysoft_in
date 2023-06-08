@@ -11,7 +11,7 @@ function AssetManagement() {
     <>
 <Features docname="Asset Management"/>
 <Advantages docname="Asset Management"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Asset Management"/>
 <Footer segment="Smarty Home"/>
     </>
   );

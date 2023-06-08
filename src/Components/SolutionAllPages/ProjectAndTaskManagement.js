@@ -10,7 +10,7 @@ function ProjectAndTaskManagement() {
     <>
 <Features docname="Project and Task Management"/>
 <Advantages docname="Project and Task Management"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Project and Task Management"/>
 <Footer segment="Smarty Home"/>
     </>
   );

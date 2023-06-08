@@ -10,7 +10,7 @@ function QualityManagement() {
     <>
 <Features docname="Quality Management"/>
 <Advantages docname="Quality Management"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Quality Management"/>
 <Footer segment="Smarty Home"/>
     </>
   );

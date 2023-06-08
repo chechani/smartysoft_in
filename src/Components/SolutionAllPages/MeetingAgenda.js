@@ -10,7 +10,7 @@ function MeetingAgenda() {
     <>
 <Features docname="Meeting Agenda and Task Execution"/>
 <Advantages docname="Meeting Agenda and Task Execution"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Meeting Agenda and Task Execution"/>
 <Footer segment="Smarty Home"/>
     </>
   );

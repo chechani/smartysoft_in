@@ -10,7 +10,7 @@ function ProjectAccounting() {
     <>
 <Features docname="Project Accounting and Financial Analysis"/>
 <Advantages docname="Project Accounting and Financial Analysis"/>
-<FAQ category="About Accxchange"/>
+<FAQ category="Project Accounting & Financial Analysis"/>
 <Footer segment="Smarty Home"/>
     </>
   );
