@@ -11,7 +11,7 @@ function CRMAndCustomerPortal() {
     <>
 <Features docname="CRM and Customer Portal"/>
 <Advantages docname="CRM and Customer Portal"/>
-<FAQ category="CRM and Customer Portal,Quotation Automation,Triger Emailing,Email Template Management,Opportunity Management"/>
+<FAQ category="CRM and Customer Portal"/>
 <Footer segment="Smarty Home"/>
     </>
   );
